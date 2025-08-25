@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landmark Fencing - Professional Installation Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    .text-primary { color: #295E29; }
+    .bg-primary { background-color: #295E29; }
+    .border-primary { border-color: #295E29; }
+    .bg-dark { background-color: #1a1a1a; }
+    
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(49, 49, 49, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%), 
+                  url('https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    }
+    
+    .services-bg {
+      background: linear-gradient(135deg, rgba(41, 94, 41, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%), 
+                 
+    }
+    
+    .cta-bg {
+      background: linear-gradient(135deg, rgba(41, 94, 41, 0.95) 0%, rgba(26, 26, 26, 0.9) 100%), 
+                  url('https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    }
+    
+    .about-overlay {
+      background: linear-gradient(135deg, rgba(41, 94, 41, 0.05) 0%, rgba(255, 255, 255, 0.95) 50%, rgba(41, 94, 41, 0.1) 100%), 
+                  url('https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    }
+    
+    .video-section-bg {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(41, 94, 41, 0.05) 100%), 
+                  url('https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    }
+    
+    .brands-bg {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(41, 94, 41, 0.05) 50%, rgba(255, 255, 255, 0.9) 100%), 
+                  url('https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    }
+    
+    .testimonial-bg {
+      background: linear-gradient(135deg, rgba(249, 250, 251, 0.95) 0%, rgba(41, 94, 41, 0.05) 50%, rgba(249, 250, 251, 0.95) 100%), 
+                  url('https://images.pexels.com/photos/1370750/pexels-photo-1370750.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    }
+    
+    .why-choose-bg {
+      background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(41, 94, 41, 0.8) 50%, rgba(26, 26, 26, 0.9) 100%), 
+                  
+    }
+    
+    .footer-bg {
+      background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(41, 94, 41, 0.8) 50%, rgba(26, 26, 26, 0.95) 100%), 
+                  url('https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    }
+    
+    .hover-primary:hover { 
+      background-color: #295E29; 
+      color: white; 
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(41, 94, 41, 0.3);
+    }
+    
+    .section-padding { padding: 100px 0; }
+    
+    .container-custom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .btn-primary {
+      background-color: #295E29;
+      color: white;
+      padding: 16px 40px;
+      border: none;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+    
+    .btn-primary:hover {
+      background-color: #1e4520;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(41, 94, 41, 0.4);
+    }
+    
+    .btn-outline {
+      border: 3px solid #295E29;
+      color: #295E29;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 14px 35px;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .btn-outline:hover {
+      background-color: #295E29;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(41, 94, 41, 0.3);
+    }
+    
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      border: 1px solid rgba(41, 94, 41, 0.1);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #295E29, #4a8a4a);
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+      border-color: #295E29;
+    }
+    
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: #295E29;
+      box-shadow: 0 20px 50px rgba(41, 94, 41, 0.3);
+    }
+    
+    .service-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent 0%, rgba(0,0,0,0.8) 50%, rgba(41, 94, 41, 0.9) 100%);
+      color: white;
+      padding: 40px 25px 25px;
+    }
+    
+    .stats-counter {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #295E29;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .testimonial-card {
+      background: white;
+      border-radius: 25px;
+      padding: 40px;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+      border: 2px solid rgba(41, 94, 41, 0.1);
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+      border-color: #295E29;
+    }
+    
+    .quote-icon {
+      position: absolute;
+      top: -20px;
+      left: 40px;
+      background: linear-gradient(135deg, #295E29, #4a8a4a);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      box-shadow: 0 5px 20px rgba(41, 94, 41, 0.3);
+    }
+    
+    .section-border {
+      border-top: 4px solid #295E29;
+      border-bottom: 4px solid #295E29;
+    }
+    
+    .section-border-light {
+      border-top: 2px solid rgba(41, 94, 41, 0.3);
+      border-bottom: 2px solid rgba(41, 94, 41, 0.3);
+    }
+    
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .process-step {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .process-step:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-5px);
+    }
+    
+    .feature-box {
+      background: white;
+      border: 2px solid rgba(41, 94, 41, 0.1);
+      border-radius: 15px;
+      padding: 25px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .feature-box:hover {
+      background: rgba(41, 94, 41, 0.1);
+      border-color: #295E29;
+      color:white;
+      transform: translateX(10px);
+    }
+    
+    .brand-logo {
+      filter: grayscale(100%) brightness(0.8);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid transparent;
+      border-radius: 10px;
+      padding: 15px;
+    }
+    
+    .brand-logo:hover {
+      filter: grayscale(0%) brightness(1);
+      border-color: #295E29;
+      transform: scale(1.1);
+    }
+    
+    .floating-decoration {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(45deg, rgba(41, 94, 41, 0.1), transparent);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #295E29, #4a8a4a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .navbar-scroll {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(41, 94, 41, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+      .section-padding { padding: 60px 0; }
+      .stats-counter { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black overflow-x-hidden">
+
+  <!-- Header -->
+ <header class="fixed top-0 left-0 w-full h-[130px] bg-white z-50"
+    style="clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);">
+    
+    <!-- Header container -->
+    <div class="max-w-[75vw] mx-auto h-full flex justify-between items-center relative z-10">
+      <!-- Left Navigation -->
+      <nav class="hidden md:flex space-x-6 text-black uppercase font-bold">
+        <a href="index.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Home</a>
+        <a href="about.html" class="header-link text-[#295E29] transition-all duration-300 hover:scale-110">About Us</a>
+        <a href="services.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Our Services</a>
+        <a href="gallery.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Projects</a>
+      </nav>
+
+      <!-- Center Logo -->
+ <div class="relative  flex justify-center items-center mx-auto">
+  <div class="h-[120px] w-[130px] rounded-full overflow-hidden border-4 border-white shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl flex items-center justify-center">
+    <img src="assets/images/logoheader.png" 
+         alt="Landmark Fencing"
+         class="h-[60%] w-[120%] "/>
+  </div>
+</div>
+
+
+
+
+
+      <!-- Right Navigation -->
+      <nav class="hidden md:flex space-x-6 text-black  uppercase font-bold">
+        <a href="contact.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Contacts</a>
+        <a href="blog.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Blog</a>
+      </nav>
+
+      <!-- Button -->
+      <a href="#contact"
+        class="hidden md:block bg-[#295E29] ml-[20px] text-white px-4 py-2 rounded hover:bg-[#1e4a1e] hover:text-white transition-all duration-300 font-bold btn-hover transform hover:scale-105">
+        GET A FREE QUOTE
+      </a>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section id="home" class="hero-bg min-h-screen relative mt-16">
+    <div class="floating-decoration top-20 left-10"></div>
+    <div class="floating-decoration top-40 right-20" style="animation-delay: -2s;"></div>
+    <div class="floating-decoration bottom-32 left-1/4" style="animation-delay: -4s;"></div>
+    
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-16 items-center min-h-screen py-20">
+        <!-- Left Content -->
+        <div class="space-y-10 text-white">
+          <div>
+            <h1 class="text-3xl md:text-6xl font-black leading-tight mb-8">
+              Professional <span class="gradient-text text-yellow-300">Fencing</span> Solutions
+            </h1>
+            <p class="text-xl leading-relaxed opacity-90 font-medium">
+              Transform your property with premium fencing installations. Our expert team delivers quality, durability, and style that lasts for decades.
+            </p>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row gap-6">
+            <a href="#video" class="btn-primary rounded-xl shadow-2xl">
+              <i class="fas fa-play mr-3"></i>
+              Watch Our Work
+            </a>
+            <button class="btn-outline rounded-xl shadow-xl">
+              <i class="fas fa-phone mr-3"></i>
+              Call (555) 123-4567
+            </button>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="grid grid-cols-3 gap-8 pt-12 border-t-2 border-white/30">
+            <div class="text-center">
+              <div class="stats-counter text-white">500+</div>
+              <p class="text-white/90 font-semibold text-lg">Projects Completed</p>
+            </div>
+            <div class="text-center">
+              <div class="stats-counter text-white">15+</div>
+              <p class="text-white/90 font-semibold text-lg">Years Experience</p>
+            </div>
+            <div class="text-center">
+              <div class="stats-counter text-white">100%</div>
+              <p class="text-white/90 font-semibold text-lg">Satisfaction Rate</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content - Appointment Form -->
+        <div class="glass-effect p-10 rounded-3xl shadow-2xl">
+          <h2 class="text-4xl font-black text-center mb-10 gradient-text">
+            Book Your Consultation
+          </h2>
+          
+          <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-4">
+              <input 
+                type="text" 
+                placeholder="Your Name" 
+                class="w-full p-5 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary transition-all duration-300 font-medium"
+              >
+              <input 
+                type="tel" 
+                placeholder="Phone Number" 
+                class="w-full p-5 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary transition-all duration-300 font-medium"
+              >
+            </div>
+            
+            <input 
+              type="email" 
+              placeholder="Email Address" 
+              class="w-full p-5 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary transition-all duration-300 font-medium"
+            >
+            
+            <select class="w-full p-5 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary transition-all duration-300 font-medium">
+              <option>Choose Your Service</option>
+              <option>Residential Fencing</option>
+              <option>Commercial Fencing</option>
+              <option>Security Fencing</option>
+              <option>Fence Repair</option>
+              <option>Custom Design</option>
+            </select>
+            
+            <textarea 
+              placeholder="Tell us about your project..." 
+              rows="4"
+              class="w-full p-5 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary transition-all duration-300 resize-none font-medium"
+            ></textarea>
+            
+            <button type="submit" class="w-full btn-primary rounded-xl text-xl py-5 shadow-xl">
+              Schedule Free Consultation
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section-padding why-choose-bg text-white  relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary/20 to-transparent"></div>
+    </div>
+    
+    <div class="container-custom text-center relative">
+      <h2 class="text-5xl font-black text-black  mb-6">How It Works</h2>
+      <p class="text-xl text-black mb-20 max-w-3xl mx-auto font-medium">
+        Simple steps to get your perfect fence installed by professionals
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Step 1 -->
+        <div class="text-center bg-[#2F302F] p-8 rounded-2xl">
+          <div class="bg-white  w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
+            <i class="fas fa-calendar-check text-4xl text-black"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-6">1. Schedule Consultation</h3>
+          <p class="text-gray-300 leading-relaxed font-medium text-lg">
+            Book a free consultation where we assess your property and discuss your fencing needs, preferences, and budget.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center bg-[#2F302F]  p-8 rounded-2xl">
+          <div class="bg-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
+            <i class="fas fa-ruler-combined text-4xl text-black "></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-6">2. Design & Quote</h3>
+          <p class="text-gray-300 leading-relaxed font-medium text-lg">
+            We create a custom design plan and provide you with a detailed quote including materials and installation timeline.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+    <div class="text-center bg-[#2F302F]  p-8 rounded-2xl">
+          <div class="bg-white  w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
+            <i class="fas fa-tools text-4xl text-black "></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-6">3. Professional Installation</h3>
+          <p class="text-gray-300 leading-relaxed font-medium text-lg">
+            Our certified team installs your fence with precision, ensuring quality workmanship and complete satisfaction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding about-overlay  relative">
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-20 items-center relative z-10">
+        <!-- Image -->
+        <div class="relative">
+          <img 
+            src="https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
+            alt="Professional Fencing Team" 
+            class="w-full h-[500px] object-cover border-4 border-white"
+          >
+          <div class="absolute -bottom-8 -right-8 bg-gradient-to-br from-primary to-green-600 text-white p-10 rounded-3xl shadow-2xl">
+            <div class="text-center">
+              <div class="text-4xl font-black">15+</div>
+              <div class="text-sm font-semibold">Years of Excellence</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="space-y-8">
+          <div>
+            <h2 class="text-5xl font-black text-black mb-8">
+              Your Trusted <span class="gradient-text">Fencing Experts</span>
+            </h2>
+            <p class="text-gray-700 text-xl leading-relaxed mb-8 font-medium">
+              With over 15 years of experience, Landmark Fencing has been transforming properties across the region with premium fencing solutions. 
+            </p>
+          </div>
+
+          <!-- Key Features -->
+          <div class="space-y-6">
+            <div class="feature-box">
+              <div class="flex items-start space-x-5">
+                <div class="bg-primary w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <i class="fas fa-check text-white text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-xl mb-3">Premium Materials</h4>
+                  <p class="text-gray-600 font-medium">We source only the highest quality materials from trusted suppliers, ensuring your fence stands the test of time.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="feature-box">
+              <div class="flex items-start space-x-5">
+                <div class="bg-primary w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <i class="fas fa-check text-white text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-xl mb-3">Expert Installation</h4>
+                  <p class="text-gray-600 font-medium">Our certified professionals handle every aspect of installation with precision and attention to detail.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="feature-box">
+              <div class="flex items-start space-x-5">
+                <div class="bg-primary w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <i class="fas fa-check text-white text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-xl mb-3">Lifetime Warranty</h4>
+                  <p class="text-gray-600 font-medium">We stand behind our work with comprehensive warranties on both materials and craftsmanship.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-primary rounded-xl shadow-xl">
+            Read More About Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section-padding services-bg ">
+    <div class="container-custom">
+      <div class="text-center mb-20">
+        <h2 class="text-5xl font-black mb-6 text-[#2F302F]">Our Services</h2>
+        <p class="text-xl text-[#2F302F]max-w-3xl mx-auto font-medium">
+          From residential privacy fences to commercial security solutions, we offer comprehensive fencing services
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Service 1 -->
+        <div class="service-card group">
+          <img src="https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Residential Fencing" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="service-overlay">
+            <h3 class="text-2xl font-bold mb-3">Residential Fencing</h3>
+            <p class="text-sm mb-6 opacity-90">Beautiful and functional fencing solutions for your home, enhancing privacy and curb appeal.</p>
+            <button class="bg-white text-[#2F302F]  font-bold text-sm px-6 py-3 shadow-lg">Read More</button>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card group">
+          <img src="https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Residential Fencing" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="service-overlay">
+            <h3 class="text-2xl font-bold mb-3">Residential Fencing</h3>
+            <p class="text-sm mb-6 opacity-90">Beautiful and functional fencing solutions for your home, enhancing privacy and curb appeal.</p>
+            <button class="bg-white text-[#2F302F]  font-bold text-sm px-6 py-3 shadow-lg">Read More</button>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+         <div class="service-card group">
+          <img src="https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Residential Fencing" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="service-overlay">
+            <h3 class="text-2xl font-bold mb-3">Residential Fencing</h3>
+            <p class="text-sm mb-6 opacity-90">Beautiful and functional fencing solutions for your home, enhancing privacy and curb appeal.</p>
+            <button class="bg-white text-[#2F302F]  font-bold text-sm px-6 py-3 shadow-lg">Read More</button>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+         <div class="service-card group">
+          <img src="https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Residential Fencing" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="service-overlay">
+            <h3 class="text-2xl font-bold mb-3">Residential Fencing</h3>
+            <p class="text-sm mb-6 opacity-90">Beautiful and functional fencing solutions for your home, enhancing privacy and curb appeal.</p>
+            <button class="bg-white text-[#2F302F]  font-bold text-sm px-6 py-3 shadow-lg">Read More</button>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+         <div class="service-card group">
+          <img src="https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Residential Fencing" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="service-overlay">
+            <h3 class="text-2xl font-bold mb-3">Residential Fencing</h3>
+            <p class="text-sm mb-6 opacity-90">Beautiful and functional fencing solutions for your home, enhancing privacy and curb appeal.</p>
+            <button class="bg-white text-[#2F302F]  font-bold text-sm px-6 py-3 shadow-lg">Read More</button>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card group">
+          <img src="https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Residential Fencing" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="service-overlay">
+            <h3 class="text-2xl font-bold mb-3">Residential Fencing</h3>
+            <p class="text-sm mb-6 opacity-90">Beautiful and functional fencing solutions for your home, enhancing privacy and curb appeal.</p>
+            <button class="bg-white text-[#2F302F]  font-bold text-sm px-6 py-3 shadow-lg">Read More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Why Choose Us -->
+  <section class="section-padding bg-[#2F302F] text-white section-border relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute bottom-0 right-0 w-full h-full bg-gradient-to-l from-primary/20 to-transparent"></div>
+    </div>
+    
+    <div class="container-custom relative">
+      <div class="text-center mb-20">
+        <h2 class="text-5xl font-black mb-6">Why Choose Landmark Fencing?</h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto font-medium">
+          We deliver exceptional fencing solutions backed by years of experience and commitment to quality
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Reason 1 -->
+        <div class="text-center bg-white p-10 rounded-2xl border-2 border-[#295E29]">
+          <div class="w-32 h-32 bg-gradient-to-br from-white to-gray-200 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
+            <i class="fas fa-users text-primary text-4xl"></i>
+          </div>
+          <h3 class="text-3xl text-black font-bold mb-6">Expert Team</h3>
+          <p class="text-[#2F302F] leading-relaxed font-medium text-lg">
+            Our certified professionals have decades of combined experience in fencing installation and are committed to delivering exceptional craftsmanship on every project.
+          </p>
+        </div>
+
+        <!-- Reason 2 -->
+        <div class="text-center bg-white  p-10  border-2 border-[#295E29] rounded-2xl">
+          <div class="w-32 h-32 bg-gradient-to-br from-white to-gray-200 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
+            <i class="fas fa-gem text-primary text-4xl"></i>
+          </div>
+          <h3 class="text-3xl text-black  font-bold mb-6">Premium Materials</h3>
+          <p class="text-[#2F302F] leading-relaxed font-medium text-lg">
+            We source only the finest materials from trusted manufacturers, ensuring your fence not only looks great but also withstands the test of time and weather.
+          </p>
+        </div>
+
+        <!-- Reason 3 -->
+        <div class="text-center bg-white p-10 rounded-2xl border-2 border-[#295E29]">
+          <div class="w-32 h-32 bg-gradient-to-br from-white to-gray-200 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
+            <i class="fas fa-star text-primary text-4xl"></i>
+          </div>
+          <h3 class="text-3xl text-black font-bold mb-6">Outstanding Service</h3>
+          <p class="text-[#2F302F] leading-relaxed font-medium text-lg">
+            From initial consultation to project completion and beyond, we provide personalized service and support to ensure your complete satisfaction with our work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Video Section -->
+  <section class="section-padding  bg-gray-50" id="video">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-20 items-center">
+        <!-- Content -->
+        <div class="space-y-8">
+          <h2 class="text-5xl font-black text-black">
+            See Our <span class="gradient-text">Craftsmanship</span> in Action
+          </h2>
+          <p class="text-gray-700 text-xl leading-relaxed font-medium">
+            Watch how our experienced team transforms properties with precision installation and attention to detail. From planning to completion, we ensure every project meets our high standards.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex items-center space-x-6 p-4 bg-white rounded-xl shadow-md">
+              <i class="fas fa-medal text-primary text-2xl"></i>
+              <span class="text-xl font-semibold">Award-winning craftsmanship</span>
+            </div>
+            <div class="flex items-center space-x-6 p-4 bg-white rounded-xl shadow-md">
+              <i class="fas fa-clock text-primary text-2xl"></i>
+              <span class="text-xl font-semibold">On-time project completion</span>
+            </div>
+            <div class="flex items-center space-x-6 p-4 bg-white rounded-xl shadow-md">
+              <i class="fas fa-shield-alt text-primary text-2xl"></i>
+              <span class="text-xl font-semibold">Fully licensed and insured</span>
+            </div>
+          </div>
+
+          <button class="btn-primary rounded-xl shadow-xl">
+            <i class="fas fa-play mr-3"></i>
+            Watch Full Portfolio
+          </button>
+        </div>
+
+        <!-- Video -->
+        <div class="relative">
+          <div class="bg-gray-300 rounded-3xl overflow-hidden aspect-video shadow-2xl border-4 border-white">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Fencing Installation Process"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+ 
+  <!-- Testimonial -->
+  <section class="section-padding bg-[#EBD6CF] relative">
+    <div class="absolute inset-0 bg-white/40"></div>
+    <div class="container-custom">
+      <div class="text-center mb-20 relative z-10">
+        <h2 class="text-5xl font-black mb-6 text-black">What Our Clients Say</h2>
+        <p class="text-xl text-gray-600 font-medium">Real feedback from satisfied customers</p>
+      </div>
+
+      <div class="max-w-5xl mx-auto relative z-10">
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left text-xl"></i>
+          </div>
+          
+          <div class="text-center">
+            <p class="text-xl text-gray-700 leading-relaxed mb-10 italic font-medium">
+              "Landmark Fencing exceeded our expectations in every way. From the initial consultation to the final installation, their team was professional, knowledgeable, and efficient. The quality of workmanship is outstanding, and our new fence has completely transformed our property. I highly recommend their services to anyone looking for premium fencing solutions."
+            </p>
+            
+            <div class="flex items-center justify-center space-x-6">
+              <div class="w-20 h-20 bg-gradient-to-br from-primary to-green-600 rounded-full flex items-center justify-center text-black  text-2xl font-bold shadow-xl">
+                JB
+              </div>
+              <div class="text-left">
+                <h4 class="font-black text-2xl">Joseph Barber</h4>
+                <p class="text-gray-600 font-semibold text-lg">Residential Client</p>
+                <div class="flex text-yellow-400 mt-2 text-xl">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-white text-black relative overflow-hidden">
+    <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+    <div class="floating-decoration top-10 right-10"></div>
+    <div class="floating-decoration bottom-20 left-20" style="animation-delay: -3s;"></div>
+    
+    <div class="container-custom relative">
+      <div class="text-center">
+        <h2 class="text-5xl md:text-4xl font-black mb-8">
+          Ready to Transform Your Property?
+        </h2>
+        <p class="text-xl mb-12 max-w-3xl mx-auto opacity-95 font-medium">
+          Join hundreds of satisfied customers who trust us for their fencing needs. Get your free consultation today!
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          <button class="glass-effect text-primary px-10 py-5 rounded-xl font-bold text-xl hover:bg-white hover:text-primary transition-all duration-300 shadow-2xl">
+            <i class="fas fa-calculator mr-3"></i>
+            Get Free Quote
+          </button>
+          <a href="tel:+15551234567" class="flex bg-[#2F302F] items-center space-x-4 border-3 border-white text-white px-10 py-5 rounded-xl font-bold text-xl  transition-all duration-300 shadow-2xl">
+            <i class="fas fa-phone"></i>
+            <span>(555) 123-4567</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+          <div class="bg-white p-8 rounded-2xl">
+            <i class="fas fa-shipping-fast text-5xl mb-6 opacity-90"></i>
+            <h3 class="font-bold text-xl mb-4">Fast Installation</h3>
+            <p class="opacity-90 font-medium">Most projects completed within 2-3 days</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl">
+<i class="fas fa-star text-black  text-5xl mb-6 opacity-90"></i>
+            <h3 class="font-bold text-xl mb-4">Warranty Included</h3>
+            <p class="opacity-90 font-medium">Comprehensive warranty on all work</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl">
+            <i class="fas fa-dollar-sign text-5xl mb-6 opacity-90"></i>
+            <h3 class="font-bold text-xl mb-4">Competitive Pricing</h3>
+            <p class="opacity-90 font-medium">Best value for premium quality</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#2F302F] text-white pt-20 pb-10  relative">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="container-custom">
+      <div class="grid md:grid-cols-4 gap-12 mb-16 relative z-10">
+        <!-- Company Info -->
+        <div class="md:col-span-2">
+         <div class="flex items-center space-x-4 mb-8">
+  <!-- Logo inside a rounded background -->
+  <div class="w-[140px] h-[120px] bg-whtie  rounded-full flex items-center justify-center shadow-xl overflow-hidden">
+    <img src="assets/images/logo2.png" alt="Landmark Fencing Logo" class="w-[100%] h-[100%] object-contain rounded-full" />
+  </div>
+
+  <!-- Title and Subtitle -->
+  <div>
+    <h3 class="text-3xl font-black">Landmark Fencing</h3>
+    <p class="text-gray-400 font-semibold">Professional Fencing Services</p>
+  </div>
+</div>
+
+          <p class="text-gray-300 leading-relaxed mb-8 max-w-md font-medium text-lg">
+            Transform your property with premium fencing solutions. Our expert team delivers quality, durability, and style that lasts for decades. Contact us today for your free consultation.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="bg-white text-black  w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-2xl font-bold mb-8 text-white ">Quick Links</h4>
+          <ul class="space-y-4">
+            <li><a href="#home" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Home</a></li>
+            <li><a href="#about" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">About Us</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Our Services</a></li>
+            <li><a href="#gallery" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Gallery</a></li>
+            <li><a href="#contact" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Contact</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Privacy Policy </a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Cookie Policy</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-2xl font-bold mb-8 text-white ">Get in Touch</h4>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <i class="fas fa-map-marker-alt text-primary mt-2 text-xl"></i>
+              <div>
+                <p class="text-gray-300 font-medium text-lg">123 Main Street<br>Your City, ST 12345</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-phone text-primary text-xl"></i>
+              <p class="text-gray-300 font-medium text-lg">(555) 123-4567</p>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-envelope text-primary text-xl"></i>
+              <p class="text-gray-300 font-medium text-lg">info@landmarkfencing.com</p>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h5 class="font-bold mb-4 text-lg">Business Hours</h5>
+            <p class="text-gray-300 font-medium">Monday - Friday: 8:00 AM - 6:00 PM</p>
+            <p class="text-gray-300 font-medium">Saturday: 9:00 AM - 5:00 PM</p>
+            <p class="text-gray-300 font-medium">Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t-2 border-gray-700 pt-10 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+          <p class="text-gray-400 font-medium text-lg">© 2025 Landmark Fencing. All Rights Reserved.</p>
+           <p class="text-gray-400 font-medium text-lg">Designed & Developed By <a href="https://kyleinfotech.co.in/" class="text-white">Kyle Infotech</a></p>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Form validation with enhanced styling
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Create and show success message
+      const successMessage = document.createElement('div');
+      successMessage.innerHTML = `
+        <div class="fixed top-4 right-4 bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-xl shadow-2xl z-50 max-w-sm">
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-check-circle text-2xl"></i>
+            <div>
+              <h4 class="font-bold text-lg">Success!</h4>
+              <p class="text-sm opacity-90">We'll contact you within 24 hours to schedule your free consultation.</p>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      document.body.appendChild(successMessage);
+      
+      // Remove message after 5 seconds
+      setTimeout(() => {
+        successMessage.remove();
+      }, 5000);
+      
+      // Reset form
+      this.reset();
+    });
+
+    // Enhanced navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 100) {
+        navbar.classList.add('navbar-scroll');
+        navbar.classList.remove('bg-white');
+      } else {
+        navbar.classList.remove('navbar-scroll');
+        navbar.classList.add('bg-white');
+      }
+    });
+
+    // Parallax effect for floating decorations
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const decorations = document.querySelectorAll('.floating-decoration');
+      
+      decorations.forEach((decoration, index) => {
+        const speed = 0.5 + (index * 0.2);
+        decoration.style.transform = `translateY(${scrolled * speed}px)`;
+      });
+    });
+
+    // Add loading animation to buttons
+    document.querySelectorAll('.btn-primary, .btn-outline').forEach(button => {
+      button.addEventListener('click', function(e) {
+        if (this.type === 'submit') return; // Skip for form submissions
+        
+        // Add loading state
+        const originalText = this.innerHTML;
+        this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Loading...';
+        this.disabled = true;
+        
+        // Simulate loading
+        setTimeout(() => {
+          this.innerHTML = originalText;
+          this.disabled = false;
+        }, 2000);
+      });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all cards and sections
+    document.querySelectorAll('.card, .service-card, .testimonial-card, .process-step').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Add CSS for fade-in animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .animate-fade-in {
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+
+</body>
+</html>

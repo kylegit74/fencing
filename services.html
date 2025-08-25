@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Fencing Installation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .raleway {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px #295E29, 0 0 10px #295E29; }
+      50% { box-shadow: 0 0 20px #295E29, 0 0 40px #295E29; }
+      100% { box-shadow: 0 0 5px #295E29, 0 0 10px #295E29; }
+    }
+    .animate-glow {
+      animation: glow 2s infinite ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .animate-slide-left {
+      animation: slideInLeft 0.8s ease-out;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .animate-slide-right {
+      animation: slideInRight 0.8s ease-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .animate-pulse-custom {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .timeline-item {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .timeline-item.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-line {
+      background: linear-gradient(180deg, #295E29 0%, #4ade80 50%, #295E29 100%);
+    }
+
+    .service-card {
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(41, 94, 41, 0.2);
+    }
+
+    .service-image {
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover .service-image {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      
+      .timeline-item .w-1\/2 {
+        width: 100% !important;
+        padding-left: 2rem !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+      }
+      
+      .timeline-item .w-1\/2:first-child {
+        padding-right: 2rem !important;
+        padding-left: 0 !important;
+      }
+    }
+    .footer-bg {
+      background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(41, 94, 41, 0.8) 50%, rgba(26, 26, 26, 0.95) 100%), 
+                  url('https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    }
+    
+     .container-custom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+     .about-overlay {
+      background: linear-gradient(135deg, rgba(41, 94, 41, 0.05) 0%, rgba(255, 255, 255, 0.95) 50%, rgba(41, 94, 41, 0.1) 100%), 
+                  url('https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full h-[130px] bg-white z-50"
+    style="clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);">
+    
+    <!-- Header container -->
+    <div class="max-w-[75vw] mx-auto h-full flex justify-between items-center relative z-10">
+      <!-- Left Navigation -->
+      <nav class="hidden md:flex space-x-6 text-black uppercase font-bold">
+        <a href="index.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Home</a>
+        <a href="about.html" class="header-link text-[#295E29] transition-all duration-300 hover:scale-110">About Us</a>
+        <a href="services.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Our Services</a>
+        <a href="gallery.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Projects</a>
+      </nav>
+
+      <!-- Center Logo -->
+ <div class="relative  flex justify-center items-center mx-auto">
+  <div class="h-[120px] w-[130px] rounded-full overflow-hidden border-4 border-white shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl flex items-center justify-center">
+    <img src="assets/images/logoheader.png" 
+         alt="Landmark Fencing"
+         class="h-[60%] w-[120%] "/>
+  </div>
+</div>
+
+
+
+
+
+      <!-- Right Navigation -->
+      <nav class="hidden md:flex space-x-6 text-black  uppercase font-bold">
+        <a href="contact.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Contacts</a>
+        <a href="blog.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Blog</a>
+      </nav>
+
+      <!-- Button -->
+      <a href="#contact"
+        class="hidden md:block bg-[#295E29] ml-[20px] text-white px-4 py-2 rounded hover:bg-[#1e4a1e] hover:text-white transition-all duration-300 font-bold btn-hover transform hover:scale-105">
+        GET A FREE QUOTE
+      </a>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center bg-no-repeat mt-[100px]" style="background-image: url('/assets/images/bannerimage.jpg');">
+    <div class="absolute inset-0 bg-white/85"></div>
+    <div class="relative max-w-[79vw] mx-auto py-20 flex flex-col items-center justify-center text-center">
+      <div class="text-[#295E29] animate-fade-in-up">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-black raleway">
+          Our Professional Services
+        </h1>
+        <p class="mb-8 text-xl text-[#295E29] max-w-3xl mx-auto raleway font-semibold">
+          From residential garden fencing to commercial security installations, we provide comprehensive fencing solutions tailored to your specific needs with premium materials and expert craftsmanship.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <button class="bg-[#295E29] text-white px-8 py-3 text-lg font-bold hover:bg-green-700 transition raleway transform hover:scale-105">
+            VIEW ALL SERVICES
+          </button>
+          <button class="border-2 border-[#295E29] text-[#295E29] px-8 py-3 text-lg font-bold hover:bg-[#295E29] hover:text-white transition raleway transform hover:scale-105">
+            GET FREE QUOTE
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About our services -->
+  <section class="bg-white py-16 w-full flex items-center justify-center min-h-screen">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-10">
+      
+      <!-- Left: Image -->
+      <div class="w-full md:w-[40%] flex justify-center">
+        <img src="/assets/images/aboutussectionimage.jpg" alt="Fencing Example" class="rounded shadow-md border-[15px] w-[500px] h-[500px] border-[#295E29]">
+      </div>
+
+      <!-- Right: Text Content -->
+      <div class="w-full md:w-1/2">
+        <p class="text-2xl text-[#295E29] font-semibold mb-2 raleway">Expert Fence Installation</p>
+        <h2 class="text-2xl md:text-4xl font-bold text-black leading-tight mb-4 raleway">
+          Your choice of fencing contractors in Lorem Ipsum and beyond
+        </h2>
+        <p class="text-gray-600 font-bold text-[16px] mb-6 raleway">
+          Everything you need for the perfect fencing installation—premium fencing at competitive prices.
+          Whatever your fencing needs, we ensure everything is installed quickly and professionally. Using
+          high-grade materials, we assure our fence systems, posts, gates, and everything else are of superior quality,
+          approved by local authorities.
+        </p>
+        <p class="text-gray-600 font-bold text-[16px] mb-6 raleway">
+          Everything you need for the perfect fencing installation—premium fencing at competitive prices. Whatever your fencing
+          needs, we ensure everything is installed quickly and professionally.
+        </p>
+        <button class="bg-[#295E29] raleway text-white px-6 py-2 font-semibold rounded-[1px] hover:bg-green-600 transition">
+          Contact us
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Services Timeline Section -->
+  <section class="bg-gray-50 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold text-[#295E29] raleway mb-4 animate-fade-in-up">Complete Fencing Solutions</h2>
+        <p class="text-gray-600 text-xl raleway animate-fade-in-up">Professional services designed for your every fencing need</p>
+      </div>
+
+      <!-- Timeline Container -->
+      <div class="relative">
+        <!-- Main Timeline Line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-2 timeline-line rounded-full" style="height: 100%;"></div>
+
+        <!-- Timeline Items -->
+        <div class="space-y-24">
+          <!-- Service 1 - Residential Fencing -->
+          <div class="timeline-item flex items-center relative">
+            <div class="w-1/2 pr-12 text-right animate-slide-left">
+              <div class="service-card bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-l-4 border-[#295E29] overflow-hidden">
+                <div class="relative">
+                  <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Residential Fencing" class="service-image w-full h-[300px] object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-4 left-4">
+                    <span class="bg-[#295E29] text-white px-3 py-1 rounded-full text-sm font-bold raleway">01</span>
+                  </div>
+                </div>
+                <div class="p-8">
+                  <h3 class="text-2xl font-bold raleway text-[#295E29] mb-4">Residential Fencing</h3>
+                  <p class="text-gray-600 font-semibold text-base mb-6 raleway leading-relaxed">
+                    Enhance your home's privacy, security, and curb appeal with our premium residential fencing solutions designed for lasting beauty and functionality.
+                  </p>
+                  <div class="grid grid-cols-2 gap-2 mb-6">
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Privacy Fencing
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Garden Fencing
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Pool Fencing
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Decorative Fencing
+                    </span>
+                  </div>
+                  <button class="bg-[#295E29] text-white px-6 py-3 font-bold hover:bg-green-600 transition raleway rounded-lg transform hover:scale-105 w-full">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-green-100 border-4 border-[#295E29] rounded-full flex items-center justify-center animate-glow z-10">
+              <i class="fas fa-home text-[#295E29] text-xl"></i>
+            </div>
+            <div class="w-1/2 pl-12"></div>
+          </div>
+
+          <!-- Service 2 - Commercial Fencing -->
+          <div class="timeline-item flex items-center relative">
+            <div class="w-1/2 pr-12"></div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-green-100 border-4 border-[#295E29] rounded-full flex items-center justify-center animate-glow z-10">
+              <i class="fas fa-building text-[#295E29] text-xl"></i>
+            </div>
+            <div class="w-1/2 pl-12 animate-slide-right">
+              <div class="service-card bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-r-4 border-[#295E29] overflow-hidden">
+                <div class="relative">
+                  <img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Commercial Fencing" class="service-image w-full h-[300px] object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-4 left-4">
+                    <span class="bg-[#295E29] text-white px-3 py-1 rounded-full text-sm font-bold raleway">02</span>
+                  </div>
+                </div>
+                <div class="p-8">
+                  <h3 class="text-2xl font-bold raleway text-[#295E29] mb-4">Commercial Fencing</h3>
+                  <p class="text-gray-600 font-semibold text-base mb-6 raleway leading-relaxed">
+                    Secure your business premises with durable, professional-grade commercial fencing systems that provide maximum protection and professional appearance.
+                  </p>
+                  <div class="grid grid-cols-2 gap-2 mb-6">
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Security Fencing
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Industrial Fencing
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Perimeter Fencing
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Access Control
+                    </span>
+                  </div>
+                  <button class="bg-[#295E29] text-white px-6 py-3 font-bold hover:bg-green-600 transition raleway rounded-lg transform hover:scale-105 w-full">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 - Wood Fencing -->
+          <div class="timeline-item flex items-center relative">
+            <div class="w-1/2 pr-12 text-right animate-slide-left">
+              <div class="service-card bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-l-4 border-[#295E29] overflow-hidden">
+                <div class="relative">
+                  <img src="https://images.pexels.com/photos/1396127/pexels-photo-1396127.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wood Fencing" class="service-image w-full h-[300px] object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-4 left-4">
+                    <span class="bg-[#295E29] text-white px-3 py-1 rounded-full text-sm font-bold raleway">03</span>
+                  </div>
+                </div>
+                <div class="p-8">
+                  <h3 class="text-2xl font-bold raleway text-[#295E29] mb-4">Wood Fencing</h3>
+                  <p class="text-gray-600 font-semibold text-base mb-6 raleway leading-relaxed">
+                    Classic wooden fences that bring natural beauty and warmth to your property with exceptional durability and timeless appeal that never goes out of style.
+                  </p>
+                  <div class="grid grid-cols-2 gap-2 mb-6">
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Cedar Fencing
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Pine Fencing
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Picket Fencing
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Custom Designs
+                    </span>
+                  </div>
+                  <button class="bg-[#295E29] text-white px-6 py-3 font-bold hover:bg-green-600 transition raleway rounded-lg transform hover:scale-105 w-full">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-green-100 border-4 border-[#295E29] rounded-full flex items-center justify-center animate-glow z-10">
+              <i class="fas fa-tree text-[#295E29] text-xl"></i>
+            </div>
+            <div class="w-1/2 pl-12"></div>
+          </div>
+
+          <!-- Service 4 - Metal Fencing -->
+          <div class="timeline-item flex items-center relative">
+            <div class="w-1/2 pr-12"></div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-green-100 border-4 border-[#295E29] rounded-full flex items-center justify-center animate-glow z-10">
+              <i class="fas fa-tools text-[#295E29] text-xl"></i>
+            </div>
+            <div class="w-1/2 pl-12 animate-slide-right">
+              <div class="service-card bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-r-4 border-[#295E29] overflow-hidden">
+                <div class="relative">
+                  <img src="https://images.pexels.com/photos/1396125/pexels-photo-1396125.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Metal Fencing" class="service-image w-full h-[300px] object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-4 left-4">
+                    <span class="bg-[#295E29] text-white px-3 py-1 rounded-full text-sm font-bold raleway">04</span>
+                  </div>
+                </div>
+                <div class="p-8">
+                  <h3 class="text-2xl font-bold raleway text-[#295E29] mb-4">Metal Fencing</h3>
+                  <p class="text-gray-600 font-semibold text-base mb-6 raleway leading-relaxed">
+                    Strong, modern metal fencing solutions offering maximum security with minimal maintenance requirements and sleek aesthetics that complement any property.
+                  </p>
+                  <div class="grid grid-cols-2 gap-2 mb-6">
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Aluminum Fencing
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Steel Fencing
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Wrought Iron
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Chain Link
+                    </span>
+                  </div>
+                  <button class="bg-[#295E29] text-white px-6 py-3 font-bold hover:bg-green-600 transition raleway rounded-lg transform hover:scale-105 w-full">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5 - Repair & Custom Design -->
+          <div class="timeline-item flex items-center relative">
+            <div class="w-1/2 pr-12 text-right animate-slide-left">
+              <div class="service-card bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-l-4 border-[#295E29] overflow-hidden">
+                <div class="relative">
+                  <img src="https://images.pexels.com/photos/1396130/pexels-photo-1396130.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Repair & Custom Design" class="service-image w-full h-[300px] object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-4 left-4">
+                    <span class="bg-[#295E29] text-white px-3 py-1 rounded-full text-sm font-bold raleway">05</span>
+                  </div>
+                </div>
+                <div class="p-8">
+                  <h3 class="text-2xl font-bold raleway text-[#295E29] mb-4">Repair & Custom Design</h3>
+                  <p class="text-gray-600 font-semibold text-base mb-6 raleway leading-relaxed">
+                    Professional repair services and unique custom-designed solutions tailored to your specific requirements and vision, bringing your fencing dreams to life.
+                  </p>
+                  <div class="grid grid-cols-2 gap-2 mb-6">
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Post Replacement
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Panel Repair
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>3D Visualization
+                    </span>
+                    <span class="flex items-center text-sm text-[#295E29] raleway font-semibold">
+                      <i class="fas fa-check-circle text-[#295E29] mr-2"></i>Custom Installation
+                    </span>
+                  </div>
+                  <button class="bg-[#295E29] text-white px-6 py-3 font-bold hover:bg-green-600 transition raleway rounded-lg transform hover:scale-105 w-full">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-green-100 border-4 border-[#295E29] rounded-full flex items-center justify-center animate-glow z-10">
+              <i class="fas fa-magic text-[#295E29] text-xl"></i>
+            </div>
+            <div class="w-1/2 pl-12"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Our Services -->
+  <section class="about-overlay  py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold raleway text-[#295E29]">Why Choose Our Services?</h2>
+      <p class="mt-2 raleway text-[18px] font-bold text-gray-700">
+        Professional expertise and quality materials for every fencing project
+      </p>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 mt-20">
+      <div class="border-[2px] border-[#295E29] p-6 text-center bg-white hover:bg-gray-50 transition duration-300 shadow-lg">
+        <div class="w-16 h-16 mx-auto mb-4 bg-[#295E29] flex items-center justify-center rounded shadow mt-[-60px]">
+          <i class="fas fa-award text-white text-2xl"></i>
+        </div>
+        <h3 class="font-semibold mb-2 raleway text-[23px] text-[#295E29]">Premium Materials</h3>
+        <p class="text-[18px] text-gray-600 raleway">
+          We use only the highest quality materials from trusted suppliers, ensuring your fence stands the test of time with minimal maintenance requirements.
+        </p>
+      </div>
+      <div class="border-[2px] border-[#295E29] p-6 text-center bg-white hover:bg-gray-50 transition duration-300 shadow-lg">
+        <div class="w-16 h-16 mx-auto mb-4 bg-[#295E29] flex items-center justify-center rounded shadow mt-[-60px]">
+          <i class="fas fa-users text-white text-2xl"></i>
+        </div>
+        <h3 class="font-semibold mb-2 raleway text-[23px] text-[#295E29]">Expert Installation</h3>
+        <p class="text-[18px] text-gray-600 raleway">
+          Our certified installation team has years of experience and follows industry best practices to ensure perfect installation every time.
+        </p>
+      </div>
+      <div class="border-[2px] border-[#295E29] p-6 text-center bg-white hover:bg-gray-50 transition duration-300 shadow-lg">
+        <div class="w-16 h-16 mx-auto mb-4 bg-[#295E29] flex items-center justify-center rounded shadow mt-[-60px]">
+          <i class="fas fa-shield-alt text-white text-2xl"></i>
+        </div>
+        <h3 class="font-semibold mb-2 raleway text-[23px] text-[#295E29]">Warranty Protection</h3>
+        <p class="text-[18px] text-gray-600 raleway">
+          All our services come with comprehensive warranty coverage, giving you peace of mind and protection for your investment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="bg-[#2F302F] text-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold raleway mb-4">Our Project Process</h2>
+        <p class="text-lg opacity-90 raleway">
+          From consultation to completion, we ensure a smooth and professional experience
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center fade-in-up bg-white py-6 px-2">
+          <div class="w-20 h-20 mx-auto mb-6 bg-[#295E29] rounded-full flex items-center justify-center ">
+            <i class="fas fa-comments text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold raleway mb-3 text-black ">1. Consultation</h3>
+          <p class=" raleway font-bold raleway mb-3 text-black">Free site survey and detailed project discussion</p>
+        </div>
+
+        <div class="text-center bg-white  fade-in-up py-6 px-2" style="animation-delay: 0.1s;">
+          <div class="w-20 h-20 mx-auto mb-6 bg-[#295E29] rounded-full flex items-center justify-center ">
+            <i class="fas fa-drafting-compass text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold raleway mb-3 text-black">2. Design</h3>
+          <p class=" font-bold mb-3 text-black raleway">Custom design solution tailored to your needs</p>
+        </div>
+
+        <div class="text-center bg-white  fade-in-up py-6 px-2" style="animation-delay: 0.2s;">
+          <div class="w-20 h-20 mx-auto mb-6 bg-[#295E29] rounded-full flex items-center justify-center ">
+            <i class="fas fa-file-contract text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold raleway mb-3 text-black">3. Quote</h3>
+          <p class="font-bold mb-3 text-black raleway">Transparent pricing with no hidden costs</p>
+        </div>
+
+        <div class="text-center bg-white  fade-in-up py-6 px-2" style="animation-delay: 0.3s;">
+          <div class="w-20 h-20 mx-auto mb-6 bg-[#295E29] rounded-full flex items-center justify-center ">
+            <i class="fas fa-tools text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold raleway mb-3 text-black">4. Installation</h3>
+          <p class="font-bold mb-3 text-black raleway">Professional installation by certified experts</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Call to Action Section -->
+  <section class="section-padding bg-white text-black relative py-10 overflow-hidden">
+    <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+    <div class="floating-decoration top-10 right-10"></div>
+    <div class="floating-decoration bottom-20 left-20" style="animation-delay: -3s;"></div>
+    
+    <div class="container-custom relative">
+      <div class="text-center">
+        <h2 class="text-4xl  font-black mb-8">
+          Ready to Transform Your Property?
+        </h2>
+        <p class="text-xl mb-12 max-w-3xl mx-auto opacity-95 font-medium">
+          Join hundreds of satisfied customers who trust us for their fencing needs. Get your free consultation today!
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          <button class="glass-effect bg-white text-black  px-10 py-5 rounded-xl font-bold text-xl hover:bg-white hover:text-primary transition-all duration-300 shadow-2xl">
+            <i class="fas fa-calculator mr-3"></i>
+            Get Free Quote
+          </button>
+          <a href="tel:+15551234567" class="flex bg-[#2F302F] items-center space-x-4 border-3 border-white text-white px-10 py-5 rounded-xl font-bold text-xl  transition-all duration-300 shadow-2xl">
+            <i class="fas fa-phone"></i>
+            <span>(555) 123-4567</span>
+          </a>
+        </div>
+
+      
+       
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer -->
+   <!-- Footer -->
+  <footer class="bg-[#2F302F] text-white pt-20 pb-10  relative">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="container-custom">
+      <div class="grid md:grid-cols-4 gap-12 mb-16 relative z-10">
+        <!-- Company Info -->
+        <div class="md:col-span-2">
+         <div class="flex items-center space-x-4 mb-8">
+  <!-- Logo inside a rounded background -->
+  <div class="w-[140px] h-[120px] bg-whtie  rounded-full flex items-center justify-center shadow-xl overflow-hidden">
+    <img src="assets/images/logo2.png" alt="Landmark Fencing Logo" class="w-[100%] h-[100%] object-contain rounded-full" />
+  </div>
+
+  <!-- Title and Subtitle -->
+  <div>
+    <h3 class="text-3xl font-black">Landmark Fencing</h3>
+    <p class="text-gray-400 font-semibold">Professional Fencing Services</p>
+  </div>
+</div>
+
+          <p class="text-gray-300 leading-relaxed mb-8 max-w-md font-medium text-lg">
+            Transform your property with premium fencing solutions. Our expert team delivers quality, durability, and style that lasts for decades. Contact us today for your free consultation.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="bg-white text-black  w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-2xl font-bold mb-8 text-white ">Quick Links</h4>
+          <ul class="space-y-4">
+            <li><a href="#home" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Home</a></li>
+            <li><a href="#about" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">About Us</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Our Services</a></li>
+            <li><a href="#gallery" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Gallery</a></li>
+            <li><a href="#contact" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Contact</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Privacy Policy </a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Cookie Policy</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-2xl font-bold mb-8 text-white ">Get in Touch</h4>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <i class="fas fa-map-marker-alt text-primary mt-2 text-xl"></i>
+              <div>
+                <p class="text-gray-300 font-medium text-lg">123 Main Street<br>Your City, ST 12345</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-phone text-primary text-xl"></i>
+              <p class="text-gray-300 font-medium text-lg">(555) 123-4567</p>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-envelope text-primary text-xl"></i>
+              <p class="text-gray-300 font-medium text-lg">info@landmarkfencing.com</p>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h5 class="font-bold mb-4 text-lg">Business Hours</h5>
+            <p class="text-gray-300 font-medium">Monday - Friday: 8:00 AM - 6:00 PM</p>
+            <p class="text-gray-300 font-medium">Saturday: 9:00 AM - 5:00 PM</p>
+            <p class="text-gray-300 font-medium">Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t-2 border-gray-700 pt-10 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+          <p class="text-gray-400 font-medium text-lg">© 2025 Landmark Fencing. All Rights Reserved.</p>
+           <p class="text-gray-400 font-medium text-lg">Designed & Developed By <a href="https://kyleinfotech.co.in/" class="text-white">Kyle Infotech</a></p>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Loading Screen
+    window.addEventListener('load', () => {
+      const loading = document.getElementById('loading');
+      if (loading) {
+        setTimeout(() => {
+          loading.classList.add('fade-out');
+          setTimeout(() => {
+            loading.style.display = 'none';
+          }, 500);
+        }, 1000);
+      }
+    });
+
+    // Scroll Animation Observer
+    const observerOptions1 = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer1 = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions1);
+
+    // Observe all scroll-animate elements
+    document.addEventListener('DOMContentLoaded', () => {
+      const scrollElements = document.querySelectorAll('.scroll-animate');
+      scrollElements.forEach(el => {
+        observer1.observe(el);
+      });
+    });
+
+    // Animate timeline items on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all timeline items
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      observer.observe(item);
+    });
+
+    // Add mobile responsiveness for timeline
+    function adjustTimelineForMobile() {
+      const timelineItems = document.querySelectorAll('.timeline-item');
+      const isMobile = window.innerWidth < 768;
+      
+      if (isMobile) {
+        timelineItems.forEach((item, index) => {
+          const leftContent = item.querySelector('.w-1\\/2:first-child');
+          const rightContent = item.querySelector('.w-1\\/2:last-child');
+          
+          if (leftContent && rightContent) {
+            // Move all content to the right side for mobile
+            if (index % 2 === 0) {
+              const content = leftContent.innerHTML;
+              rightContent.innerHTML = content;
+              leftContent.innerHTML = '';
+            }
+          }
+        });
+      }
+    }
+
+    // Adjust timeline on load and resize
+    adjustTimelineForMobile();
+    window.addEventListener('resize', adjustTimelineForMobile);
+  </script>
+
+</body>
+</html>

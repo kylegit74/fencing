@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Fencing Installation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Flaticon Solid Rounded Icons -->
+  <link href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  .raleway{
+        font-family: 'Raleway', sans-serif;
+  }
+
+
+    /* Enhanced Glow Animation */
+    @keyframes glow {
+      0% { 
+        box-shadow: 0 0 5px #ffffff, 0 0 10px #fdf5f5, 0 0 15px #000000;
+        transform: scale(1);
+      }
+      50% { 
+        box-shadow: 0 0 20px #ffffff, 0 0 40px #635b5b, 0 0 60px #706868;
+        transform: scale(1.05);
+      }
+      100% { 
+        box-shadow: 0 0 5px #ffe2e2, 0 0 10px #222222, 0 0 15px #ffffff;
+        transform: scale(1);
+      }
+    }
+    .animate-glow {
+      animation: glow 3s infinite ease-in-out;
+    }
+
+    /* Fade In Up Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in-up {
+      animation: fadeInUp 1s ease-out;
+    }
+
+    /* Slide In Left Animation */
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .animate-slide-in-left {
+      animation: slideInLeft 1s ease-out;
+    }
+
+    /* Slide In Right Animation */
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .animate-slide-in-right {
+      animation: slideInRight 1s ease-out;
+    }
+
+    /* Bounce In Animation */
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      70% {
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .animate-bounce-in {
+      animation: bounceIn 1s ease-out;
+    }
+
+    /* Pulse Animation */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .animate-pulse-custom {
+      animation: pulse 2s infinite;
+    }
+
+    /* Float Animation */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Gradient Animation */
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .animate-gradient {
+      background: linear-gradient(-45deg, #295E29, #34a853, #295E29, #1e4a1e);
+      background-size: 400% 400%;
+      animation: gradientShift 4s ease infinite;
+    }
+
+    /* Card Hover Effects */
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .card-hover:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(41, 94, 41, 0.3);
+    }
+
+    /* Button Hover Effects */
+    .btn-hover {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .btn-hover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .btn-hover:hover::before {
+      left: 100%;
+    }
+
+   
+
+    /* Form Input Styles */
+    .form-input {
+      transition: all 0.3s ease;
+      border: 2px solid #e5e7eb;
+    }
+    .form-input:focus {
+      border-color: #295E29;
+      box-shadow: 0 0 0 3px rgba(41, 94, 41, 0.1);
+      transform: scale(1.02);
+    }
+
+    /* Scroll Animation Classes */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+    .scroll-animate.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Icon Spin on Hover */
+    .icon-spin:hover {
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Typewriter Effect */
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    .typewriter {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typewriter 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: #295E29; }
+    }
+
+    /* Parallax Effect */
+    .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #295E29;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #1e4a1e;
+    }
+
+    /* Success Message Animation */
+    @keyframes successPulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .success-message {
+      animation: successPulse 0.5s ease-in-out;
+    }
+
+    .footer-bg {
+      background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(41, 94, 41, 0.8) 50%, rgba(26, 26, 26, 0.95) 100%), 
+                  url('https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    }
+     .container-custom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+     .about-overlay {
+      background: linear-gradient(135deg, rgba(41, 94, 41, 0.05) 0%, rgba(255, 255, 255, 0.95) 50%, rgba(41, 94, 41, 0.1) 100%), 
+                  url('https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    }
+    
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- Header -->
+    <header class="fixed top-0 left-0 w-full h-[130px] bg-white z-50"
+    style="clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);">
+    
+    <!-- Header container -->
+    <div class="max-w-[75vw] mx-auto h-full flex justify-between items-center relative z-10">
+      <!-- Left Navigation -->
+      <nav class="hidden md:flex space-x-6 text-black uppercase font-bold">
+        <a href="index.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Home</a>
+        <a href="about.html" class="header-link text-[#295E29] transition-all duration-300 hover:scale-110">About Us</a>
+        <a href="services.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Our Services</a>
+        <a href="gallery.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Projects</a>
+      </nav>
+
+      <!-- Center Logo -->
+ <div class="relative  flex justify-center items-center mx-auto">
+  <div class="h-[120px] w-[130px] rounded-full overflow-hidden border-4 border-white shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl flex items-center justify-center">
+    <img src="assets/images/logoheader.png" 
+         alt="Landmark Fencing"
+         class="h-[60%] w-[120%] "/>
+  </div>
+</div>
+
+
+
+
+
+      <!-- Right Navigation -->
+      <nav class="hidden md:flex space-x-6 text-black  uppercase font-bold">
+        <a href="contact.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Contacts</a>
+        <a href="blog.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Blog</a>
+      </nav>
+
+      <!-- Button -->
+      <a href="#contact"
+        class="hidden md:block bg-[#295E29] ml-[20px] text-white px-4 py-2 rounded hover:bg-[#1e4a1e] hover:text-white transition-all duration-300 font-bold btn-hover transform hover:scale-105">
+        GET A FREE QUOTE
+      </a>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center bg-no-repeat mt-[100px] " 
+    style="background-image: url('/assets/images/contact.jpg');">
+
+    <!-- Dark overlay (70% opacity) -->
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <div class="relative max-w-[79vw] mx-auto py-20 flex flex-col items-center justify-center text-center">
+      
+      <!-- Hero Content -->
+      <div class="text-white scroll-animate">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white raleway  ">
+          Contact Us Today
+        </h1>
+        <p class="mb-8 text-xl text-white max-w-3xl mx-auto raleway animate-fade-in-up">
+          Ready to transform your property with premium fencing? Get in touch with our expert team for a free consultation and quote.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <a href="#contact-form" class="bg-[#295E29] text-white px-8 py-3 text-lg font-bold hover:bg-green-700 transition-all duration-300 raleway transform hover:scale-105 btn-hover animate-gradient">
+            Get Free Quote 
+          </a>
+          <a href="tel:+12345678" class="flex items-center justify-center space-x-2 border-2 border-white text-white px-8 py-3 text-lg font-bold hover:bg-white hover:text-[#295E29] transition-all duration-300 raleway transform hover:scale-105 btn-hover">
+            <i class="fas fa-phone animate-pulse-custom"></i>
+            <span>012 3456 7890</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Information Section -->
+  <section class="about-overlay  py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12 scroll-animate">
+        <h2 class="text-4xl font-bold text-black raleway mb-4 animate-bounce-in">Get In Touch</h2>
+        <p class="text-[#505050] text-lg raleway animate-fade-in-up">We're here to help with all your fencing needs</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Phone -->
+        <div class="text-center p-6 bg-black  rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 card-hover scroll-animate">
+          <div class="w-20 h-20 bg-[#295E29] text-white text-3xl flex items-center justify-center rounded-full mx-auto mb-4  animate-glow  icon-spin">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white raleway mb-3">Call Us</h3>
+          <p class="text-white raleway mb-3">Speak directly with our experts</p>
+          <a href="tel:+12345678" class="text-white    font-bold text-lg hover:text-green-700 transition-all duration-300">012 3456 7890</a>
+        </div>
+
+        <!-- Email -->
+        <div class="text-center p-6 bg-black rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 card-hover scroll-animate">
+          <div class="w-20 h-20 bg-[#295E29] text-white text-3xl flex items-center justify-center rounded-full mx-auto mb-4 animate-glow icon-spin">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white  raleway mb-3">Email Us</h3>
+          <p class="text-white  raleway mb-3">Send us your requirements</p>
+          <a href="mailto:loremtest@gmail.com" class="text-white  font-bold text-lg  transition-all duration-300">loremtest@gmail.com</a>
+        </div>
+
+        <!-- Location -->
+        <div class="text-center p-6 bg-black  rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 card-hover scroll-animate">
+          <div class="w-20 h-20 bg-[#295E29] text-white text-3xl flex items-center justify-center rounded-full mx-auto mb-4 animate-glow icon-spin">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white  raleway mb-3">Visit Us</h3>
+          <p class="text-white raleway mb-3">Come see our showroom</p>
+          <p class="text-white font-bold text-lg">32 Lorem Rd, Lorem BR2 8BA, United Kingdom</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact-form" class="bg-[#2F302F] text-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        
+        <!-- Left: Contact Form -->
+        <div class="scroll-animate">
+          <h2 class="text-4xl font-bold raleway mb-6 animate-slide-in-left text-glow">Send Us A Message</h2>
+          <p class="text-gray-300 text-lg raleway mb-8 animate-slide-in-left">Fill out the form below and we'll get back to you within 24 hours.</p>
+          
+          <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-white font-bold mb-2 raleway">First Name *</label>
+                <input type="text" name="firstName" required 
+                  class="w-full px-4 py-3 bg-white text-black rounded-lg form-input raleway font-bold"
+                  placeholder="Enter your first name">
+              </div>
+              <div>
+                <label class="block text-white font-bold mb-2 raleway">Last Name *</label>
+                <input type="text" name="lastName" required 
+                  class="w-full px-4 py-3 bg-white text-black rounded-lg form-input raleway font-bold"
+                  placeholder="Enter your last name">
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-white font-bold mb-2 raleway">Email *</label>
+                <input type="email" name="email" required 
+                  class="w-full px-4 py-3 bg-white text-black rounded-lg form-input raleway font-bold"
+                  placeholder="Enter your email">
+              </div>
+              <div>
+                <label class="block text-white font-bold mb-2 raleway">Phone *</label>
+                <input type="tel" name="phone" required 
+                  class="w-full px-4 py-3 bg-white text-black rounded-lg form-input raleway font-bold"
+                  placeholder="Enter your phone number">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-white font-bold mb-2 raleway">Service Needed</label>
+              <select name="service" 
+                class="w-full px-4 py-3 bg-white text-black rounded-lg form-input raleway font-bold">
+                <option value="">Select a service</option>
+                <option value="residential-fencing">Residential Fencing</option>
+                <option value="commercial-fencing">Commercial Fencing</option>
+                <option value="fence-repair">Fence Repair</option>
+                <option value="gate-installation">Gate Installation</option>
+                <option value="consultation">Free Consultation</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-white font-bold mb-2 raleway">Project Description *</label>
+              <textarea name="message" required rows="4" 
+                class="w-full px-4 py-3 bg-white text-black rounded-lg form-input raleway font-bold resize-none"
+                placeholder="Tell us about your fencing project..."></textarea>
+            </div>
+
+            <button type="submit" 
+              class="w-full bg-[#295E29] text-white px-8 py-4 text-lg font-bold hover:bg-green-700 transition-all duration-300 raleway rounded-lg transform hover:scale-105 btn-hover animate-gradient">
+              <i class="fas fa-paper-plane mr-2"></i>
+              Send Message
+            </button>
+          </form>
+
+          <!-- Success Message -->
+          <div id="success-message" class="hidden mt-6 p-4 bg-green-600 text-white rounded-lg success-message">
+            <i class="fas fa-check-circle mr-2"></i>
+            Thank you! Your message has been sent successfully. We'll contact you soon.
+          </div>
+        </div>
+
+        <!-- Right: Map and Hours -->
+        <div class="scroll-animate">
+          <h3 class="text-3xl font-bold raleway mb-6 animate-slide-in-right text-glow">Find Us Here</h3>
+          
+          <!-- Map Placeholder -->
+          <div class="bg-gray-200 h-64 rounded-lg mb-8 flex items-center justify-center card-hover overflow-hidden">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5292835999777!2d-0.11771368422878085!3d51.50331427963267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c7c7eb9be3%3A0x3918653583725b56!2sLondon%2C%20UK!5e0!3m2!1sen!2s!4v1635789456123!5m2!1sen!2s" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              class="rounded-lg">
+            </iframe>
+          </div>
+
+          <!-- Working Hours -->
+          <div class="border border-[#295E29] p-6 rounded-lg hover:bg-gray-800 transition-all duration-500 card-hover">
+            <h4 class="text-2xl font-bold raleway mb-4 flex items-center">
+              <i class="fas fa-clock mr-3 text-[#295E29] animate-pulse-custom"></i>
+              Working Hours
+            </h4>
+            <div class="space-y-3 text-gray-300 raleway font-bold">
+              <div class="flex justify-between">
+                <span>Monday - Friday:</span>
+                <span class="text-white">8:00 AM - 8:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Saturday:</span>
+                <span class="text-white">9:00 AM - 5:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Sunday:</span>
+                <span class="text-white">9:00 AM - 5:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emergency Contact -->
+          <div class="mt-6 border border-red-500 p-6 rounded-lg bg-red-900/20 hover:bg-red-900/30 transition-all duration-300">
+            <h4 class="text-xl font-bold raleway mb-3 text-red-400 flex items-center">
+              <i class="fas fa-exclamation-triangle mr-2 animate-pulse-custom"></i>
+              Emergency Repairs
+            </h4>
+            <p class="text-gray-300 raleway font-bold mb-3">Need urgent fence repairs? We offer 24/7 emergency services.</p>
+            <a href="tel:+12345678" class="text-red-400 font-bold text-lg hover:text-red-300 transition-all duration-300">
+              <i class="fas fa-phone mr-2"></i>
+              Emergency Hotline: 012 3456 7890
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Call to Action Section -->
+<!-- Call to Action Section -->
+  <section class="section-padding bg-white text-black relative py-10 overflow-hidden">
+    <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+    <div class="floating-decoration top-10 right-10"></div>
+    <div class="floating-decoration bottom-20 left-20" style="animation-delay: -3s;"></div>
+    
+    <div class="container-custom relative">
+      <div class="text-center">
+        <h2 class="text-5xl md:text-4xl font-black mb-8">
+          Ready to Transform Your Property?
+        </h2>
+        <p class="text-xl mb-12 max-w-3xl mx-auto opacity-95 font-medium">
+          Join hundreds of satisfied customers who trust us for their fencing needs. Get your free consultation today!
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          <button class="glass-effect bg-white text-black  px-10 py-5 rounded-xl font-bold text-xl hover:bg-white hover:text-primary transition-all duration-300 shadow-2xl">
+            <i class="fas fa-calculator mr-3"></i>
+            Get Free Quote
+          </button>
+          <a href="tel:+15551234567" class="flex bg-[#2F302F] items-center space-x-4 border-3 border-white text-white px-10 py-5 rounded-xl font-bold text-xl  transition-all duration-300 shadow-2xl">
+            <i class="fas fa-phone"></i>
+            <span>(555) 123-4567</span>
+          </a>
+        </div>
+
+      
+       
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<!-- Footer -->
+ <!-- Footer -->
+  <footer class="bg-[#2F302F] text-white pt-20 pb-10  relative">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="container-custom">
+      <div class="grid md:grid-cols-4 gap-12 mb-16 relative z-10">
+        <!-- Company Info -->
+        <div class="md:col-span-2">
+         <div class="flex items-center space-x-4 mb-8">
+  <!-- Logo inside a rounded background -->
+  <div class="w-[140px] h-[120px] bg-whtie  rounded-full flex items-center justify-center shadow-xl overflow-hidden">
+    <img src="assets/images/logo2.png" alt="Landmark Fencing Logo" class="w-[100%] h-[100%] object-contain rounded-full" />
+  </div>
+
+  <!-- Title and Subtitle -->
+  <div>
+    <h3 class="text-3xl font-black">Landmark Fencing</h3>
+    <p class="text-gray-400 font-semibold">Professional Fencing Services</p>
+  </div>
+</div>
+
+          <p class="text-gray-300 leading-relaxed mb-8 max-w-md font-medium text-lg">
+            Transform your property with premium fencing solutions. Our expert team delivers quality, durability, and style that lasts for decades. Contact us today for your free consultation.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="bg-white text-black  w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-2xl font-bold mb-8 text-white ">Quick Links</h4>
+          <ul class="space-y-4">
+            <li><a href="#home" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Home</a></li>
+            <li><a href="#about" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">About Us</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Our Services</a></li>
+            <li><a href="#gallery" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Gallery</a></li>
+            <li><a href="#contact" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Contact</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Privacy Policy </a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Cookie Policy</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-2xl font-bold mb-8 text-white ">Get in Touch</h4>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <i class="fas fa-map-marker-alt text-primary mt-2 text-xl"></i>
+              <div>
+                <p class="text-gray-300 font-medium text-lg">123 Main Street<br>Your City, ST 12345</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-phone text-primary text-xl"></i>
+              <p class="text-gray-300 font-medium text-lg">(555) 123-4567</p>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-envelope text-primary text-xl"></i>
+              <p class="text-gray-300 font-medium text-lg">info@landmarkfencing.com</p>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h5 class="font-bold mb-4 text-lg">Business Hours</h5>
+            <p class="text-gray-300 font-medium">Monday - Friday: 8:00 AM - 6:00 PM</p>
+            <p class="text-gray-300 font-medium">Saturday: 9:00 AM - 5:00 PM</p>
+            <p class="text-gray-300 font-medium">Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t-2 border-gray-700 pt-10 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+          <p class="text-gray-400 font-medium text-lg">© 2025 Landmark Fencing. All Rights Reserved.</p>
+           <p class="text-gray-400 font-medium text-lg">Designed & Developed By <a href="https://kyleinfotech.co.in/" class="text-white">Kyle Infotech</a></p>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Form Submission Handler
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(event.target);
+      const data = Object.fromEntries(formData);
+      
+      // Here you would typically send the data to your server
+      console.log('Form data:', data);
+      
+      // Show success message
+      const successMessage = document.getElementById('success-message');
+      successMessage.classList.remove('hidden');
+      
+      // Reset form
+      event.target.reset();
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        successMessage.classList.add('hidden');
+      }, 5000);
+      
+      // Scroll to success message
+      successMessage.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Scroll Animation Observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all scroll-animate elements
+    document.addEventListener('DOMContentLoaded', () => {
+      const scrollElements = document.querySelectorAll('.scroll-animate');
+      scrollElements.forEach(el => observer.observe(el));
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add loading animation
+    window.addEventListener('load', () => {
+      document.body.style.opacity = '0';
+      document.body.style.transition = 'opacity 0.5s ease-in-out';
+      setTimeout(() => {
+        document.body.style.opacity = '1';
+      }, 100);
+    });
+
+    // Parallax effect for background images
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const parallaxElements = document.querySelectorAll('.parallax');
+      
+      parallaxElements.forEach(element => {
+        const speed = 0.5;
+        const yPos = -(scrolled * speed);
+        element.style.transform = `translateY(${yPos}px)`;
+      });
+    });
+
+    // Add mouse trail effect
+    document.addEventListener('mousemove', (e) => {
+      const trail = document.createElement('div');
+      trail.className = 'fixed w-2 h-2 bg-[#295E29] rounded-full pointer-events-none z-50 opacity-50';
+      trail.style.left = e.clientX + 'px';
+      trail.style.top = e.clientY + 'px';
+      trail.style.animation = 'fadeOut 1s ease-out forwards';
+      
+      document.body.appendChild(trail);
+      
+      setTimeout(() => {
+        trail.remove();
+      }, 1000);
+    });
+
+    // Add fadeOut animation for mouse trail
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          transform: scale(0);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Add typing effect to hero title
+    function typeWriter(element, text, speed = 50) {
+      let i = 0;
+      element.innerHTML = '';
+      
+      function type() {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      
+      type();
+    }
+
+    // Initialize typing effect for hero title
+    document.addEventListener('DOMContentLoaded', () => {
+      const heroTitle = document.querySelector('.typewriter');
+      if (heroTitle) {
+        const originalText = heroTitle.textContent;
+        setTimeout(() => {
+          typeWriter(heroTitle, originalText, 100);
+        }, 500);
+      }
+    });
+
+    // Form field animations
+    document.querySelectorAll('.form-input').forEach(input => {
+      input.addEventListener('focus', function() {
+        this.parentElement.style.transform = 'scale(1.02)';
+      });
+      
+      input.addEventListener('blur', function() {
+        this.parentElement.style.transform = 'scale(1)';
+      });
+    });
+
+    // Add floating labels effect
+    document.querySelectorAll('input, select, textarea').forEach(field => {
+      field.addEventListener('focus', function() {
+        this.previousElementSibling.style.color = '#295E29';
+        this.previousElementSibling.style.transform = 'scale(1.1)';
+      });
+      
+      field.addEventListener('blur', function() {
+        this.previousElementSibling.style.color = '#ffffff';
+        this.previousElementSibling.style.transform = 'scale(1)';
+      });
+    });
+  </script>
+
+</body>
+</html>
