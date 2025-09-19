@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy - JP Landmark Fencing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'raleway': ['Raleway', 'sans-serif'],
+          },
+          colors: {
+            'primary': '#295E29',
+            'primary-dark': '#1e4520',
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'fade-in-up': 'fadeInUp 0.8s ease-out',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          },
+          backdropBlur: {
+            'xs': '2px',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(49, 49, 49, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%),
+        url('https://images.pexels.com/photos/1370750/pexels-photo-1370750.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    }
+
+    .newsletter-bg {
+      background: linear-gradient(135deg, rgba(41, 94, 41, 0.9) 0%, rgba(26, 26, 26, 0.9) 100%),
+        url('https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop') center/cover;
+    }
+
+    .btn-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-shimmer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn-shimmer:hover::before {
+      left: 100%;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #295E29, #4a8a4a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    @media (max-width: 768px) {
+      .clip-path-header {
+        clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
+      }
+    }
+
+    .clip-path-header {
+      clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+    }
+
+    .terms-content h2 {
+      color: #295E29;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .terms-content h3 {
+      color: #295E29;
+      font-weight: 600;
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .terms-content p {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .terms-content ul, .terms-content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .terms-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 768px) {
+      .terms-content h2 {
+        font-size: 2rem;
+      }
+
+      .terms-content h3 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black overflow-x-hidden font-raleway">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full h-[100px] md:h-[130px] bg-white z-50 clip-path-header">
+    <div class="max-w-[90vw] md:max-w-[75vw] mx-auto h-full flex justify-between items-center relative z-10 px-4">
+      <!-- Left Navigation -->
+      <nav class="hidden lg:flex space-x-4 xl:space-x-6 text-black uppercase font-bold text-sm xl:text-base">
+        <a href="index.html" class="hover:text-[#295E29] transition-all duration-300 hover:scale-110">Home</a>
+        <a href="about.html" class="hover:text-[#295E29] transition-all duration-300 hover:scale-110">About Us</a>
+        <a href="services.html" class="hover:text-[#295E29] transition-all duration-300 hover:scale-110">Our Services</a>
+        <a href="gallery.html" class="hover:text-[#295E29] transition-all duration-300 hover:scale-110">Projects</a>
+      </nav>
+
+      <!-- Center Logo -->
+      <div class="relative flex justify-center items-center">
+        <div class="h-[80px] w-[85px] md:h-[120px] md:w-[130px] rounded-full overflow-hidden border-2 md:border-4 border-white shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl flex items-center justify-center">
+          <img src="assets/images/Airedale 01.jpg" alt="Landmark Fencing" class="w-[120%]" />
+        </div>
+      </div>
+
+      <!-- Right Navigation -->
+      <nav class="hidden lg:flex space-x-4 xl:space-x-6 text-black uppercase font-bold text-sm xl:text-base">
+        <a href="contact.html" class="hover:text-[#295E29] transition-all duration-300 hover:scale-110">Contacts</a>
+        <a href="blog.html" class="hover:text-[#295E29] transition-all duration-300 hover:scale-110">Blog</a>
+      </nav>
+
+      <!-- Button -->
+      <a href="contact.html" class="hidden xl:block bg-[#295E29] ml-4 text-white px-3 py-2 text-sm rounded hover:bg-[#1e4a1e] hover:text-white transition-all duration-300 font-bold transform hover:scale-105">
+        GET A FREE QUOTE
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="lg:hidden text-black" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars text-xl md:text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="lg:hidden bg-white border-t border-gray-200 py-4 hidden">
+      <nav class="flex flex-col space-y-4 px-6">
+        <a href="index.html" class="text-black font-bold hover:text-[#295E29]">Home</a>
+        <a href="about.html" class="text-black font-bold hover:text-[#295E29]">About Us</a>
+        <a href="services.html" class="text-black font-bold hover:text-[#295E29]">Our Services</a>
+        <a href="gallery.html" class="text-black font-bold hover:text-[#295E29]">Projects</a>
+        <a href="contact.html" class="text-black font-bold hover:text-[#295E29]">Contacts</a>
+        <a href="blog.html" class="text-black font-bold hover:text-[#295E29]">Blog</a>
+        <a href="contact.html" class="bg-[#295E29] text-white px-4 py-2 rounded hover:bg-[#1e4a1e] transition-all duration-300 font-bold text-center mt-2">
+          GET A FREE QUOTE
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center bg-no-repeat mt-[80px] md:mt-[100px]" style="background-image: url('assets/images/bannerimage.jpg');">
+    <div class="absolute inset-0 bg-white/85"></div>
+    <div class="relative max-w-[90vw] md:max-w-[79vw] mx-auto py-16 md:py-20 flex flex-col items-center justify-center text-center px-4">
+      <div class="text-[#295E29] animate-fade-in-up">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black font-raleway">
+          Cookie Policy
+        </h1>
+        <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto font-medium">
+          Learn how we use cookies to improve your browsing experience on our website
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="contact.html" class="border-2 border-[#295E29] text-[#295E29] px-6 md:px-8 py-3 text-base md:text-lg font-bold hover:bg-[#295E29] hover:text-white transition font-raleway transform hover:scale-105">
+            GET FREE QUOTE
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cookie Policy Content -->
+  <section class="py-16 md:py-20 lg:py-24 ">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class=" p-6 md:p-8 lg:p-12  ">
+        <div class="terms-content text-gray-700">
+         
+
+          <h2>1. What Are Cookies?</h2>
+          <p>
+            Cookies are small text files that are placed on your computer or mobile device when you visit our website. They are widely used to make websites work more efficiently and to provide information to website owners. Cookies help us understand how you use our website and improve your browsing experience.
+          </p>
+
+          <h2>2. How We Use Cookies</h2>
+          <p>
+            JP Landmark Fencing uses cookies for various purposes to enhance your experience on our website:
+          </p>
+          <ul>
+            <li>To remember your preferences and settings</li>
+            <li>To analyze website traffic and user behavior</li>
+            <li>To improve website functionality and performance</li>
+            <li>To provide personalized content and recommendations</li>
+            <li>To enable social media features and integrations</li>
+            <li>To deliver relevant advertisements and marketing content</li>
+          </ul>
+
+          <h2>3. Types of Cookies We Use</h2>
+          <h3>3.1 Essential Cookies</h3>
+          <p>
+            These cookies are necessary for the website to function properly. They enable basic functions like page navigation, access to secure areas, and form submissions. The website cannot function properly without these cookies.
+          </p>
+          
+          <h3>3.2 Performance Cookies</h3>
+          <p>
+            These cookies collect information about how visitors use our website, such as which pages are visited most often and if users receive error messages. This information helps us improve how our website works.
+          </p>
+
+          <h3>3.3 Functionality Cookies</h3>
+          <p>
+            These cookies allow the website to remember choices you make (such as your username, language, or region) and provide enhanced, more personal features.
+          </p>
+
+          <h3>3.4 Targeting/Advertising Cookies</h3>
+          <p>
+            These cookies are used to deliver advertisements that are relevant to you and your interests. They also help limit the number of times you see an advertisement and measure the effectiveness of advertising campaigns.
+          </p>
+
+          <h2>4. Third-Party Cookies</h2>
+          <p>
+            We may use third-party services that place cookies on your device. These include:
+          </p>
+          <ul>
+            <li><strong>Google Analytics:</strong> To analyze website traffic and user behavior</li>
+            <li><strong>Google Ads:</strong> To display relevant advertisements</li>
+            <li><strong>Facebook Pixel:</strong> To track conversions and optimize ad campaigns</li>
+            <li><strong>Social Media Platforms:</strong> To enable social sharing and login features</li>
+            <li><strong>Live Chat Services:</strong> To provide customer support functionality</li>
+          </ul>
+          
+          <h2>5. Managing Your Cookie Preferences</h2>
+          <h3>5.1 Browser Settings</h3>
+          <p>
+            Most web browsers allow you to control cookies through their settings. You can:
+          </p>
+          <ul>
+            <li>View what cookies are stored on your device</li>
+            <li>Delete existing cookies</li>
+            <li>Block cookies from being set</li>
+            <li>Set preferences for specific websites</li>
+          </ul>
+
+          <h3>5.2 Opt-Out Options</h3>
+          <p>
+            You can opt out of certain types of cookies and tracking:
+          </p>
+          <ul>
+            <li><strong>Google Analytics:</strong> Use the Google Analytics Opt-out Browser Add-on</li>
+            <li><strong>Google Ads:</strong> Visit Google's Ad Settings page</li>
+            <li><strong>Facebook:</strong> Adjust your Facebook ad preferences</li>
+            <li><strong>General Advertising:</strong> Visit the Digital Advertising Alliance opt-out page</li>
+          </ul>
+
+          <h2>6. Impact of Disabling Cookies</h2>
+          <p>
+            While you can disable cookies, please note that doing so may affect your experience on our website:
+          </p>
+          <ul>
+            <li>Some features may not work properly or at all</li>
+            <li>You may need to re-enter information more frequently</li>
+            <li>Personalized content and recommendations may not be available</li>
+            <li>Website performance may be reduced</li>
+          </ul>
+
+          <h2>7. Cookie Retention</h2>
+          <p>
+            Different cookies have different retention periods:
+          </p>
+          <ul>
+            <li><strong>Session Cookies:</strong> Deleted when you close your browser</li>
+            <li><strong>Persistent Cookies:</strong> Remain on your device for a set period or until manually deleted</li>
+            <li><strong>Analytics Cookies:</strong> Typically retained for 2 years</li>
+            <li><strong>Advertising Cookies:</strong> Usually retained for 30-90 days</li>
+          </ul>
+
+          <h2>8. Data Security</h2>
+          <p>
+            We take the security of your data seriously. Cookies are stored securely and we implement appropriate technical and organizational measures to protect against unauthorized access, alteration, disclosure, or destruction of cookie data.
+          </p>
+          
+          <h2>9. Children's Privacy</h2>
+          <p>
+            Our website is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13 through cookies. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.
+          </p>
+
+          <h2>10. International Data Transfers</h2>
+          <p>
+            Some of our third-party service providers may be located outside your country. When you use our website, your cookie data may be transferred to and processed in other countries. We ensure that such transfers comply with applicable data protection laws.
+          </p>
+
+          <h2>11. Legal Basis for Processing</h2>
+          <p>
+            Our legal basis for using cookies depends on the type of cookie:
+          </p>
+          <ul>
+            <li><strong>Essential Cookies:</strong> Legitimate interest in providing website functionality</li>
+            <li><strong>Performance Cookies:</strong> Your consent or legitimate interest in improving our services</li>
+            <li><strong>Functionality Cookies:</strong> Your consent or legitimate interest in enhancing user experience</li>
+            <li><strong>Advertising Cookies:</strong> Your explicit consent</li>
+          </ul>
+
+          <h2>12. Your Rights</h2>
+          <p>
+            Under applicable data protection laws, you have certain rights regarding cookies and personal data:
+          </p>
+          <ul>
+            <li>Right to be informed about cookie usage</li>
+            <li>Right to access information about cookies stored on your device</li>
+            <li>Right to withdraw consent for non-essential cookies</li>
+            <li>Right to object to processing for legitimate interests</li>
+            <li>Right to data portability where applicable</li>
+          </ul>
+
+          <h2>13. Updates to This Cookie Policy</h2>
+          <p>
+            We may update this Cookie Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will notify you of any material changes by posting the updated policy on our website and updating the "Last Updated" date.
+          </p>
+
+          <h2>14. Consent and Acceptance</h2>
+          <p>
+            By continuing to use our website, you consent to our use of cookies as described in this policy. If you do not agree with our use of cookies, you should adjust your browser settings or discontinue use of our website.
+          </p>
+
+          <h2>15. Related Policies</h2>
+          <p>
+            This Cookie Policy should be read in conjunction with our Privacy Policy, which provides additional information about how we collect, use, and protect your personal information.
+          </p>
+
+          <h2>16. Contact Information</h2>
+          <p>
+            If you have any questions about this Cookie Policy or our use of cookies, please contact us:
+          </p>
+          <div class="bg-[#295E29]/5 p-6 rounded-xl mt-4 border-l-4 border-[#295E29]">
+            <p><strong>JP Landmark Fencing</strong></p>
+            <p><strong>Phone:</strong> <a href="tel:+447897897867" class="text-[#295E29] hover:underline">07897897867</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@landmarkfencing.com" class="text-[#295E29] hover:underline">info@landmarkfencing.com</a></p>
+            <p><strong>Address:</strong> 123 Main Street, Your City, ST 12345</p>
+            <p><strong>Business Hours:</strong> Monday - Friday: 8:00 AM - 6:00 PM, Saturday: 9:00 AM - 5:00 PM</p>
+          </div>
+
+        
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-20 lg:py-24 bg-[#e3e3e3] text-black relative overflow-hidden">
+    <div class="absolute top-10 right-10 w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-[#295E29]/10 to-transparent rounded-full animate-float"></div>
+    <div class="absolute bottom-20 left-20 w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-[#295E29]/10 to-transparent rounded-full animate-float" style="animation-delay: -3s;"></div>
+    
+    <div class="max-w-7xl mx-auto relative px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-6 md:mb-8">
+          Ready to Transform Your Property?
+        </h2>
+        <p class="text-lg md:text-xl mb-8 md:mb-12 max-w-3xl mx-auto opacity-95 font-medium">
+          Join hundreds of satisfied customers who trust us for their fencing needs. Get your free consultation today!
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center mb-12 md:mb-16">
+          <a href="contact.html" class="w-full sm:w-auto bg-white/10 backdrop-blur-sm border border-white/20 bg-white text-black px-8 md:px-10 py-4 md:py-5 rounded-xl font-bold text-lg md:text-xl hover:bg-white hover:text-primary transition-all duration-300 shadow-2xl">
+            <i class="fas fa-calculator mr-3"></i>
+            Get Free Quote
+          </a>
+          <a href="tel:+447897897867" class="w-full sm:w-auto flex bg-[#2F302F] items-center justify-center space-x-4 border-3 border-white text-white px-8 md:px-10 py-4 md:py-5 rounded-xl font-bold text-lg md:text-xl transition-all duration-300 shadow-2xl hover:bg-black">
+            <i class="fas fa-phone"></i>
+            <span>07897897867</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#2F302F] text-white pt-16 md:pt-20 pb-10 relative">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12 md:mb-16 relative z-10">
+        <!-- Company Info -->
+        <div class="md:col-span-2">
+          <div class="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 mb-6 md:mb-8">
+            <div class="w-[100px] h-[85px] md:w-[140px] md:h-[120px] bg-white rounded-full flex items-center justify-center overflow-hidden flex-shrink-0">
+              <img src="assets/images/Airedale png.png" alt="Landmark Fencing Logo" class="w-[100%] h-[100%] object-contain rounded-full" />
+            </div>
+            <div class="text-center sm:text-left">
+              <h3 class="text-2xl md:text-3xl font-black">JP Landmark Fencing</h3>
+              <p class="text-gray-400 font-semibold">Professional Fencing Services</p>
+            </div>
+          </div>
+
+          <p class="text-gray-300 leading-relaxed mb-6 md:mb-8 max-w-md font-medium text-base md:text-lg text-center sm:text-left">
+            Transform your property with premium fencing solutions from <strong>JP Landmark Fencing</strong>. Our expert
+            team delivers unmatched quality, durability, and style that lasts for decades. Contact us today for a free
+            consultation.
+          </p>
+          <div class="flex space-x-4 justify-center sm:justify-start">
+            <a href="#" class="bg-white text-black w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-facebook-f text-sm md:text-base"></i>
+            </a>
+            <a href="#" class="bg-white text-black w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-instagram text-sm md:text-base"></i>
+            </a>
+            <a href="#" class="bg-white text-black w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-youtube text-sm md:text-base"></i>
+            </a>
+            <a href="#" class="bg-white text-black w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-linkedin-in text-sm md:text-base"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-white text-center lg:text-left">Quick Links</h4>
+          <ul class="space-y-3 md:space-y-4 text-center lg:text-left">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-base md:text-lg hover:translate-x-2 block">Home</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-base md:text-lg hover:translate-x-2 block">About Us</a></li>
+            <li><a href="services.html" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-base md:text-lg hover:translate-x-2 block">Our Services</a></li>
+            <li><a href="gallery.html" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-base md:text-lg hover:translate-x-2 block">Gallery</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-base md:text-lg hover:translate-x-2 block">Contact</a></li>
+            <li><a href="blog.html" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-base md:text-lg hover:translate-x-2 block">Blog</a></li>
+            <li><a href="privacy-policy.html" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-base md:text-lg hover:translate-x-2 block">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-base md:text-lg hover:translate-x-2 block">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-white text-center lg:text-left">Get in Touch</h4>
+          <div class="space-y-4 md:space-y-6 text-center lg:text-left">
+            <div class="flex items-start space-x-4 justify-center lg:justify-start">
+              <i class="fas fa-map-marker-alt text-[#295E29] mt-2 text-lg md:text-xl flex-shrink-0"></i>
+              <div>
+                <a href="#" class="text-gray-300 font-medium text-base md:text-lg">
+                  123 Main Street<br/>Your City, ST 12345
+                </a>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4 justify-center lg:justify-start">
+              <i class="fas fa-phone text-[#295E29] text-lg md:text-xl flex-shrink-0"></i>
+              <a href="tel:+447897897867" class="text-gray-300 font-medium text-base md:text-lg">(739) 839-1575</a>
+            </div>
+            <div class="flex items-center space-x-4 justify-center lg:justify-start">
+              <i class="fas fa-envelope text-[#295E29] text-lg md:text-xl flex-shrink-0"></i>
+              <a href="mailto:info@landmarkfencing.com" class="text-gray-300 font-medium text-base md:text-lg">info@landmarkfencing.com</a>
+            </div>
+          </div>
+
+          <div class="mt-6 md:mt-8 text-center lg:text-left">
+            <h5 class="font-bold mb-4 text-base md:text-lg">Business Hours</h5>
+            <p class="text-gray-300 font-medium text-sm md:text-base">Monday - Friday: 8:00 AM - 6:00 PM</p>
+            <p class="text-gray-300 font-medium text-sm md:text-base">Saturday: 9:00 AM - 5:00 PM</p>
+            <p class="text-gray-300 font-medium text-sm md:text-base">Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t-2 border-gray-700 pt-8 md:pt-10 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-center">
+          <p class="text-gray-400 font-medium text-base md:text-lg">© 2025 Landmark Fencing. All Rights Reserved.</p>
+          <p class="text-gray-400 font-medium text-base md:text-lg">
+            Designed & Developed By <a href="https://kyleinfotech.co.in/" class="text-white hover:text-[#295E29] transition-colors">Kyle Infotech</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('hidden');
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuButton = document.querySelector('[onclick="toggleMobileMenu()"]');
+      
+      if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Handle window resize for mobile menu
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        document.getElementById('mobileMenu').classList.add('hidden');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe terms content for animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const cookieSection = document.querySelector('.terms-content');
+      if (cookieSection) {
+        cookieSection.style.opacity = '0';
+        cookieSection.style.transform = 'translateY(30px)';
+        cookieSection.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(cookieSection);
+      }
+    });
+  </script>
+
+</body>
+</html>
