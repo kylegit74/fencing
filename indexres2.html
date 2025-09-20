@@ -8,7 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="assets/css/style.css"/>
   <script>
     tailwind.config = {
       theme: {
@@ -41,122 +41,81 @@
     }
   </script>
 
-  <style>
-    * {
-      font-family: 'Raleway', sans-serif;
-    }
-
-    .hero-bg {
-      background: linear-gradient(135deg, rgba(49, 49, 49, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%),
-        url('../assets/images/servFenceCat_1.webp') center/cover;
-    }
-
-    .about-overlay {
-      background: linear-gradient(135deg, rgba(41, 94, 41, 0.05) 0%, rgba(255, 255, 255, 0.95) 50%, rgba(41, 94, 41, 0.1) 100%),
-        url('https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
-    }
-
-    .header-clip {
-      clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
-    }
-
-    .btn-shimmer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: left 0.5s;
-    }
-
-    .btn-shimmer:hover::before {
-      left: 100%;
-    }
-
-    .service-overlay {
-      background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.8) 50%, rgba(41, 94, 41, 0.9) 100%);
-    }
-
-    .glass-effect {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .navbar-scroll {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(41, 94, 41, 0.1);
-    }
-  </style>
+ 
+   
 </head>
 
 <body class="bg-white text-black overflow-x-hidden font-raleway">
 
   <!-- Header -->
-  <header id="navbar"
-    class="fixed top-0 left-0 w-full h-24 md:h-32 bg-white z-50 header-clip transition-all duration-300">
-    <div
-      class="max-w-[90vw] lg:max-w-[75vw] mx-auto h-full flex flex-col lg:flex-row justify-between items-center relative z-10 px-4 lg:px-0">
-
-      <!-- Mobile menu button -->
-      <button class="lg:hidden absolute top-6 right-4 text-black z-50" onclick="toggleMobileMenu()">
-        <i class="fas fa-bars text-2xl"></i>
-      </button>
-
-      <!-- Left Navigation -->
-      <nav class="hidden lg:flex space-x-3 lg:space-x-6 text-black uppercase font-bold text-sm lg:text-base">
-        <a href="index.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Home</a>
-        <a href="about.html" class="hover:text-primary transition-all duration-300 hover:scale-110">About Us</a>
-        <a href="services.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Our Services</a>
-        <a href="gallery.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Projects</a>
-      </nav>
-
-      <!-- Center Logo for desktop, Left Logo for mobile -->
-      <div class="flex justify-start lg:justify-center items-center mt-4 lg:mt-0 absolute top-2 left-4 lg:relative lg:top-0 lg:left-0">
-        <div
-          class="h-16 w-16 md:h-24 md:w-24 lg:h-28 lg:w-32 rounded-full overflow-hidden border-2 md:border-4 border-white shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl flex items-center justify-center">
-          <img src="assets/images/Airedale 01.jpg" alt="Landmark Fencing" class="w-[120%]" />
+  <header id="navbar" class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300 h-20 lg:h-24 xl:h-32 header-clip">
+    <div class="max-w-7xl mx-auto h-full flex items-center justify-between px-4 lg:px-8 relative">
+      
+      <!-- Mobile Layout: Logo left, Menu right -->
+      <div class="flex lg:hidden items-center justify-between w-full">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <div class="h-16 w-16 md:h-16 md:w-16 rounded-full overflow-hidden border-2 border-white shadow-lg bg-white flex items-center justify-center">
+            <img src="assets/images/Airedale 01.jpg" alt="Landmark Fencing" class="w-[120%]" />
+          </div>
         </div>
+
+        <!-- Mobile menu button -->
+        <button class="text-black z-50 relative" onclick="toggleMobileMenu()">
+          <i id="menuIcon" class="fas fa-bars text-2xl"></i>
+        </button>
       </div>
 
-      <!-- Right Navigation -->
-      <nav class="hidden lg:flex space-x-3 lg:space-x-6 text-black uppercase font-bold text-sm lg:text-base">
-        <a href="contact.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Contacts</a>
-        <a href="blog.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Blog</a>
-      </nav>
+      <!-- Desktop Layout: Full navigation -->
+      <div class="hidden lg:flex items-center justify-between w-full">
+        <!-- Left Navigation -->
+        <nav class="flex space-x-6 text-black uppercase font-bold text-sm xl:text-base">
+          <a href="index.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Home</a>
+          <a href="about.html" class="hover:text-primary transition-all duration-300 hover:scale-110">About Us</a>
+          <a href="services.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Our Services</a>
+          <a href="gallery.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Projects</a>
+        </nav>
 
-      <!-- Button -->
-      <a href="contact.html"
-        class="hidden lg:block bg-primary ml-2 lg:ml-5 text-white px-3 lg:px-4 py-2 rounded hover:bg-green-800 hover:text-white transition-all duration-300 font-bold transform hover:scale-105 text-sm lg:text-base">
-        GET A FREE QUOTE
-      </a>
+        <!-- Center Logo -->
+        <div class="flex justify-center items-center">
+          <div class="h-20 w-20 xl:h-28 xl:w-32 rounded-full overflow-hidden border-4 border-white shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl flex items-center justify-center">
+            <img src="assets/images/Airedale 01.jpg" alt="Landmark Fencing" class="w-[120%]" />
+          </div>
+        </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="fixed inset-0 bg-white z-[60] hidden lg:hidden">
-        <div class="flex flex-col items-center justify-center h-full space-y-8 text-2xl font-bold uppercase">
-          <a href="index.html" class="hover:text-primary transition-all duration-300">Home</a>
-          <a href="about.html" class="hover:text-primary transition-all duration-300">About Us</a>
-          <a href="services.html" class="hover:text-primary transition-all duration-300">Our Services</a>
-          <a href="gallery.html" class="hover:text-primary transition-all duration-300">Projects</a>
-          <a href="contact.html" class="hover:text-primary transition-all duration-300">Contacts</a>
-          <a href="blog.html" class="hover:text-primary transition-all duration-300">Blog</a>
-          <a href="contact.html"
-            class="bg-primary text-white px-6 py-3 rounded hover:bg-green-800 transition-all duration-300">
+        <!-- Right Navigation -->
+        <div class="flex items-center space-x-6">
+          <nav class="flex space-x-6 text-black uppercase font-bold text-sm xl:text-base">
+            <a href="contact.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Contacts</a>
+            <a href="blog.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Blog</a>
+          </nav>
+
+          <!-- CTA Button -->
+          <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded hover:bg-green-800 hover:text-white transition-all duration-300 font-bold transform hover:scale-105 text-sm xl:text-base whitespace-nowrap">
             GET A FREE QUOTE
           </a>
         </div>
-        <button class="absolute top-6 right-4 text-black z-[70]" onclick="toggleMobileMenu()">
-          <i class="fas fa-times text-3xl"></i>
-        </button>
       </div>
     </div>
   </header>
 
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileMenu" class="fixed mobile-menu left-0 right-0 bottom-0 bg-white z-40 hidden lg:hidden border-t-2 border-primary/10 shadow-2xl">
+    <div class="flex flex-col items-center justify-start h-full space-y-6 text-xl font-bold uppercase pt-8 pb-8">
+      <a href="index.html" class="hover:text-primary transition-all duration-300 py-2">Home</a>
+      <a href="about.html" class="hover:text-primary transition-all duration-300 py-2">About Us</a>
+      <a href="services.html" class="hover:text-primary transition-all duration-300 py-2">Our Services</a>
+      <a href="gallery.html" class="hover:text-primary transition-all duration-300 py-2">Projects</a>
+      <a href="contact.html" class="hover:text-primary transition-all duration-300 py-2">Contacts</a>
+      <a href="blog.html" class="hover:text-primary transition-all duration-300 py-2">Blog</a>
+      <a href="contact.html" class="bg-primary text-white px-6 py-3 rounded hover:bg-green-800 transition-all duration-300 mt-4">
+        GET A FREE QUOTE
+      </a>
+    </div>
+  </div>
+
   <!-- Hero Section -->
-  <section id="home" class="hero-bg min-h-screen relative mt-16 md:mt-20">
+  <section id="home" class="hero-bg min-h-screen relative pt-20 lg:pt-24 xl:pt-32">
     <div
       class="absolute top-20 left-4 md:left-10 w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-primary/10 to-transparent rounded-full animate-float">
     </div>
@@ -745,7 +704,7 @@
     </div>
   </section>
 
-   <!-- Enhanced Responsive Footer -->
+  <!-- Enhanced Responsive Footer -->
   <footer class="footer-responsive text-white pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 lg:pb-10 relative">
     <div class="absolute inset-0 bg-black/20"></div>
     <div class="container-custom relative z-10">
@@ -861,13 +820,23 @@
     </div>
   </footer>
 
-
   <!-- JavaScript -->
   <script>
     // Mobile menu toggle
     function toggleMobileMenu() {
       const mobileMenu = document.getElementById('mobileMenu');
+      const menuIcon = document.getElementById('menuIcon');
+      
       mobileMenu.classList.toggle('hidden');
+      
+      // Toggle icon between hamburger and close
+      if (mobileMenu.classList.contains('hidden')) {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+      } else {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times');
+      }
     }
 
     // Smooth scrolling for navigation links
@@ -880,6 +849,15 @@
             behavior: 'smooth',
             block: 'start'
           });
+        }
+        
+        // Close mobile menu after clicking a link
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('fa-times');
+          menuIcon.classList.add('fa-bars');
         }
       });
     });
@@ -912,9 +890,6 @@
       // Reset form
       e.target.reset();
     }
-
-    // Enhanced navbar scroll effect
-    
 
     // Parallax effect for floating decorations
     window.addEventListener('scroll', () => {
@@ -970,15 +945,35 @@
       const menuButton = document.querySelector('[onclick="toggleMobileMenu()"]');
 
       if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          const menuIcon = document.getElementById('menuIcon');
+          menuIcon.classList.remove('fa-times');
+          menuIcon.classList.add('fa-bars');
+        }
       }
     });
 
     // Close mobile menu when window is resized to desktop
     window.addEventListener('resize', function () {
       if (window.innerWidth >= 1024) {
-        document.getElementById('mobileMenu').classList.add('hidden');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
       }
+    });
+
+    // Close mobile menu when clicking on navigation links
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+      });
     });
   </script>
 

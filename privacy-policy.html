@@ -140,55 +140,72 @@
 <body class="bg-white text-black overflow-x-hidden font-raleway">
 
   <!-- Header -->
-  <header class="fixed top-0 left-0 w-full h-[100px] md:h-[130px] bg-white z-50 clip-path-header">
-    <div class="max-w-[90vw] md:max-w-[75vw] mx-auto h-full flex justify-between items-center relative z-10 px-4">
-      <!-- Left Navigation -->
-      <nav class="hidden lg:flex space-x-4 xl:space-x-6 text-black uppercase font-bold text-sm xl:text-base">
-        <a href="index.html" class="hover:text-[#295E29] transition-all duration-300 hover:scale-110">Home</a>
-        <a href="about.html" class="hover:text-[#295E29] transition-all duration-300 hover:scale-110">About Us</a>
-        <a href="services.html" class="hover:text-[#295E29] transition-all duration-300 hover:scale-110">Our Services</a>
-        <a href="gallery.html" class="hover:text-[#295E29] transition-all duration-300 hover:scale-110">Projects</a>
-      </nav>
-
-      <!-- Center Logo -->
-      <div class="relative flex justify-center items-center">
-        <div class="h-[80px] w-[85px] md:h-[120px] md:w-[130px] rounded-full overflow-hidden border-2 md:border-4 border-white shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl flex items-center justify-center">
-          <img src="assets/images/Airedale 01.jpg" alt="Landmark Fencing" class="w-[120%]" />
+  <!-- Header -->
+  <header id="navbar" class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300 h-20 lg:h-24 xl:h-32 header-clip">
+    <div class="max-w-7xl mx-auto h-full flex items-center justify-between px-4 lg:px-8 relative">
+      
+      <!-- Mobile Layout: Logo left, Menu right -->
+      <div class="flex lg:hidden items-center justify-between w-full">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <div class="h-16 w-16 md:h-16 md:w-16 rounded-full overflow-hidden border-2 border-white shadow-lg bg-white flex items-center justify-center">
+            <img src="assets/images/Airedale 01.jpg" alt="Landmark Fencing" class="w-[120%]" />
+          </div>
         </div>
+
+        <!-- Mobile menu button -->
+        <button class="text-black z-50 relative" onclick="toggleMobileMenu()">
+          <i id="menuIcon" class="fas fa-bars text-2xl"></i>
+        </button>
       </div>
 
-      <!-- Right Navigation -->
-      <nav class="hidden lg:flex space-x-4 xl:space-x-6 text-black uppercase font-bold text-sm xl:text-base">
-        <a href="contact.html" class="hover:text-[#295E29] transition-all duration-300 hover:scale-110">Contacts</a>
-        <a href="blog.html" class="hover:text-[#295E29] transition-all duration-300 hover:scale-110">Blog</a>
-      </nav>
+      <!-- Desktop Layout: Full navigation -->
+      <div class="hidden lg:flex items-center justify-between w-full">
+        <!-- Left Navigation -->
+        <nav class="flex space-x-6 text-black uppercase font-bold text-sm xl:text-base">
+          <a href="index.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Home</a>
+          <a href="about.html" class="hover:text-primary transition-all duration-300 hover:scale-110">About Us</a>
+          <a href="services.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Our Services</a>
+          <a href="gallery.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Projects</a>
+        </nav>
 
-      <!-- Button -->
-      <a href="contact.html" class="hidden xl:block bg-[#295E29] ml-4 text-white px-3 py-2 text-sm rounded hover:bg-[#1e4a1e] hover:text-white transition-all duration-300 font-bold transform hover:scale-105">
-        GET A FREE QUOTE
-      </a>
+        <!-- Center Logo -->
+        <div class="flex justify-center items-center">
+          <div class="h-20 w-20 xl:h-28 xl:w-32 rounded-full overflow-hidden border-4 border-white shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl flex items-center justify-center">
+            <img src="assets/images/Airedale 01.jpg" alt="Landmark Fencing" class="w-[120%]" />
+          </div>
+        </div>
 
-      <!-- Mobile Menu Button -->
-      <button class="lg:hidden text-black" onclick="toggleMobileMenu()">
-        <i class="fas fa-bars text-xl md:text-2xl"></i>
-      </button>
-    </div>
+        <!-- Right Navigation -->
+        <div class="flex items-center space-x-6">
+          <nav class="flex space-x-6 text-black uppercase font-bold text-sm xl:text-base">
+            <a href="contact.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Contacts</a>
+            <a href="blog.html" class="hover:text-primary transition-all duration-300 hover:scale-110">Blog</a>
+          </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="lg:hidden bg-white border-t border-gray-200 py-4 hidden">
-      <nav class="flex flex-col space-y-4 px-6">
-        <a href="index.html" class="text-black font-bold hover:text-[#295E29]">Home</a>
-        <a href="about.html" class="text-black font-bold hover:text-[#295E29]">About Us</a>
-        <a href="services.html" class="text-black font-bold hover:text-[#295E29]">Our Services</a>
-        <a href="gallery.html" class="text-black font-bold hover:text-[#295E29]">Projects</a>
-        <a href="contact.html" class="text-black font-bold hover:text-[#295E29]">Contacts</a>
-        <a href="blog.html" class="text-black font-bold hover:text-[#295E29]">Blog</a>
-        <a href="contact.html" class="bg-[#295E29] text-white px-4 py-2 rounded hover:bg-[#1e4a1e] transition-all duration-300 font-bold text-center mt-2">
-          GET A FREE QUOTE
-        </a>
-      </nav>
+          <!-- CTA Button -->
+          <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded hover:bg-green-800 hover:text-white transition-all duration-300 font-bold transform hover:scale-105 text-sm xl:text-base whitespace-nowrap">
+            GET A FREE QUOTE
+          </a>
+        </div>
+      </div>
     </div>
   </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileMenu" class="fixed mobile-menu left-0 right-0 bottom-0 bg-white z-40 hidden lg:hidden border-t-2 border-primary/10 shadow-2xl">
+    <div class="flex flex-col items-center justify-start h-full space-y-6 text-xl font-bold uppercase pt-8 pb-8">
+      <a href="index.html" class="hover:text-primary transition-all duration-300 py-2">Home</a>
+      <a href="about.html" class="hover:text-primary transition-all duration-300 py-2">About Us</a>
+      <a href="services.html" class="hover:text-primary transition-all duration-300 py-2">Our Services</a>
+      <a href="gallery.html" class="hover:text-primary transition-all duration-300 py-2">Projects</a>
+      <a href="contact.html" class="hover:text-primary transition-all duration-300 py-2">Contacts</a>
+      <a href="blog.html" class="hover:text-primary transition-all duration-300 py-2">Blog</a>
+      <a href="contact.html" class="bg-primary text-white px-6 py-3 rounded hover:bg-green-800 transition-all duration-300 mt-4">
+        GET A FREE QUOTE
+      </a>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="relative bg-cover bg-center bg-no-repeat mt-[80px] md:mt-[100px]" style="background-image: url('assets/images/bannerimage.jpg');">
@@ -485,126 +502,122 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#2F302F] text-white pt-20 pb-10  relative">
+    <!-- Enhanced Responsive Footer -->
+  <footer class="footer-responsive text-white pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 lg:pb-10 relative">
     <div class="absolute inset-0 bg-black/20"></div>
-    <div class="container-custom">
-      <div class="grid md:grid-cols-4 gap-12 mb-16 relative z-10">
-        <!-- Company Info -->
-        <div class="md:col-span-2">
-          <div class="flex items-center space-x-4 mb-8">
-            <!-- Logo inside a rounded background -->
-            <div
-              class="w-[140px] h-[120px] bg-whtie  rounded-full flex items-center justify-center shadow-xl overflow-hidden">
-              <img src="assets/images/Airedale png.png" alt="Landmark Fencing Logo"
-                class="w-[100%] h-[100%] object-contain rounded-full" />
+    <div class="container-custom relative z-10">
+      <!-- Main Footer Content -->
+      <div class="footer-grid grid gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16">
+        
+        <!-- Company Info Section -->
+        <div class="footer-company-section">
+          <div class="footer-company-info">
+            <!-- Logo and Title Container -->
+            <div class="flex flex-col items-center sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6 mb-6 lg:mb-8">
+              <!-- Logo Container -->
+              <div class="footer-logo-container w-20 h-16 sm:w-24 sm:h-20 lg:w-32 lg:h-24 bg-white rounded-full flex items-center justify-center shadow-xl overflow-hidden flex-shrink-0">
+                <img src="assets/images/Airedale png.png" alt="Landmark Fencing Logo" class="w-full h-full object-contain rounded-full" />
+              </div>
+
+              <!-- Title and Subtitle -->
+              <div class="text-center sm:text-left">
+                <h3 class="footer-logo-text text-xl sm:text-2xl lg:text-3xl font-black">JP Landmark Fencing</h3>
+                <p class="text-gray-400 font-semibold text-sm sm:text-base lg:text-lg">Professional Fencing Services</p>
+              </div>
             </div>
 
-            <!-- Title and Subtitle -->
-            <div>
-              <h3 class="text-3xl font-black">JP Landmark Fencing</h3>
-              <p class="text-gray-400 font-semibold">Professional Fencing Services</p>
-            </div>
-          </div>
+            <!-- Company Description -->
+            <p class="footer-company-description text-gray-300 leading-relaxed mb-6 lg:mb-8 font-medium text-base lg:text-lg text-center sm:text-left max-w-2xl sm:max-w-none">
+              Transform your property with premium fencing solutions from <strong>JP Landmark Fencing</strong>. Our expert
+              team delivers unmatched quality, durability, and style that lasts for decades. Contact us today for a free
+              consultation.
+            </p>
 
-          <p class="text-gray-300 leading-relaxed mb-8 max-w-md font-medium text-lg">
-            Transform your property with premium fencing solutions from <strong>JP Landmark Fencing</strong>. Our expert
-            team delivers unmatched quality, durability, and style that lasts for decades. Contact us today for a free
-            consultation.
-          </p>
-          <div class="flex space-x-4">
-            <a href="#"
-              class="bg-white text-black  w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#"
-              class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#"
-              class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a href="#"
-              class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
+            <!-- Social Media Links -->
+            <div class="footer-social-links flex justify-center sm:justify-start space-x-3 lg:space-x-4">
+              <a href="#" class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg">
+                <i class="fab fa-facebook-f text-sm lg:text-base"></i>
+              </a>
+              <a href="#" class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg">
+                <i class="fab fa-instagram text-sm lg:text-base"></i>
+              </a>
+              <a href="#" class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg">
+                <i class="fab fa-youtube text-sm lg:text-base"></i>
+              </a>
+              <a href="#" class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg">
+                <i class="fab fa-linkedin-in text-sm lg:text-base"></i>
+              </a>
+            </div>
           </div>
         </div>
 
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-2xl font-bold mb-8 text-white ">Quick Links</h4>
-          <ul class="space-y-4">
-            <li><a href="home.html"
-                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Home</a>
-            </li>
-            <li><a href="about.html"
-                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">About
-                Us</a></li>
-            <li><a href="services.html"
-                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Our
-                Services</a></li>
-            <li><a href="gallery.html"
-                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Gallery</a>
-            </li>
-            <li><a href="contact.html"
-                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Contact</a>
-            </li>
-            <li><a href="privacy-policy.html"
-                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Privacy
-                Policy </a></li>
-            <li><a href="cookie-policy.html"
-                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Cookie
-                Policy</a></li>
-            <li><a href="terms-conditions.html"
-                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Terms
-                & Conditions</a></li>
+        <!-- Quick Links Section -->
+        <div class="footer-links-section text-center lg:text-left">
+          <h4 class="text-lg sm:text-xl lg:text-2xl font-bold mb-6 lg:mb-8 text-white">Quick Links</h4>
+          <ul class="space-y-3 lg:space-y-4">
+            <li><a href="home.html" class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block">Home</a></li>
+            <li><a href="about.html" class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block">About Us</a></li>
+            <li><a href="services.html" class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block">Our Services</a></li>
+            <li><a href="gallery.html" class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block">Contact</a></li>
+            <li><a href="privacy-policy.html" class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html" class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block">Cookie Policy</a></li>
+            <li><a href="terms-conditions.html" class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block">Terms & Conditions</a></li>
           </ul>
         </div>
 
-        <!-- Contact Info -->
-        <div>
-          <h4 class="text-2xl font-bold mb-8 text-white ">Get in Touch</h4>
-          <div class="space-y-6">
-            <div class="flex items-start space-x-4">
-              <i class="fas fa-map-marker-alt text-primary mt-2 text-xl"></i>
-              <div>
+        <!-- Contact Info Section -->
+        <div class="footer-contact-section text-center lg:text-left">
+          <h4 class="text-lg sm:text-xl lg:text-2xl font-bold mb-6 lg:mb-8 text-white">Get in Touch</h4>
+          
+          <!-- Contact Information -->
+          <div class="space-y-4 lg:space-y-6 mb-6 lg:mb-8">
+            <!-- Address -->
+            <div class="flex flex-col xl:flex-row items-center lg:items-start space-y-2 sm:space-y-0 sm:space-x-4">
+              <i class="fas fa-map-marker-alt text-primary text-lg lg:text-xl flex-shrink-0"></i>
+              <div class="text-center lg:text-left">
                 <a href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/media/googleMap.1fabcae9.html?defaultLocation=2&showZoom=true&showStreetView=true&showMapType=true&language=en&id=dataItem-kfnzlgh9&googleMapsScriptPath=%2Fservices%2Feditor-elements-library%2Fdist%2Fthunderbolt%2Fmedia%2Fgoogle-map.min.08346697.js&origin=https%3A%2F%2Finfo2892662.wixsite.com&hasFocus=true"
-                  class="text-gray-300 font-medium text-lg">123 Main Street<br>Your City, ST 12345</a>
+                  class="text-gray-300 font-medium text-sm sm:text-base lg:text-lg hover:text-white transition-colors">123 Main Street<br>Your City, ST 12345</a>
               </div>
             </div>
-            <div class="flex items-center space-x-4">
-              <i class="fas fa-phone text-primary text-xl"></i>
-              <a href="tel:+447897897867" class="text-gray-300 font-medium text-lg">07897897867</a>
+            
+            <!-- Phone -->
+            <div class="flex items-center justify-center lg:justify-start space-x-4">
+              <i class="fas fa-phone text-primary text-lg lg:text-xl"></i>
+              <a href="tel:+447897897867" class="text-gray-300 font-medium text-sm sm:text-base lg:text-lg hover:text-white transition-colors">07897897867</a>
             </div>
 
-            <div class="flex items-center space-x-4">
-              <i class="fas fa-envelope text-primary text-xl"></i>
-              <a href="mailto:nfo@Landmarkfencingcompany.com"
-                class="text-gray-300 font-medium text-lg">info@landmarkfencing.com</a>
+            <!-- Email -->
+            <div class="flex items-center justify-center lg:justify-start space-x-4">
+              <i class="fas fa-envelope text-primary text-lg lg:text-xl"></i>
+              <a href="mailto:info@landmarkfencing.com" class="text-gray-300 font-medium text-sm sm:text-base lg:text-lg hover:text-white transition-colors">info@landmarkfencing.com</a>
             </div>
           </div>
 
-          <div class="mt-8">
-            <h5 class="font-bold mb-4 text-lg">Business Hours</h5>
-            <p class="text-gray-300 font-medium">Monday - Friday: 8:00 AM - 6:00 PM</p>
-            <p class="text-gray-300 font-medium">Saturday: 9:00 AM - 5:00 PM</p>
-            <p class="text-gray-300 font-medium">Sunday: Closed</p>
+          <!-- Business Hours -->
+          <div class="text-center lg:text-left">
+            <h5 class="font-bold mb-3 lg:mb-4 text-sm sm:text-base lg:text-lg text-white">Business Hours</h5>
+            <div class="space-y-1 sm:space-y-2">
+              <p class="text-gray-300 font-medium text-xs sm:text-sm lg:text-base">Monday - Friday: 8:00 AM - 6:00 PM</p>
+              <p class="text-gray-300 font-medium text-xs sm:text-sm lg:text-base">Saturday: 9:00 AM - 5:00 PM</p>
+              <p class="text-gray-300 font-medium text-xs sm:text-sm lg:text-base">Sunday: Closed</p>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Bottom Bar -->
-      <div class="border-t-2 border-gray-700 pt-10 relative z-10">
-        <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-          <p class="text-gray-400 font-medium text-lg">© 2025 Landmark Fencing. All Rights Reserved.</p>
-          <p class="text-gray-400 font-medium text-lg">Designed & Developed By <a href="https://kyleinfotech.co.in/"
-              class="text-white">Kyle Infotech</a></p>
-
+      <div class="border-t-2 border-gray-700 pt-6 sm:pt-8 lg:pt-10">
+        <div class="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0 text-center lg:text-left">
+          <p class="text-gray-400 font-medium text-xs sm:text-sm lg:text-base">© 2025 Landmark Fencing. All Rights Reserved.</p>
+          <p class="text-gray-400 font-medium text-xs sm:text-sm lg:text-base">
+            Designed & Developed By <a href="https://kyleinfotech.co.in/" class="text-white hover:text-primary transition-colors">Kyle Infotech</a>
+          </p>
         </div>
       </div>
     </div>
   </footer>
+
 
   <!-- JavaScript -->
   <script>
