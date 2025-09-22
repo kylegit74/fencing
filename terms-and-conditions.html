@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms & Conditions - JP Landmark Fencing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              raleway: ["Raleway", "sans-serif"],
+            },
+            colors: {
+              primary: "#295E29",
+              "primary-dark": "#1e4520",
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              "fade-in-up": "fadeInUp 0.8s ease-out",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+            backdropBlur: {
+              xs: "2px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white text-black overflow-x-hidden font-raleway">
+    <!-- Header -->
+    <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300 h-20 lg:h-24 xl:h-32 header-clip"
+    >
+      <div
+        class="max-w-7xl mx-auto h-full flex items-center justify-between px-4 lg:px-8 relative"
+      >
+        <!-- Mobile Layout: Logo left, Menu right -->
+        <div class="flex lg:hidden items-center justify-between w-full">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div
+              class="h-16 w-16 md:h-16 md:w-16 rounded-full overflow-hidden border-2 border-white shadow-lg bg-white flex items-center justify-center"
+            >
+              <img
+                src="assets/images/Airedale 01.jpg"
+                alt="Landmark Fencing"
+                class="w-[120%]"
+              />
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button class="text-black z-50 relative" onclick="toggleMobileMenu()">
+            <i id="menuIcon" class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Layout: Full navigation -->
+        <div class="hidden lg:flex items-center justify-between w-full">
+          <!-- Left Navigation -->
+          <nav
+            class="flex space-x-6 text-black uppercase font-bold text-sm xl:text-base"
+          >
+            <a
+              href="index.html"
+              class="hover:text-primary transition-all duration-300 hover:scale-110"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="hover:text-primary transition-all duration-300 hover:scale-110"
+              >About Us</a
+            >
+            <a
+              href="services.html"
+              class="hover:text-primary transition-all duration-300 hover:scale-110"
+              >Our Services</a
+            >
+            <a
+              href="gallery.html"
+              class="hover:text-primary transition-all duration-300 hover:scale-110"
+              >Projects</a
+            >
+          </nav>
+
+          <!-- Center Logo -->
+          <div class="flex justify-center items-center">
+            <div
+              class="h-20 w-20 xl:h-28 xl:w-32 rounded-full overflow-hidden border-4 border-white shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl flex items-center justify-center"
+            >
+              <img
+                src="assets/images/Airedale 01.jpg"
+                alt="Landmark Fencing"
+                class="w-[120%]"
+              />
+            </div>
+          </div>
+
+          <!-- Right Navigation -->
+          <div class="flex items-center space-x-6">
+            <nav
+              class="flex space-x-6 text-black uppercase font-bold text-sm xl:text-base"
+            >
+              <a
+                href="contact.html"
+                class="hover:text-primary transition-all duration-300 hover:scale-110"
+                >Contacts</a
+              >
+              <a
+                href="blog.html"
+                class="hover:text-primary transition-all duration-300 hover:scale-110"
+                >Blog</a
+              >
+            </nav>
+
+            <!-- CTA Button -->
+            <a
+              href="contact.html"
+              class="bg-primary text-white px-4 py-2 rounded hover:bg-green-800 hover:text-white transition-all duration-300 font-bold transform hover:scale-105 text-sm xl:text-base whitespace-nowrap"
+            >
+              GET A FREE QUOTE
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobileMenu"
+      class="fixed mobile-menu left-0 right-0 bottom-0 bg-white z-40 hidden lg:hidden border-t-2 border-primary/10 shadow-2xl"
+    >
+      <div
+        class="flex flex-col items-center justify-start h-full space-y-6 text-xl font-bold uppercase pt-8 pb-8"
+      >
+        <a
+          href="index.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >About Us</a
+        >
+        <a
+          href="services.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Our Services</a
+        >
+        <a
+          href="gallery.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Projects</a
+        >
+        <a
+          href="contact.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Contacts</a
+        >
+        <a
+          href="blog.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Blog</a
+        >
+        <a
+          href="contact.html"
+          class="bg-primary text-white px-6 py-3 rounded hover:bg-green-800 transition-all duration-300 mt-4"
+        >
+          GET A FREE QUOTE
+        </a>
+      </div>
+    </div>
+    <!-- Hero Section -->
+    <section
+      class="relative bg-cover bg-center bg-no-repeat mt-[80px] md:mt-[100px]"
+      style="background-image: url('assets/images/bannerimage.jpg')"
+    >
+      <div class="absolute inset-0 bg-white/85"></div>
+      <div
+        class="relative max-w-[90vw] md:max-w-[79vw] mx-auto py-16 md:py-20 flex flex-col items-center justify-center text-center px-4"
+      >
+        <div class="text-[#295E29] animate-fade-in-up">
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black font-raleway"
+          >
+            Terms & Conditions
+          </h1>
+          <p
+            class="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto font-medium"
+          >
+            Please read these terms and conditions carefully before using our
+            services
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="contact.html"
+              class="border-2 border-[#295E29] text-[#295E29] px-6 md:px-8 py-3 text-base md:text-lg font-bold hover:bg-[#295E29] hover:text-white transition font-raleway transform hover:scale-105"
+            >
+              GET FREE QUOTE
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terms & Conditions Content -->
+    <section class="py-8 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="">
+          <div class="terms-content text-gray-700">
+            <h2>1. Agreement to Terms</h2>
+            <p>
+              By accessing and using the services provided by JP Landmark
+              Fencing ("we," "our," or "us"), you ("customer," "client," or
+              "you") agree to be bound by these Terms and Conditions. These
+              terms constitute a legally binding agreement between you and JP
+              Landmark Fencing. If you do not agree with any part of these
+              terms, you may not use our services.
+            </p>
+
+            <h2>2. Services Provided</h2>
+            <p>
+              JP Landmark Fencing provides professional fencing installation,
+              repair, and maintenance services including but not limited to:
+            </p>
+            <ul>
+              <li>Residential and commercial fence installation</li>
+              <li>Fence repair and maintenance services</li>
+              <li>Custom fence design and consultation</li>
+              <li>Material supply and delivery</li>
+              <li>Property assessment and measurements</li>
+              <li>Post-installation support and warranty services</li>
+            </ul>
+
+            <h2>3. Quotations and Pricing</h2>
+            <h3>3.1 Free Estimates</h3>
+            <p>
+              We provide free, no-obligation estimates for all fencing projects.
+              Estimates are valid for 30 days from the date issued unless
+              otherwise specified. Prices may be subject to change based on
+              material costs, site conditions, or project modifications.
+            </p>
+
+            <h3>3.2 Final Pricing</h3>
+            <p>
+              Final pricing will be confirmed in writing before work commences.
+              Any changes to the original scope of work must be approved in
+              writing and may result in additional charges.
+            </p>
+
+            <h2>4. Payment Terms</h2>
+            <h3>4.1 Payment Schedule</h3>
+            <p>
+              Payment terms will be outlined in your service agreement.
+              Typically, our payment structure includes:
+            </p>
+            <ul>
+              <li>
+                Deposit required upon contract signing (usually 25-50% of total
+                project cost)
+              </li>
+              <li>
+                Progress payments for larger projects as work milestones are
+                completed
+              </li>
+              <li>
+                Final payment due upon project completion and customer
+                satisfaction
+              </li>
+            </ul>
+
+            <h3>4.2 Late Payments</h3>
+            <p>
+              Payments not received within 30 days of invoice date may be
+              subject to a 1.5% monthly service charge. We reserve the right to
+              suspend work on projects with overdue payments.
+            </p>
+
+            <h2>5. Permits and Approvals</h2>
+            <p>
+              The customer is responsible for obtaining all necessary permits
+              and approvals required for fence installation unless specifically
+              agreed otherwise in writing. We can assist with permit
+              applications as an additional service. The customer must ensure
+              compliance with local zoning laws, homeowner association
+              requirements, and property line restrictions.
+            </p>
+
+            <h2>6. Property Access and Preparation</h2>
+            <h3>6.1 Site Access</h3>
+            <p>
+              The customer must provide reasonable access to the work area
+              during normal business hours (8:00 AM - 6:00 PM, Monday through
+              Saturday). This includes ensuring clear pathways for equipment and
+              materials.
+            </p>
+
+            <h3>6.2 Site Preparation</h3>
+            <p>Unless otherwise agreed, the customer is responsible for:</p>
+            <ul>
+              <li>
+                Marking underground utilities through appropriate utility
+                location services
+              </li>
+              <li>
+                Clearing the fence line of obstacles, vegetation, or debris
+              </li>
+              <li>Providing access to electrical outlets if needed</li>
+              <li>Securing pets and ensuring safe working conditions</li>
+            </ul>
+
+            <h2>7. Warranty and Guarantees</h2>
+            <h3>7.1 Workmanship Warranty</h3>
+            <p>
+              We provide a one (1) year warranty on all installation workmanship
+              from the date of completion. This warranty covers defects in
+              installation but does not cover normal wear and tear, damage from
+              extreme weather, or damage caused by customer negligence.
+            </p>
+
+            <h3>7.2 Material Warranties</h3>
+            <p>
+              Material warranties are provided by the manufacturer and vary by
+              product. We will provide all applicable manufacturer warranty
+              information upon project completion.
+            </p>
+
+            <h2>8. Limitation of Liability</h2>
+            <p>
+              Our liability for any claim related to our services is limited to
+              the total amount paid for the specific service in question. We are
+              not liable for indirect, incidental, or consequential damages
+              including but not limited to:
+            </p>
+            <ul>
+              <li>Property damage not directly caused by our negligence</li>
+              <li>Loss of use or enjoyment of property</li>
+              <li>Economic losses beyond the cost of our services</li>
+              <li>
+                Damage to landscaping or irrigation systems not marked by
+                customer
+              </li>
+            </ul>
+
+            <h2>9. Insurance and Licensing</h2>
+            <p>
+              JP Landmark Fencing maintains appropriate business liability
+              insurance and all required licenses for our services. Proof of
+              insurance and licensing can be provided upon request. We are not
+              responsible for work performed by unlicensed contractors or work
+              not performed by JP Landmark Fencing personnel.
+            </p>
+
+            <h2>10. Cancellation and Refund Policy</h2>
+            <h3>10.1 Customer Cancellation</h3>
+            <p>
+              Customers may cancel services with written notice. Cancellation
+              terms depend on project stage:
+            </p>
+            <ul>
+              <li>
+                Before work begins: Full refund minus any costs incurred for
+                materials ordered or permits obtained
+              </li>
+              <li>
+                After work begins: Refund of unused portion minus completed
+                work, materials, and reasonable administrative costs
+              </li>
+              <li>Custom or special-order materials may not be refundable</li>
+            </ul>
+
+            <h2>11. Force Majeure</h2>
+            <p>
+              We are not liable for delays or inability to perform due to
+              circumstances beyond our reasonable control, including but not
+              limited to severe weather, natural disasters, government
+              regulations, labor disputes, or material shortages. In such cases,
+              we will make reasonable efforts to complete work as soon as
+              conditions permit.
+            </p>
+
+            <h2>12. Dispute Resolution</h2>
+            <h3>12.1 Initial Resolution</h3>
+            <p>
+              Any disputes should first be addressed directly with our customer
+              service team. We are committed to resolving issues promptly and
+              fairly.
+            </p>
+
+            <h3>12.2 Mediation and Arbitration</h3>
+            <p>
+              If direct resolution is not possible, disputes may be subject to
+              mediation or arbitration as specified in your service agreement,
+              governed by the laws of our operating jurisdiction.
+            </p>
+
+            <h2>13. Privacy and Data Protection</h2>
+            <p>
+              We respect your privacy and handle personal information in
+              accordance with our Privacy Policy. Customer information is used
+              solely for service delivery, communication, and business purposes.
+              We do not sell or share personal information with third parties
+              except as required by law or for service delivery.
+            </p>
+
+            <h2>14. Intellectual Property</h2>
+            <p>
+              All custom designs, plans, and proprietary methods remain the
+              intellectual property of JP Landmark Fencing. Customers receive a
+              limited license to use these designs for their specific project
+              only.
+            </p>
+
+            <h2>15. Safety and Environmental Compliance</h2>
+            <p>
+              We are committed to maintaining safe work practices and
+              environmental compliance. All work is performed in accordance with
+              applicable safety regulations and environmental guidelines.
+              Customers must inform us of any known hazardous conditions or
+              materials on the property.
+            </p>
+
+            <h2>16. Changes to Terms</h2>
+            <p>
+              We reserve the right to modify these Terms and Conditions at any
+              time. Updated terms will be posted on our website and will apply
+              to all services contracted after the effective date of the
+              changes. Continued use of our services after changes constitutes
+              acceptance of the modified terms.
+            </p>
+
+            <h2>17. Governing Law</h2>
+            <p>
+              These Terms and Conditions are governed by the laws of [Your
+              State/Province] and any applicable federal laws. Any legal actions
+              must be brought in the appropriate courts of [Your Jurisdiction].
+            </p>
+
+            <h2>18. Severability</h2>
+            <p>
+              If any provision of these Terms and Conditions is found to be
+              unenforceable or invalid, the remaining provisions will continue
+              to be valid and enforceable to the fullest extent permitted by
+              law.
+            </p>
+
+            <h2>19. Contact Information</h2>
+            <p>
+              For questions regarding these Terms and Conditions or our
+              services, please contact us:
+            </p>
+            <div
+              class="bg-[#295E29]/5 p-6 rounded-xl mt-4 border-l-4 border-[#295E29]"
+            >
+              <p><strong>JP Landmark Fencing</strong></p>
+              <p>
+                <strong>Phone:</strong>
+                <a
+                  href="tel:+447897897867"
+                  class="text-[#295E29] hover:underline"
+                  >07897897867</a
+                >
+              </p>
+              <p>
+                <strong>Email:</strong>
+                <a
+                  href="mailto:info@landmarkfencing.com"
+                  class="text-[#295E29] hover:underline"
+                  >info@landmarkfencing.com</a
+                >
+              </p>
+              <p>
+                <strong>Address:</strong> 123 Main Street, Your City, ST 12345
+              </p>
+              <p>
+                <strong>Business Hours:</strong> Monday - Friday: 8:00 AM - 6:00
+                PM, Saturday: 9:00 AM - 5:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="py-16 md:py-20 lg:py-24 bg-[#e3e3e3] text-black relative overflow-hidden"
+    >
+      <div
+        class="absolute top-10 right-10 w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-[#295E29]/10 to-transparent rounded-full animate-float"
+      ></div>
+      <div
+        class="absolute bottom-20 left-20 w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-[#295E29]/10 to-transparent rounded-full animate-float"
+        style="animation-delay: -3s"
+      ></div>
+
+      <div class="max-w-7xl mx-auto relative px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-6 md:mb-8">
+            Ready to Transform Your Property?
+          </h2>
+          <p
+            class="text-lg md:text-xl mb-8 md:mb-12 max-w-3xl mx-auto opacity-95 font-medium"
+          >
+            Join hundreds of satisfied customers who trust us for their fencing
+            needs. Get your free consultation today!
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center mb-12 md:mb-16"
+          >
+            <a
+              href="contact.html"
+              class="w-full sm:w-auto bg-white/10 backdrop-blur-sm border border-white/20 bg-white text-black px-8 md:px-10 py-4 md:py-5 rounded-xl font-bold text-lg md:text-xl hover:bg-white hover:text-primary transition-all duration-300 shadow-2xl"
+            >
+              <i class="fas fa-calculator mr-3"></i>
+              Get Free Quote
+            </a>
+            <a
+              href="tel:+447897897867"
+              class="w-full sm:w-auto flex bg-[#2F302F] items-center justify-center space-x-4 border-3 border-white text-white px-8 md:px-10 py-4 md:py-5 rounded-xl font-bold text-lg md:text-xl transition-all duration-300 shadow-2xl hover:bg-black"
+            >
+              <i class="fas fa-phone"></i>
+              <span>07897897867</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Enhanced Responsive Footer -->
+    <footer
+      class="footer-responsive text-white pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 lg:pb-10 relative"
+    >
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="container-custom relative z-10">
+        <!-- Main Footer Content -->
+        <div
+          class="footer-grid grid gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16"
+        >
+          <!-- Company Info Section -->
+          <div class="footer-company-section">
+            <div class="footer-company-info">
+              <!-- Logo and Title Container -->
+              <div
+                class="flex flex-col items-center sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6 mb-6 lg:mb-8"
+              >
+                <!-- Logo Container -->
+                <div
+                  class="footer-logo-container w-20 h-16 sm:w-24 sm:h-20 lg:w-32 lg:h-24 bg-white rounded-full flex items-center justify-center shadow-xl overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="assets/images/Airedale png.png"
+                    alt="Landmark Fencing Logo"
+                    class="w-full h-full object-contain rounded-full"
+                  />
+                </div>
+
+                <!-- Title and Subtitle -->
+                <div class="text-center sm:text-left">
+                  <h3
+                    class="footer-logo-text text-xl sm:text-2xl lg:text-3xl font-black"
+                  >
+                    JP Landmark Fencing
+                  </h3>
+                  <p
+                    class="text-gray-400 font-semibold text-sm sm:text-base lg:text-lg"
+                  >
+                    Professional Fencing Services
+                  </p>
+                </div>
+              </div>
+
+              <!-- Company Description -->
+              <p
+                class="footer-company-description text-gray-300 leading-relaxed mb-6 lg:mb-8 font-medium text-base lg:text-lg text-center sm:text-left max-w-2xl sm:max-w-none"
+              >
+                Transform your property with premium fencing solutions from
+                <strong>JP Landmark Fencing</strong>. Our expert team delivers
+                unmatched quality, durability, and style that lasts for decades.
+                Contact us today for a free consultation.
+              </p>
+
+              <!-- Social Media Links -->
+              <div
+                class="footer-social-links flex justify-center sm:justify-start space-x-3 lg:space-x-4"
+              >
+                <a
+                  href="#"
+                  class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fab fa-facebook-f text-sm lg:text-base"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fab fa-instagram text-sm lg:text-base"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fab fa-youtube text-sm lg:text-base"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fab fa-linkedin-in text-sm lg:text-base"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div class="footer-links-section text-center lg:text-left">
+            <h4
+              class="text-lg sm:text-xl lg:text-2xl font-bold mb-6 lg:mb-8 text-white"
+            >
+              Quick Links
+            </h4>
+            <ul class="space-y-3 lg:space-y-4">
+              <li>
+                <a
+                  href="home.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="gallery.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="privacy-policy.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="cookie-policy.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Cookie Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="terms-and-conditions.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Terms & Conditions</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info Section -->
+          <div class="footer-contact-section text-center lg:text-left">
+            <h4
+              class="text-lg sm:text-xl lg:text-2xl font-bold mb-6 lg:mb-8 text-white"
+            >
+              Get in Touch
+            </h4>
+
+            <!-- Contact Information -->
+            <div class="space-y-4 lg:space-y-6 mb-6 lg:mb-8">
+              <!-- Address -->
+              <div
+                class="flex flex-col xl:flex-row items-center lg:items-start space-y-2 sm:space-y-0 sm:space-x-4"
+              >
+                <i
+                  class="fas fa-map-marker-alt text-primary text-lg lg:text-xl flex-shrink-0"
+                ></i>
+                <div class="text-center lg:text-left">
+                  <a
+                    href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/media/googleMap.1fabcae9.html?defaultLocation=2&showZoom=true&showStreetView=true&showMapType=true&language=en&id=dataItem-kfnzlgh9&googleMapsScriptPath=%2Fservices%2Feditor-elements-library%2Fdist%2Fthunderbolt%2Fmedia%2Fgoogle-map.min.08346697.js&origin=https%3A%2F%2Finfo2892662.wixsite.com&hasFocus=true"
+                    class="text-gray-300 font-medium text-sm sm:text-base lg:text-lg hover:text-white transition-colors"
+                    >123 Main Street<br />Your City, ST 12345</a
+                  >
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div
+                class="flex items-center justify-center lg:justify-start space-x-4"
+              >
+                <i class="fas fa-phone text-primary text-lg lg:text-xl"></i>
+                <a
+                  href="tel:+447897897867"
+                  class="text-gray-300 font-medium text-sm sm:text-base lg:text-lg hover:text-white transition-colors"
+                  >07897897867</a
+                >
+              </div>
+
+              <!-- Email -->
+              <div
+                class="flex items-center justify-center lg:justify-start space-x-4"
+              >
+                <i class="fas fa-envelope text-primary text-lg lg:text-xl"></i>
+                <a
+                  href="mailto:info@landmarkfencing.com"
+                  class="text-gray-300 font-medium text-sm sm:text-base lg:text-lg hover:text-white transition-colors"
+                  >info@landmarkfencing.com</a
+                >
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="text-center lg:text-left">
+              <h5
+                class="font-bold mb-3 lg:mb-4 text-sm sm:text-base lg:text-lg text-white"
+              >
+                Business Hours
+              </h5>
+              <div class="space-y-1 sm:space-y-2">
+                <p
+                  class="text-gray-300 font-medium text-xs sm:text-sm lg:text-base"
+                >
+                  Monday - Friday: 8:00 AM - 6:00 PM
+                </p>
+                <p
+                  class="text-gray-300 font-medium text-xs sm:text-sm lg:text-base"
+                >
+                  Saturday: 9:00 AM - 5:00 PM
+                </p>
+                <p
+                  class="text-gray-300 font-medium text-xs sm:text-sm lg:text-base"
+                >
+                  Sunday: Closed
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t-2 border-gray-700 pt-6 sm:pt-8 lg:pt-10">
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0 text-center lg:text-left"
+          >
+            <p
+              class="text-gray-400 font-medium text-xs sm:text-sm lg:text-base"
+            >
+              © 2025 Landmark Fencing. All Rights Reserved.
+            </p>
+            <p
+              class="text-gray-400 font-medium text-xs sm:text-sm lg:text-base"
+            >
+              Designed & Developed By
+              <a
+                href="https://kyleinfotech.co.in/"
+                class="text-white hover:text-primary transition-colors"
+                >Kyle Infotech</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile menu toggle
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenu.classList.toggle("hidden");
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuButton = document.querySelector(
+          '[onclick="toggleMobileMenu()"]'
+        );
+
+        if (
+          !mobileMenu.contains(event.target) &&
+          !menuButton.contains(event.target)
+        ) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+
+      // Handle window resize for mobile menu
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1024) {
+          document.getElementById("mobileMenu").classList.add("hidden");
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe terms content for animation
+      document.addEventListener("DOMContentLoaded", () => {
+        const termsSection = document.querySelector(".terms-content");
+        if (termsSection) {
+          termsSection.style.opacity = "0";
+          termsSection.style.transform = "translateY(30px)";
+          termsSection.style.transition =
+            "opacity 0.8s ease, transform 0.8s ease";
+          observer.observe(termsSection);
+        }
+      });
+    </script>
+  </body>
+  <script>
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuIcon = document.getElementById("menuIcon");
+
+      mobileMenu.classList.toggle("hidden");
+
+      // Toggle icon between hamburger and close
+      if (mobileMenu.classList.contains("hidden")) {
+        menuIcon.classList.remove("fa-times");
+        menuIcon.classList.add("fa-bars");
+      } else {
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-times");
+      }
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", function (e) {
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuButton = document.querySelector(
+        '[onclick="toggleMobileMenu()"]'
+      );
+
+      if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
+        if (!mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.add("hidden");
+          const menuIcon = document.getElementById("menuIcon");
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+        }
+      }
+    });
+
+    // Close mobile menu when window is resized to desktop
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 1024) {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+        mobileMenu.classList.add("hidden");
+        menuIcon.classList.remove("fa-times");
+        menuIcon.classList.add("fa-bars");
+      }
+    });
+
+    // Close mobile menu when clicking on navigation links
+    document.querySelectorAll("#mobileMenu a").forEach((link) => {
+      link.addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+        mobileMenu.classList.add("hidden");
+        menuIcon.classList.remove("fa-times");
+        menuIcon.classList.add("fa-bars");
+      });
+    });
+  </script>
+</html>

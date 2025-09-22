@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Fencing Installation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flaticon Solid Rounded Icons -->
+    <link
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              raleway: ["Raleway", "sans-serif"],
+            },
+            colors: {
+              primary: "#295E29",
+              "primary-dark": "#1e4a1e",
+            },
+            animation: {
+              glow: "glow 3s infinite ease-in-out",
+              "fade-in-up": "fadeInUp 1s ease-out",
+              "slide-in-left": "slideInLeft 1s ease-out",
+              "slide-in-right": "slideInRight 1s ease-out",
+              "bounce-in": "bounceIn 1s ease-out",
+              "pulse-custom": "pulse 2s infinite",
+              float: "float 3s ease-in-out infinite",
+              gradient: "gradientShift 4s ease infinite",
+              "success-pulse": "successPulse 0.5s ease-in-out",
+              typewriter:
+                "typewriter 3s steps(40, end), blink-caret 0.75s step-end infinite",
+              "spin-slow": "spin 1s linear infinite",
+            },
+            keyframes: {
+              glow: {
+                "0%": {
+                  boxShadow:
+                    "0 0 5px #ffffff, 0 0 10px #fdf5f5, 0 0 15px #000000",
+                  transform: "scale(1)",
+                },
+                "50%": {
+                  boxShadow:
+                    "0 0 20px #ffffff, 0 0 40px #635b5b, 0 0 60px #706868",
+                  transform: "scale(1.05)",
+                },
+                "100%": {
+                  boxShadow:
+                    "0 0 5px #ffe2e2, 0 0 10px #222222, 0 0 15px #ffffff",
+                  transform: "scale(1)",
+                },
+              },
+              fadeInUp: {
+                from: {
+                  opacity: "0",
+                  transform: "translateY(50px)",
+                },
+                to: {
+                  opacity: "1",
+                  transform: "translateY(0)",
+                },
+              },
+              slideInLeft: {
+                from: {
+                  opacity: "0",
+                  transform: "translateX(-100px)",
+                },
+                to: {
+                  opacity: "1",
+                  transform: "translateX(0)",
+                },
+              },
+              slideInRight: {
+                from: {
+                  opacity: "0",
+                  transform: "translateX(100px)",
+                },
+                to: {
+                  opacity: "1",
+                  transform: "translateX(0)",
+                },
+              },
+              bounceIn: {
+                "0%": {
+                  opacity: "0",
+                  transform: "scale(0.3)",
+                },
+                "50%": {
+                  opacity: "1",
+                  transform: "scale(1.05)",
+                },
+                "70%": {
+                  transform: "scale(0.9)",
+                },
+                "100%": {
+                  opacity: "1",
+                  transform: "scale(1)",
+                },
+              },
+              float: {
+                "0%": {
+                  transform: "translateY(0px)",
+                },
+                "50%": {
+                  transform: "translateY(-10px)",
+                },
+                "100%": {
+                  transform: "translateY(0px)",
+                },
+              },
+              gradientShift: {
+                "0%": {
+                  backgroundPosition: "0% 50%",
+                },
+                "50%": {
+                  backgroundPosition: "100% 50%",
+                },
+                "100%": {
+                  backgroundPosition: "0% 50%",
+                },
+              },
+              successPulse: {
+                "0%": { transform: "scale(1)" },
+                "50%": { transform: "scale(1.1)" },
+                "100%": { transform: "scale(1)" },
+              },
+              typewriter: {
+                from: { width: "0" },
+                to: { width: "100%" },
+              },
+              "blink-caret": {
+                "from, to": { borderColor: "transparent" },
+                "50%": { borderColor: "#295E29" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-raleway text-gray-800">
+    <!-- Header -->
+    <!-- Header -->
+    <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300 h-20 lg:h-24 xl:h-32 header-clip"
+    >
+      <div
+        class="max-w-7xl mx-auto h-full flex items-center justify-between px-4 lg:px-8 relative"
+      >
+        <!-- Mobile Layout: Logo left, Menu right -->
+        <div class="flex lg:hidden items-center justify-between w-full">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div
+              class="h-16 w-16 md:h-16 md:w-16 rounded-full overflow-hidden border-2 border-white shadow-lg bg-white flex items-center justify-center"
+            >
+              <img
+                src="assets/images/Airedale 01.jpg"
+                alt="Landmark Fencing"
+                class="w-[120%]"
+              />
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button class="text-black z-50 relative" onclick="toggleMobileMenu()">
+            <i id="menuIcon" class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Layout: Full navigation -->
+        <div class="hidden lg:flex items-center justify-between w-full">
+          <!-- Left Navigation -->
+          <nav
+            class="flex space-x-6 text-black uppercase font-bold text-sm xl:text-base"
+          >
+            <a
+              href="index.html"
+              class="hover:text-primary transition-all duration-300 hover:scale-110"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="hover:text-primary transition-all duration-300 hover:scale-110"
+              >About Us</a
+            >
+            <a
+              href="services.html"
+              class="hover:text-primary transition-all duration-300 hover:scale-110"
+              >Our Services</a
+            >
+            <a
+              href="gallery.html"
+              class="hover:text-primary transition-all duration-300 hover:scale-110"
+              >Projects</a
+            >
+          </nav>
+
+          <!-- Center Logo -->
+          <div class="flex justify-center items-center">
+            <div
+              class="h-20 w-20 xl:h-28 xl:w-32 rounded-full overflow-hidden border-4 border-white shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl flex items-center justify-center"
+            >
+              <img
+                src="assets/images/Airedale 01.jpg"
+                alt="Landmark Fencing"
+                class="w-[120%]"
+              />
+            </div>
+          </div>
+
+          <!-- Right Navigation -->
+          <div class="flex items-center space-x-6">
+            <nav
+              class="flex space-x-6 text-black uppercase font-bold text-sm xl:text-base"
+            >
+              <a
+                href="contact.html"
+                class="hover:text-primary transition-all duration-300 hover:scale-110"
+                >Contacts</a
+              >
+              <a
+                href="blog.html"
+                class="hover:text-primary transition-all duration-300 hover:scale-110"
+                >Blog</a
+              >
+            </nav>
+
+            <!-- CTA Button -->
+            <a
+              href="contact.html"
+              class="bg-primary text-white px-4 py-2 rounded hover:bg-green-800 hover:text-white transition-all duration-300 font-bold transform hover:scale-105 text-sm xl:text-base whitespace-nowrap"
+            >
+              GET A FREE QUOTE
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobileMenu"
+      class="fixed mobile-menu left-0 right-0 bottom-0 bg-white z-40 hidden lg:hidden border-t-2 border-primary/10 shadow-2xl"
+    >
+      <div
+        class="flex flex-col items-center justify-start h-full space-y-6 text-xl font-bold uppercase pt-8 pb-8"
+      >
+        <a
+          href="index.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >About Us</a
+        >
+        <a
+          href="services.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Our Services</a
+        >
+        <a
+          href="gallery.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Projects</a
+        >
+        <a
+          href="contact.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Contacts</a
+        >
+        <a
+          href="blog.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Blog</a
+        >
+        <a
+          href="contact.html"
+          class="bg-primary text-white px-6 py-3 rounded hover:bg-green-800 transition-all duration-300 mt-4"
+        >
+          GET A FREE QUOTE
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      class="relative hero-bg bg-cover bg-center bg-no-repeat mt-[80px] sm:mt-[100px] min-h-[400px] sm:min-h-[500px] lg:min-h-[400px] flex items-center"
+    >
+      <!-- Dark overlay (70% opacity) -->
+
+      <div
+        class="relative max-w-[95vw] sm:max-w-[90vw] lg:max-w-[79vw] mx-auto py-12 sm:py-20 flex flex-col items-center justify-center text-center px-4"
+      >
+        <!-- Hero Content -->
+        <div class="text-white scroll-animate">
+          <h1
+            class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white font-raleway"
+          >
+            Contact Us Today
+          </h1>
+          <p
+            class="mb-6 sm:mb-8 text-base sm:text-lg lg:text-xl text-white max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto font-raleway animate-fade-in-up leading-relaxed"
+          >
+            Ready to transform your property with premium fencing? Get in touch
+            with our expert team for a free consultation and quote.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+447897897867"
+              class="flex items-center justify-center space-x-2 border-2 border-white text-white px-6 sm:px-8 py-3 text-base sm:text-lg font-bold hover:bg-white hover:text-primary transition-all duration-300 font-raleway transform hover:scale-105 btn-hover"
+            >
+              <i class="fas fa-phone animate-pulse-custom"></i>
+              <span>07897897867</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="about-overlay py-12 sm:py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-8 sm:mb-12 scroll-animate">
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-black font-raleway mb-4 animate-bounce-in"
+          >
+            Get In Touch
+          </h2>
+          <p
+            class="text-[#505050] text-base sm:text-lg font-raleway animate-fade-in-up"
+          >
+            We're here to help with all your fencing needs
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <!-- Phone -->
+          <div
+            class="text-center p-4 sm:p-6 bg-black rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 card-hover scroll-animate"
+          >
+            <div
+              class="w-16 h-16 sm:w-20 sm:h-20 bg-primary text-white text-2xl sm:text-3xl flex items-center justify-center rounded-full mx-auto mb-4 animate-glow icon-spin"
+            >
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3
+              class="text-lg sm:text-xl font-bold text-white font-raleway mb-3"
+            >
+              Call Us
+            </h3>
+            <p class="text-white font-raleway mb-3 text-sm sm:text-base">
+              Speak directly with our experts
+            </p>
+            <a
+              href="tel:+447897897867"
+              class="text-white font-bold text-base sm:text-lg hover:text-green-400 transition-all duration-300"
+              >07897897867</a
+            >
+          </div>
+
+          <!-- Email -->
+          <div
+            class="text-center p-4 sm:p-6 bg-black rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 card-hover scroll-animate"
+          >
+            <div
+              class="w-16 h-16 sm:w-20 sm:h-20 bg-primary text-white text-2xl sm:text-3xl flex items-center justify-center rounded-full mx-auto mb-4 animate-glow icon-spin"
+            >
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3
+              class="text-lg sm:text-xl font-bold text-white font-raleway mb-3"
+            >
+              Email Us
+            </h3>
+            <p class="text-white font-raleway mb-3 text-sm sm:text-base">
+              Send us your requirements
+            </p>
+            <a
+              href="mailto:info@landmarkfencing.com"
+              class="text-white font-bold text-base sm:text-lg hover:text-green-400 transition-all duration-300 break-all"
+              >info@landmarkfencing.com</a
+            >
+          </div>
+
+          <!-- Location -->
+          <div
+            class="text-center p-4 sm:p-6 bg-black rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 card-hover scroll-animate"
+          >
+            <div
+              class="w-16 h-16 sm:w-20 sm:h-20 bg-primary text-white text-2xl sm:text-3xl flex items-center justify-center rounded-full mx-auto mb-4 animate-glow icon-spin"
+            >
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3
+              class="text-lg sm:text-xl font-bold text-white font-raleway mb-3"
+            >
+              Visit Us
+            </h3>
+            <p class="text-white font-raleway mb-3 text-sm sm:text-base">
+              Come see our showroom
+            </p>
+            <p class="text-white font-bold text-base sm:text-lg">
+              32 Lorem Rd, Lorem BR2 8BA, United Kingdom
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="bg-[#2F302F] text-white py-12 sm:py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+          <!-- Left: Contact Form -->
+          <div class="scroll-animate">
+            <h2
+              class="text-3xl sm:text-4xl font-bold font-raleway mb-4 sm:mb-6 animate-slide-in-left text-glow"
+            >
+              Send Us A Message
+            </h2>
+            <p
+              class="text-gray-300 text-base sm:text-lg font-raleway mb-6 sm:mb-8 animate-slide-in-left"
+            >
+              Fill out the form below and we'll get back to you within 24 hours.
+            </p>
+
+            <form
+              class="space-y-4 sm:space-y-6"
+              onsubmit="handleFormSubmit(event)"
+            >
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div>
+                  <label
+                    class="block text-white font-bold mb-2 font-raleway text-sm sm:text-base"
+                    >First Name *</label
+                  >
+                  <input
+                    type="text"
+                    name="firstName"
+                    required
+                    class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white text-black rounded-lg form-input font-raleway font-bold transition-all duration-300 border-2 border-gray-300 focus:border-primary text-sm sm:text-base"
+                    placeholder="Enter your first name"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-white font-bold mb-2 font-raleway text-sm sm:text-base"
+                    >Last Name *</label
+                  >
+                  <input
+                    type="text"
+                    name="lastName"
+                    required
+                    class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white text-black rounded-lg form-input font-raleway font-bold transition-all duration-300 border-2 border-gray-300 focus:border-primary text-sm sm:text-base"
+                    placeholder="Enter your last name"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div>
+                  <label
+                    class="block text-white font-bold mb-2 font-raleway text-sm sm:text-base"
+                    >Email *</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white text-black rounded-lg form-input font-raleway font-bold transition-all duration-300 border-2 border-gray-300 focus:border-primary text-sm sm:text-base"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-white font-bold mb-2 font-raleway text-sm sm:text-base"
+                    >Phone *</label
+                  >
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white text-black rounded-lg form-input font-raleway font-bold transition-all duration-300 border-2 border-gray-300 focus:border-primary text-sm sm:text-base"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  class="block text-white font-bold mb-2 font-raleway text-sm sm:text-base"
+                  >Service Needed</label
+                >
+                <select
+                  name="service"
+                  class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white text-black rounded-lg form-input font-raleway font-bold transition-all duration-300 border-2 border-gray-300 focus:border-primary text-sm sm:text-base"
+                >
+                  <option value="">Select a service</option>
+                  <option value="residential-fencing">
+                    Residential Fencing
+                  </option>
+                  <option value="commercial-fencing">Commercial Fencing</option>
+                  <option value="fence-repair">Fence Repair</option>
+                  <option value="gate-installation">Gate Installation</option>
+                  <option value="consultation">Free Consultation</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  class="block text-white font-bold mb-2 font-raleway text-sm sm:text-base"
+                  >Project Description *</label
+                >
+                <textarea
+                  name="message"
+                  required
+                  rows="4"
+                  class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white text-black rounded-lg form-input font-raleway font-bold resize-none transition-all duration-300 border-2 border-gray-300 focus:border-primary text-sm sm:text-base"
+                  placeholder="Tell us about your fencing project..."
+                ></textarea>
+              </div>
+
+              <!-- Terms and Conditions Checkbox -->
+              <label
+                class="flex items-start space-x-2 text-xs sm:text-sm font-medium text-white"
+              >
+                <input type="checkbox" required class="mt-1 accent-primary" />
+                <span
+                  >I agree to the
+                  <a
+                    href="/terms-and-conditions"
+                    class="text-primary underline hover:text-green-400 transition"
+                  >
+                    Terms & Conditions
+                  </a>
+                </span>
+              </label>
+
+              <button
+                type="submit"
+                class="w-full bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold hover:bg-green-700 transition-all duration-300 font-raleway rounded-lg transform hover:scale-105 btn-hover animate-gradient"
+              >
+                <i class="fas fa-paper-plane mr-2"></i>
+                Send Message
+              </button>
+            </form>
+
+            <!-- Success Message -->
+            <div
+              id="success-message"
+              class="hidden mt-6 p-4 bg-green-600 text-white rounded-lg animate-success-pulse"
+            >
+              <i class="fas fa-check-circle mr-2"></i>
+              Thank you! Your message has been sent successfully. We'll contact
+              you soon.
+            </div>
+          </div>
+
+          <!-- Right: Map and Hours -->
+          <div class="scroll-animate space-y-6 sm:space-y-8">
+            <h3
+              class="text-2xl sm:text-3xl font-bold font-raleway animate-slide-in-right text-glow"
+            >
+              Find Us Here
+            </h3>
+
+            <!-- Map Placeholder -->
+            <div
+              class="bg-gray-200 h-48 sm:h-64 rounded-lg card-hover overflow-hidden"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5292835999777!2d-0.11771368422878085!3d51.50331427963267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c7c7eb9be3%3A0x3918653583725b56!2sLondon%2C%20UK!5e0!3m2!1sen!2s!4v1635789456123!5m2!1sen!2s"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded-lg"
+              >
+              </iframe>
+            </div>
+
+            <!-- Working Hours -->
+            <div
+              class="border border-primary p-4 sm:p-6 rounded-lg hover:bg-gray-800 transition-all duration-500 card-hover"
+            >
+              <h4
+                class="text-xl sm:text-2xl font-bold font-raleway mb-4 flex items-center"
+              >
+                <i
+                  class="fas fa-clock mr-3 text-primary animate-pulse-custom"
+                ></i>
+                Working Hours
+              </h4>
+              <div
+                class="space-y-2 sm:space-y-3 text-gray-300 font-raleway font-bold text-sm sm:text-base"
+              >
+                <div class="flex justify-between">
+                  <span>Monday - Friday:</span>
+                  <span class="text-white">8:00 AM - 8:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Saturday:</span>
+                  <span class="text-white">9:00 AM - 5:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Sunday:</span>
+                  <span class="text-white">9:00 AM - 5:00 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Emergency Contact -->
+            <div
+              class="border border-red-500 p-4 sm:p-6 rounded-lg bg-red-900/20 hover:bg-red-900/30 transition-all duration-300"
+            >
+              <h4
+                class="text-lg sm:text-xl font-bold font-raleway mb-3 text-red-400 flex items-center"
+              >
+                <i
+                  class="fas fa-exclamation-triangle mr-2 animate-pulse-custom"
+                ></i>
+                Emergency Repairs
+              </h4>
+              <p
+                class="text-gray-300 font-raleway font-bold mb-3 text-sm sm:text-base"
+              >
+                Need urgent fence repairs? We offer 24/7 emergency services.
+              </p>
+              <a
+                href="tel:+447897897867"
+                class="text-red-400 font-bold text-base sm:text-lg hover:text-red-300 transition-all duration-300 flex items-center"
+              >
+                <i class="fas fa-phone mr-2"></i>
+                <span class="break-all">Emergency Hotline: 07897897867</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section
+      class="bg-[#e3e3e3] text-black relative py-8 sm:py-10 overflow-hidden"
+    >
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6 relative">
+        <div class="text-center">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8">
+            Ready to Transform Your Property?
+          </h2>
+          <p
+            class="text-base sm:text-lg lg:text-xl mb-8 sm:mb-12 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto opacity-95 font-medium"
+          >
+            Join hundreds of satisfied customers who trust us for their fencing
+            needs. Get your free consultation today!
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16"
+          >
+            <a
+              href="contact.html"
+              class="w-full sm:w-auto bg-white text-black px-6 sm:px-10 py-4 sm:py-5 rounded-xl font-bold text-lg sm:text-xl hover:bg-white hover:text-primary transition-all duration-300 shadow-2xl text-center"
+            >
+              <i class="fas fa-calculator mr-3"></i>
+              Get Free Quote
+            </a>
+            <a
+              href="tel:+447897897867"
+              class="w-full sm:w-auto flex bg-[#2F302F] items-center justify-center space-x-4 border-3 border-white text-white px-6 sm:px-10 py-4 sm:py-5 rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 shadow-2xl"
+            >
+              <i class="fas fa-phone"></i>
+              <span>07897897867</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Enhanced Responsive Footer -->
+    <footer
+      class="footer-responsive text-white pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 lg:pb-10 relative"
+    >
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="container-custom relative z-10">
+        <!-- Main Footer Content -->
+        <div
+          class="footer-grid grid gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16"
+        >
+          <!-- Company Info Section -->
+          <div class="footer-company-section">
+            <div class="footer-company-info">
+              <!-- Logo and Title Container -->
+              <div
+                class="flex flex-col items-center sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6 mb-6 lg:mb-8"
+              >
+                <!-- Logo Container -->
+                <div
+                  class="footer-logo-container w-20 h-16 sm:w-24 sm:h-20 lg:w-32 lg:h-24 bg-white rounded-full flex items-center justify-center shadow-xl overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="assets/images/Airedale png.png"
+                    alt="Landmark Fencing Logo"
+                    class="w-full h-full object-contain rounded-full"
+                  />
+                </div>
+
+                <!-- Title and Subtitle -->
+                <div class="text-center sm:text-left">
+                  <h3
+                    class="footer-logo-text text-xl sm:text-2xl lg:text-3xl font-black"
+                  >
+                    JP Landmark Fencing
+                  </h3>
+                  <p
+                    class="text-gray-400 font-semibold text-sm sm:text-base lg:text-lg"
+                  >
+                    Professional Fencing Services
+                  </p>
+                </div>
+              </div>
+
+              <!-- Company Description -->
+              <p
+                class="footer-company-description text-gray-300 leading-relaxed mb-6 lg:mb-8 font-medium text-base lg:text-lg text-center sm:text-left max-w-2xl sm:max-w-none"
+              >
+                Transform your property with premium fencing solutions from
+                <strong>JP Landmark Fencing</strong>. Our expert team delivers
+                unmatched quality, durability, and style that lasts for decades.
+                Contact us today for a free consultation.
+              </p>
+
+              <!-- Social Media Links -->
+              <div
+                class="footer-social-links flex justify-center sm:justify-start space-x-3 lg:space-x-4"
+              >
+                <a
+                  href="#"
+                  class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fab fa-facebook-f text-sm lg:text-base"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fab fa-instagram text-sm lg:text-base"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fab fa-youtube text-sm lg:text-base"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fab fa-linkedin-in text-sm lg:text-base"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div class="footer-links-section text-center lg:text-left">
+            <h4
+              class="text-lg sm:text-xl lg:text-2xl font-bold mb-6 lg:mb-8 text-white"
+            >
+              Quick Links
+            </h4>
+            <ul class="space-y-3 lg:space-y-4">
+              <li>
+                <a
+                  href="home.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="gallery.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="privacy-policy.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="cookie-policy.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Cookie Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="terms-and-conditions.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Terms & Conditions</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info Section -->
+          <div class="footer-contact-section text-center lg:text-left">
+            <h4
+              class="text-lg sm:text-xl lg:text-2xl font-bold mb-6 lg:mb-8 text-white"
+            >
+              Get in Touch
+            </h4>
+
+            <!-- Contact Information -->
+            <div class="space-y-4 lg:space-y-6 mb-6 lg:mb-8">
+              <!-- Address -->
+              <div
+                class="flex flex-col xl:flex-row items-center lg:items-start space-y-2 sm:space-y-0 sm:space-x-4"
+              >
+                <i
+                  class="fas fa-map-marker-alt text-primary text-lg lg:text-xl flex-shrink-0"
+                ></i>
+                <div class="text-center lg:text-left">
+                  <a
+                    href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/media/googleMap.1fabcae9.html?defaultLocation=2&showZoom=true&showStreetView=true&showMapType=true&language=en&id=dataItem-kfnzlgh9&googleMapsScriptPath=%2Fservices%2Feditor-elements-library%2Fdist%2Fthunderbolt%2Fmedia%2Fgoogle-map.min.08346697.js&origin=https%3A%2F%2Finfo2892662.wixsite.com&hasFocus=true"
+                    class="text-gray-300 font-medium text-sm sm:text-base lg:text-lg hover:text-white transition-colors"
+                    >123 Main Street<br />Your City, ST 12345</a
+                  >
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div
+                class="flex items-center justify-center lg:justify-start space-x-4"
+              >
+                <i class="fas fa-phone text-primary text-lg lg:text-xl"></i>
+                <a
+                  href="tel:+447897897867"
+                  class="text-gray-300 font-medium text-sm sm:text-base lg:text-lg hover:text-white transition-colors"
+                  >07897897867</a
+                >
+              </div>
+
+              <!-- Email -->
+              <div
+                class="flex items-center justify-center lg:justify-start space-x-4"
+              >
+                <i class="fas fa-envelope text-primary text-lg lg:text-xl"></i>
+                <a
+                  href="mailto:info@landmarkfencing.com"
+                  class="text-gray-300 font-medium text-sm sm:text-base lg:text-lg hover:text-white transition-colors"
+                  >info@landmarkfencing.com</a
+                >
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="text-center lg:text-left">
+              <h5
+                class="font-bold mb-3 lg:mb-4 text-sm sm:text-base lg:text-lg text-white"
+              >
+                Business Hours
+              </h5>
+              <div class="space-y-1 sm:space-y-2">
+                <p
+                  class="text-gray-300 font-medium text-xs sm:text-sm lg:text-base"
+                >
+                  Monday - Friday: 8:00 AM - 6:00 PM
+                </p>
+                <p
+                  class="text-gray-300 font-medium text-xs sm:text-sm lg:text-base"
+                >
+                  Saturday: 9:00 AM - 5:00 PM
+                </p>
+                <p
+                  class="text-gray-300 font-medium text-xs sm:text-sm lg:text-base"
+                >
+                  Sunday: Closed
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t-2 border-gray-700 pt-6 sm:pt-8 lg:pt-10">
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0 text-center lg:text-left"
+          >
+            <p
+              class="text-gray-400 font-medium text-xs sm:text-sm lg:text-base"
+            >
+              © 2025 Landmark Fencing. All Rights Reserved.
+            </p>
+            <p
+              class="text-gray-400 font-medium text-xs sm:text-sm lg:text-base"
+            >
+              Designed & Developed By
+              <a
+                href="https://kyleinfotech.co.in/"
+                class="text-white hover:text-primary transition-colors"
+                >Kyle Infotech</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Menu Toggle
+
+      // header responsive
+
+      // Mobile menu toggle
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+
+        mobileMenu.classList.toggle("hidden");
+
+        // Toggle icon between hamburger and close
+        if (mobileMenu.classList.contains("hidden")) {
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+        } else {
+          menuIcon.classList.remove("fa-bars");
+          menuIcon.classList.add("fa-times");
+        }
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (e) {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuButton = document.querySelector(
+          '[onclick="toggleMobileMenu()"]'
+        );
+
+        if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+            const menuIcon = document.getElementById("menuIcon");
+            menuIcon.classList.remove("fa-times");
+            menuIcon.classList.add("fa-bars");
+          }
+        }
+      });
+
+      // Close mobile menu when window is resized to desktop
+      window.addEventListener("resize", function () {
+        if (window.innerWidth >= 1024) {
+          const mobileMenu = document.getElementById("mobileMenu");
+          const menuIcon = document.getElementById("menuIcon");
+          mobileMenu.classList.add("hidden");
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+        }
+      });
+
+      // Close mobile menu when clicking on navigation links
+      document.querySelectorAll("#mobileMenu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobileMenu");
+          const menuIcon = document.getElementById("menuIcon");
+          mobileMenu.classList.add("hidden");
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+        });
+      });
+
+      // Form Submission Handler
+      function handleFormSubmit(event) {
+        event.preventDefault();
+
+        // Get form data
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData);
+
+        // Here you would typically send the data to your server
+        console.log("Form data:", data);
+
+        // Show success message
+        const successMessage = document.getElementById("success-message");
+        successMessage.classList.remove("hidden");
+
+        // Reset form
+        event.target.reset();
+
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          successMessage.classList.add("hidden");
+        }, 5000);
+
+        // Scroll to success message
+        successMessage.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Scroll Animation Observer
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      }, observerOptions);
+
+      // Observe all scroll-animate elements
+      document.addEventListener("DOMContentLoaded", () => {
+        const scrollElements = document.querySelectorAll(".scroll-animate");
+        scrollElements.forEach((el) => observer.observe(el));
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Add loading animation
+      window.addEventListener("load", () => {
+        document.body.style.opacity = "0";
+        document.body.style.transition = "opacity 0.5s ease-in-out";
+        setTimeout(() => {
+          document.body.style.opacity = "1";
+        }, 100);
+      });
+
+      // Parallax effect for background images
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const parallaxElements = document.querySelectorAll(".parallax");
+
+        parallaxElements.forEach((element) => {
+          const speed = 0.5;
+          const yPos = -(scrolled * speed);
+          element.style.transform = `translateY(${yPos}px)`;
+        });
+      });
+
+      // Add mouse trail effect (optimized for mobile)
+      if (window.innerWidth > 768) {
+        document.addEventListener("mousemove", (e) => {
+          const trail = document.createElement("div");
+          trail.className =
+            "fixed w-2 h-2 bg-primary rounded-full pointer-events-none z-50 opacity-50";
+          trail.style.left = e.clientX + "px";
+          trail.style.top = e.clientY + "px";
+          trail.style.animation = "fadeOut 1s ease-out forwards";
+
+          document.body.appendChild(trail);
+
+          setTimeout(() => {
+            trail.remove();
+          }, 1000);
+        });
+      }
+
+      // Add fadeOut animation for mouse trail
+      const style = document.createElement("style");
+      style.textContent = `
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          transform: scale(0);
+        }
+      }
+    `;
+      document.head.appendChild(style);
+
+      // Form field animations
+      document.querySelectorAll(".form-input").forEach((input) => {
+        input.addEventListener("focus", function () {
+          if (this.parentElement) {
+            this.parentElement.style.transform = "scale(1.02)";
+          }
+        });
+
+        input.addEventListener("blur", function () {
+          if (this.parentElement) {
+            this.parentElement.style.transform = "scale(1)";
+          }
+        });
+      });
+
+      // Add floating labels effect
+      document.querySelectorAll("input, select, textarea").forEach((field) => {
+        field.addEventListener("focus", function () {
+          const label = this.previousElementSibling;
+          if (label && label.tagName === "LABEL") {
+            label.style.color = "#295E29";
+            label.style.transform = "scale(1.1)";
+          }
+        });
+
+        field.addEventListener("blur", function () {
+          const label = this.previousElementSibling;
+          if (label && label.tagName === "LABEL") {
+            label.style.color = "#ffffff";
+            label.style.transform = "scale(1)";
+          }
+        });
+      });
+
+      // Close mobile menu when clicking outside
+
+      // Handle window resize for mobile menu
+      window.addEventListener("resize", function () {
+        if (window.innerWidth >= 640) {
+          // sm breakpoint
+          document.getElementById("mobile-menu").classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>

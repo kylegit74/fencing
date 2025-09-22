@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - JP Landmark Fencing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              raleway: ["Raleway", "sans-serif"],
+            },
+            colors: {
+              primary: "#295E29",
+              "primary-dark": "#1e4520",
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              "fade-in-up": "fadeInUp 0.8s ease-out",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+            backdropBlur: {
+              xs: "2px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .btn-shimmer {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-shimmer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .btn-shimmer:hover::before {
+        left: 100%;
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #295e29, #4a8a4a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .terms-content h2 {
+        color: #295e29;
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .terms-content h3 {
+        color: #295e29;
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .terms-content p {
+        margin-bottom: 1rem;
+        line-height: 1.7;
+      }
+
+      .terms-content ul,
+      .terms-content ol {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+      }
+
+      .terms-content li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+      }
+
+      @media (min-width: 768px) {
+        .terms-content h2 {
+          font-size: 2rem;
+        }
+
+        .terms-content h3 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-black overflow-x-hidden font-raleway">
+    <!-- Header -->
+    <!-- Header -->
+    <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300 h-20 lg:h-24 xl:h-32 header-clip"
+    >
+      <div
+        class="max-w-7xl mx-auto h-full flex items-center justify-between px-4 lg:px-8 relative"
+      >
+        <!-- Mobile Layout: Logo left, Menu right -->
+        <div class="flex lg:hidden items-center justify-between w-full">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div
+              class="h-16 w-16 md:h-16 md:w-16 rounded-full overflow-hidden border-2 border-white shadow-lg bg-white flex items-center justify-center"
+            >
+              <img
+                src="assets/images/Airedale 01.jpg"
+                alt="Landmark Fencing"
+                class="w-[120%]"
+              />
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button class="text-black z-50 relative" onclick="toggleMobileMenu()">
+            <i id="menuIcon" class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Layout: Full navigation -->
+        <div class="hidden lg:flex items-center justify-between w-full">
+          <!-- Left Navigation -->
+          <nav
+            class="flex space-x-6 text-black uppercase font-bold text-sm xl:text-base"
+          >
+            <a
+              href="index.html"
+              class="hover:text-primary transition-all duration-300 hover:scale-110"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="hover:text-primary transition-all duration-300 hover:scale-110"
+              >About Us</a
+            >
+            <a
+              href="services.html"
+              class="hover:text-primary transition-all duration-300 hover:scale-110"
+              >Our Services</a
+            >
+            <a
+              href="gallery.html"
+              class="hover:text-primary transition-all duration-300 hover:scale-110"
+              >Projects</a
+            >
+          </nav>
+
+          <!-- Center Logo -->
+          <div class="flex justify-center items-center">
+            <div
+              class="h-20 w-20 xl:h-28 xl:w-32 rounded-full overflow-hidden border-4 border-white shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl flex items-center justify-center"
+            >
+              <img
+                src="assets/images/Airedale 01.jpg"
+                alt="Landmark Fencing"
+                class="w-[120%]"
+              />
+            </div>
+          </div>
+
+          <!-- Right Navigation -->
+          <div class="flex items-center space-x-6">
+            <nav
+              class="flex space-x-6 text-black uppercase font-bold text-sm xl:text-base"
+            >
+              <a
+                href="contact.html"
+                class="hover:text-primary transition-all duration-300 hover:scale-110"
+                >Contacts</a
+              >
+              <a
+                href="blog.html"
+                class="hover:text-primary transition-all duration-300 hover:scale-110"
+                >Blog</a
+              >
+            </nav>
+
+            <!-- CTA Button -->
+            <a
+              href="contact.html"
+              class="bg-primary text-white px-4 py-2 rounded hover:bg-green-800 hover:text-white transition-all duration-300 font-bold transform hover:scale-105 text-sm xl:text-base whitespace-nowrap"
+            >
+              GET A FREE QUOTE
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobileMenu"
+      class="fixed mobile-menu left-0 right-0 bottom-0 bg-white z-40 hidden lg:hidden border-t-2 border-primary/10 shadow-2xl"
+    >
+      <div
+        class="flex flex-col items-center justify-start h-full space-y-6 text-xl font-bold uppercase pt-8 pb-8"
+      >
+        <a
+          href="index.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >About Us</a
+        >
+        <a
+          href="services.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Our Services</a
+        >
+        <a
+          href="gallery.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Projects</a
+        >
+        <a
+          href="contact.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Contacts</a
+        >
+        <a
+          href="blog.html"
+          class="hover:text-primary transition-all duration-300 py-2"
+          >Blog</a
+        >
+        <a
+          href="contact.html"
+          class="bg-primary text-white px-6 py-3 rounded hover:bg-green-800 transition-all duration-300 mt-4"
+        >
+          GET A FREE QUOTE
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      class="relative bg-cover bg-center bg-no-repeat mt-[80px] md:mt-[100px]"
+      style="background-image: url('assets/images/bannerimage.jpg')"
+    >
+      <div class="absolute inset-0 bg-white/85"></div>
+      <div
+        class="relative max-w-[90vw] md:max-w-[79vw] mx-auto py-16 md:py-20 flex flex-col items-center justify-center text-center px-4"
+      >
+        <div class="text-[#295E29] animate-fade-in-up">
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black font-raleway"
+          >
+            Privacy Policy
+          </h1>
+          <p
+            class="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto font-medium"
+          >
+            Learn how we collect, use, and protect your personal information
+            when you use our services
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="contact.html"
+              class="border-2 border-[#295E29] text-[#295E29] px-6 md:px-8 py-3 text-base md:text-lg font-bold hover:bg-[#295E29] hover:text-white transition font-raleway transform hover:scale-105"
+            >
+              GET FREE QUOTE
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Policy Content -->
+    <section class=" ">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="p-6 md:p-8 lg:p-12">
+          <div class="terms-content text-gray-700">
+            <p class="text-lg mb-8 leading-relaxed">
+              At JP Landmark Fencing, we are committed to protecting your
+              privacy and ensuring the security of your personal information.
+              This Privacy Policy explains how we collect, use, disclose, and
+              safeguard your information when you visit our website, use our
+              services, or interact with us in any way.
+            </p>
+
+            <h2>1. Information We Collect</h2>
+            <h3>1.1 Personal Information</h3>
+            <p>We may collect the following types of personal information:</p>
+            <ul>
+              <li>
+                <strong>Contact Information:</strong> Name, email address, phone
+                number, mailing address
+              </li>
+              <li>
+                <strong>Project Information:</strong> Property address, project
+                details, measurements, preferences
+              </li>
+              <li>
+                <strong>Financial Information:</strong> Payment information,
+                billing address (processed securely through third-party payment
+                processors)
+              </li>
+              <li>
+                <strong>Communication Records:</strong> Messages, emails, phone
+                calls, and other communications with us
+              </li>
+              <li>
+                <strong>Identity Verification:</strong> Government-issued ID
+                information when required for certain services
+              </li>
+            </ul>
+
+            <h3>1.2 Automatically Collected Information</h3>
+            <p>
+              When you visit our website or use our services, we automatically
+              collect:
+            </p>
+            <ul>
+              <li>
+                <strong>Device Information:</strong> IP address, browser type,
+                operating system, device identifiers
+              </li>
+              <li>
+                <strong>Usage Data:</strong> Pages visited, time spent on site,
+                click patterns, referral sources
+              </li>
+              <li>
+                <strong>Location Data:</strong> General geographic location
+                based on IP address
+              </li>
+              <li>
+                <strong>Cookies and Tracking Technologies:</strong> Information
+                collected through cookies, web beacons, and similar technologies
+              </li>
+            </ul>
+
+            <h3>1.3 Information from Third Parties</h3>
+            <p>We may receive information about you from:</p>
+            <ul>
+              <li>Social media platforms when you interact with our content</li>
+              <li>Marketing partners and lead generation services</li>
+              <li>Public databases and directories</li>
+              <li>Other customers who refer you to our services</li>
+            </ul>
+
+            <h2>2. How We Use Your Information</h2>
+            <p>We use your personal information for the following purposes:</p>
+            <ul>
+              <li>
+                <strong>Service Delivery:</strong> To provide fencing
+                installation, repair, and maintenance services
+              </li>
+              <li>
+                <strong>Communication:</strong> To respond to inquiries, provide
+                quotes, and update you on project status
+              </li>
+              <li>
+                <strong>Project Management:</strong> To schedule appointments,
+                coordinate installations, and manage projects
+              </li>
+              <li>
+                <strong>Payment Processing:</strong> To process payments and
+                manage billing
+              </li>
+              <li>
+                <strong>Customer Support:</strong> To provide technical support
+                and resolve issues
+              </li>
+              <li>
+                <strong>Marketing:</strong> To send promotional materials and
+                special offers (with your consent)
+              </li>
+              <li>
+                <strong>Website Improvement:</strong> To analyze usage patterns
+                and improve our website functionality
+              </li>
+              <li>
+                <strong>Legal Compliance:</strong> To comply with applicable
+                laws and regulations
+              </li>
+              <li>
+                <strong>Business Operations:</strong> To maintain records,
+                conduct business analysis, and improve our services
+              </li>
+            </ul>
+
+            <h2>3. How We Share Your Information</h2>
+            <p>We may share your information in the following circumstances:</p>
+
+            <h3>3.1 Service Providers</h3>
+            <p>
+              We share information with third-party service providers who help
+              us operate our business:
+            </p>
+            <ul>
+              <li>Payment processors and financial institutions</li>
+              <li>Website hosting and cloud storage providers</li>
+              <li>Email and communication service providers</li>
+              <li>Marketing and advertising platforms</li>
+              <li>Analytics and tracking service providers</li>
+              <li>Customer relationship management (CRM) systems</li>
+            </ul>
+
+            <h3>3.2 Business Partners</h3>
+            <p>We may share information with:</p>
+            <ul>
+              <li>
+                Material suppliers and subcontractors involved in your project
+              </li>
+              <li>Insurance companies for coverage and claims processing</li>
+              <li>Professional partners and referral sources</li>
+            </ul>
+
+            <h3>3.3 Legal Requirements</h3>
+            <p>We may disclose information when required by law or to:</p>
+            <ul>
+              <li>Comply with court orders, subpoenas, or legal processes</li>
+              <li>Protect our rights, property, or safety</li>
+              <li>Prevent fraud or illegal activities</li>
+              <li>Cooperate with law enforcement investigations</li>
+            </ul>
+
+            <h3>3.4 Business Transfers</h3>
+            <p>
+              In the event of a merger, acquisition, or sale of our business,
+              your information may be transferred to the new entity.
+            </p>
+
+            <h2>4. Data Security</h2>
+            <p>
+              We implement robust security measures to protect your personal
+              information:
+            </p>
+            <ul>
+              <li>
+                <strong>Encryption:</strong> We use SSL/TLS encryption for data
+                transmission
+              </li>
+              <li>
+                <strong>Access Controls:</strong> Limited access to personal
+                information on a need-to-know basis
+              </li>
+              <li>
+                <strong>Regular Updates:</strong> We keep our security systems
+                up-to-date
+              </li>
+              <li>
+                <strong>Employee Training:</strong> Our staff receives regular
+                privacy and security training
+              </li>
+              <li>
+                <strong>Third-Party Security:</strong> We require our service
+                providers to maintain appropriate security measures
+              </li>
+              <li>
+                <strong>Incident Response:</strong> We have procedures in place
+                to respond to potential data breaches
+              </li>
+            </ul>
+
+            <p>
+              However, no method of transmission over the internet is 100%
+              secure. While we strive to protect your information, we cannot
+              guarantee absolute security.
+            </p>
+
+            <h2>5. Your Privacy Rights</h2>
+            <p>
+              Depending on your location, you may have the following rights
+              regarding your personal information:
+            </p>
+
+            <h3>5.1 Access and Portability</h3>
+            <ul>
+              <li>
+                Request a copy of the personal information we have about you
+              </li>
+              <li>
+                Receive your data in a structured, machine-readable format
+              </li>
+            </ul>
+
+            <h3>5.2 Correction and Update</h3>
+            <ul>
+              <li>
+                Request correction of inaccurate or incomplete information
+              </li>
+              <li>Update your contact information and preferences</li>
+            </ul>
+
+            <h3>5.3 Deletion</h3>
+            <ul>
+              <li>
+                Request deletion of your personal information (subject to legal
+                requirements)
+              </li>
+              <li>Request removal from marketing communications</li>
+            </ul>
+
+            <h3>5.4 Restriction and Objection</h3>
+            <ul>
+              <li>
+                Object to processing of your information for certain purposes
+              </li>
+              <li>Restrict how we use your information</li>
+            </ul>
+
+            <h3>5.5 Marketing Communications</h3>
+            <ul>
+              <li>Opt-out of marketing emails at any time</li>
+              <li>Choose your communication preferences</li>
+            </ul>
+
+            <h2>6. Cookies and Tracking Technologies</h2>
+            <p>
+              Our website uses cookies and similar technologies to enhance your
+              experience. For detailed information about our use of cookies,
+              please refer to our
+              <a
+                href="cookie-policy.html"
+                class="text-[#295E29] hover:underline"
+                >Cookie Policy</a
+              >.
+            </p>
+
+            <h2>7. Third-Party Links and Services</h2>
+            <p>
+              Our website may contain links to third-party websites or services.
+              We are not responsible for the privacy practices of these third
+              parties. We encourage you to review their privacy policies before
+              providing any personal information.
+            </p>
+
+            <h2>8. Children's Privacy</h2>
+            <p>
+              Our services are not directed to children under 13 years of age.
+              We do not knowingly collect personal information from children
+              under 13. If we become aware that we have collected personal
+              information from a child under 13, we will take steps to delete
+              such information.
+            </p>
+
+            <h2>9. International Data Transfers</h2>
+            <p>
+              If you are located outside the United States, please be aware that
+              your information may be transferred to and processed in countries
+              that may have different data protection laws than your country of
+              residence. We ensure appropriate safeguards are in place for such
+              transfers.
+            </p>
+
+            <h2>10. Data Retention</h2>
+            <p>
+              We retain your personal information for as long as necessary to:
+            </p>
+            <ul>
+              <li>Provide our services to you</li>
+              <li>Comply with legal obligations</li>
+              <li>Resolve disputes and enforce agreements</li>
+              <li>Maintain business records for legitimate purposes</li>
+            </ul>
+            <p>
+              Specific retention periods vary depending on the type of
+              information and purpose for processing.
+            </p>
+
+            <h2>11. California Privacy Rights</h2>
+            <p>
+              If you are a California resident, you have additional rights under
+              the California Consumer Privacy Act (CCPA):
+            </p>
+            <ul>
+              <li>Right to know what personal information is collected</li>
+              <li>Right to delete personal information</li>
+              <li>Right to opt-out of the sale of personal information</li>
+              <li>Right to non-discrimination for exercising your rights</li>
+            </ul>
+
+            <p>We do not sell personal information to third parties.</p>
+
+            <h2>12. European Privacy Rights</h2>
+            <p>
+              If you are located in the European Economic Area (EEA), you have
+              rights under the General Data Protection Regulation (GDPR),
+              including those outlined in Section 5 above. You also have the
+              right to lodge a complaint with your local data protection
+              authority.
+            </p>
+
+            <h2>13. Changes to This Privacy Policy</h2>
+            <p>
+              We may update this Privacy Policy from time to time to reflect
+              changes in our practices, technology, legal requirements, or other
+              factors. We will notify you of any material changes by:
+            </p>
+            <ul>
+              <li>Posting the updated policy on our website</li>
+              <li>Updating the "Last Updated" date</li>
+              <li>Sending email notifications for significant changes</li>
+              <li>Providing prominent notice on our website</li>
+            </ul>
+
+            <h2>14. Contact Information</h2>
+            <p>
+              If you have any questions, concerns, or requests regarding this
+              Privacy Policy or our privacy practices, please contact us:
+            </p>
+            <div
+              class="bg-[#295E29]/5 p-6 rounded-xl mt-4 border-l-4 border-[#295E29]"
+            >
+              <p><strong>JP Landmark Fencing</strong></p>
+              <p><strong>Privacy Officer</strong></p>
+              <p>
+                <strong>Phone:</strong>
+                <a
+                  href="tel:+447897897867"
+                  class="text-[#295E29] hover:underline"
+                  >07897897867</a
+                >
+              </p>
+              <p>
+                <strong>Email:</strong>
+                <a
+                  href="mailto:privacy@landmarkfencing.com"
+                  class="text-[#295E29] hover:underline"
+                  >privacy@landmarkfencing.com</a
+                >
+              </p>
+              <p>
+                <strong>Address:</strong> 123 Main Street, Your City, ST 12345
+              </p>
+              <p>
+                <strong>Business Hours:</strong> Monday - Friday: 8:00 AM - 6:00
+                PM, Saturday: 9:00 AM - 5:00 PM
+              </p>
+            </div>
+
+            <h2>15. Consent and Agreement</h2>
+            <p>
+              By using our website or services, you consent to the collection,
+              use, and disclosure of your information as described in this
+              Privacy Policy. If you do not agree with this Privacy Policy,
+              please do not use our services.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="py-16 md:py-20 lg:py-24 bg-[#e3e3e3] text-black relative overflow-hidden"
+    >
+      <div
+        class="absolute top-10 right-10 w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-[#295E29]/10 to-transparent rounded-full animate-float"
+      ></div>
+      <div
+        class="absolute bottom-20 left-20 w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-[#295E29]/10 to-transparent rounded-full animate-float"
+        style="animation-delay: -3s"
+      ></div>
+
+      <div class="max-w-7xl mx-auto relative px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-black mb-6 md:mb-8">
+            Ready to Transform Your Property?
+          </h2>
+          <p
+            class="text-lg md:text-xl mb-8 md:mb-12 max-w-3xl mx-auto opacity-95 font-medium"
+          >
+            Join hundreds of satisfied customers who trust us for their fencing
+            needs. Get your free consultation today!
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center mb-12 md:mb-16"
+          >
+            <a
+              href="contact.html"
+              class="w-full sm:w-auto bg-white/10 backdrop-blur-sm border border-white/20 bg-white text-black px-8 md:px-10 py-4 md:py-5 rounded-xl font-bold text-lg md:text-xl hover:bg-white hover:text-primary transition-all duration-300 shadow-2xl"
+            >
+              <i class="fas fa-calculator mr-3"></i>
+              Get Free Quote
+            </a>
+            <a
+              href="tel:+447897897867"
+              class="w-full sm:w-auto flex bg-[#2F302F] items-center justify-center space-x-4 border-3 border-white text-white px-8 md:px-10 py-4 md:py-5 rounded-xl font-bold text-lg md:text-xl transition-all duration-300 shadow-2xl hover:bg-black"
+            >
+              <i class="fas fa-phone"></i>
+              <span>07897897867</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Enhanced Responsive Footer -->
+    <footer
+      class="footer-responsive text-white pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 lg:pb-10 relative"
+    >
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="container-custom relative z-10">
+        <!-- Main Footer Content -->
+        <div
+          class="footer-grid grid gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16"
+        >
+          <!-- Company Info Section -->
+          <div class="footer-company-section">
+            <div class="footer-company-info">
+              <!-- Logo and Title Container -->
+              <div
+                class="flex flex-col items-center sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6 mb-6 lg:mb-8"
+              >
+                <!-- Logo Container -->
+                <div
+                  class="footer-logo-container w-20 h-16 sm:w-24 sm:h-20 lg:w-32 lg:h-24 bg-white rounded-full flex items-center justify-center shadow-xl overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="assets/images/Airedale png.png"
+                    alt="Landmark Fencing Logo"
+                    class="w-full h-full object-contain rounded-full"
+                  />
+                </div>
+
+                <!-- Title and Subtitle -->
+                <div class="text-center sm:text-left">
+                  <h3
+                    class="footer-logo-text text-xl sm:text-2xl lg:text-3xl font-black"
+                  >
+                    JP Landmark Fencing
+                  </h3>
+                  <p
+                    class="text-gray-400 font-semibold text-sm sm:text-base lg:text-lg"
+                  >
+                    Professional Fencing Services
+                  </p>
+                </div>
+              </div>
+
+              <!-- Company Description -->
+              <p
+                class="footer-company-description text-gray-300 leading-relaxed mb-6 lg:mb-8 font-medium text-base lg:text-lg text-center sm:text-left max-w-2xl sm:max-w-none"
+              >
+                Transform your property with premium fencing solutions from
+                <strong>JP Landmark Fencing</strong>. Our expert team delivers
+                unmatched quality, durability, and style that lasts for decades.
+                Contact us today for a free consultation.
+              </p>
+
+              <!-- Social Media Links -->
+              <div
+                class="footer-social-links flex justify-center sm:justify-start space-x-3 lg:space-x-4"
+              >
+                <a
+                  href="#"
+                  class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fab fa-facebook-f text-sm lg:text-base"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fab fa-instagram text-sm lg:text-base"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fab fa-youtube text-sm lg:text-base"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-white text-black w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <i class="fab fa-linkedin-in text-sm lg:text-base"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div class="footer-links-section text-center lg:text-left">
+            <h4
+              class="text-lg sm:text-xl lg:text-2xl font-bold mb-6 lg:mb-8 text-white"
+            >
+              Quick Links
+            </h4>
+            <ul class="space-y-3 lg:space-y-4">
+              <li>
+                <a
+                  href="home.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="gallery.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="privacy-policy.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="cookie-policy.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Cookie Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="terms-and-conditions.html"
+                  class="footer-link text-gray-300 hover:text-white font-medium text-sm sm:text-base lg:text-lg block"
+                  >Terms & Conditions</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info Section -->
+          <div class="footer-contact-section text-center lg:text-left">
+            <h4
+              class="text-lg sm:text-xl lg:text-2xl font-bold mb-6 lg:mb-8 text-white"
+            >
+              Get in Touch
+            </h4>
+
+            <!-- Contact Information -->
+            <div class="space-y-4 lg:space-y-6 mb-6 lg:mb-8">
+              <!-- Address -->
+              <div
+                class="flex flex-col xl:flex-row items-center lg:items-start space-y-2 sm:space-y-0 sm:space-x-4"
+              >
+                <i
+                  class="fas fa-map-marker-alt text-primary text-lg lg:text-xl flex-shrink-0"
+                ></i>
+                <div class="text-center lg:text-left">
+                  <a
+                    href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/media/googleMap.1fabcae9.html?defaultLocation=2&showZoom=true&showStreetView=true&showMapType=true&language=en&id=dataItem-kfnzlgh9&googleMapsScriptPath=%2Fservices%2Feditor-elements-library%2Fdist%2Fthunderbolt%2Fmedia%2Fgoogle-map.min.08346697.js&origin=https%3A%2F%2Finfo2892662.wixsite.com&hasFocus=true"
+                    class="text-gray-300 font-medium text-sm sm:text-base lg:text-lg hover:text-white transition-colors"
+                    >123 Main Street<br />Your City, ST 12345</a
+                  >
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div
+                class="flex items-center justify-center lg:justify-start space-x-4"
+              >
+                <i class="fas fa-phone text-primary text-lg lg:text-xl"></i>
+                <a
+                  href="tel:+447897897867"
+                  class="text-gray-300 font-medium text-sm sm:text-base lg:text-lg hover:text-white transition-colors"
+                  >07897897867</a
+                >
+              </div>
+
+              <!-- Email -->
+              <div
+                class="flex items-center justify-center lg:justify-start space-x-4"
+              >
+                <i class="fas fa-envelope text-primary text-lg lg:text-xl"></i>
+                <a
+                  href="mailto:info@landmarkfencing.com"
+                  class="text-gray-300 font-medium text-sm sm:text-base lg:text-lg hover:text-white transition-colors"
+                  >info@landmarkfencing.com</a
+                >
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="text-center lg:text-left">
+              <h5
+                class="font-bold mb-3 lg:mb-4 text-sm sm:text-base lg:text-lg text-white"
+              >
+                Business Hours
+              </h5>
+              <div class="space-y-1 sm:space-y-2">
+                <p
+                  class="text-gray-300 font-medium text-xs sm:text-sm lg:text-base"
+                >
+                  Monday - Friday: 8:00 AM - 6:00 PM
+                </p>
+                <p
+                  class="text-gray-300 font-medium text-xs sm:text-sm lg:text-base"
+                >
+                  Saturday: 9:00 AM - 5:00 PM
+                </p>
+                <p
+                  class="text-gray-300 font-medium text-xs sm:text-sm lg:text-base"
+                >
+                  Sunday: Closed
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t-2 border-gray-700 pt-6 sm:pt-8 lg:pt-10">
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0 text-center lg:text-left"
+          >
+            <p
+              class="text-gray-400 font-medium text-xs sm:text-sm lg:text-base"
+            >
+              © 2025 Landmark Fencing. All Rights Reserved.
+            </p>
+            <p
+              class="text-gray-400 font-medium text-xs sm:text-sm lg:text-base"
+            >
+              Designed & Developed By
+              <a
+                href="https://kyleinfotech.co.in/"
+                class="text-white hover:text-primary transition-colors"
+                >Kyle Infotech</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile menu toggle
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenu.classList.toggle("hidden");
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuButton = document.querySelector(
+          '[onclick="toggleMobileMenu()"]'
+        );
+
+        if (
+          !mobileMenu.contains(event.target) &&
+          !menuButton.contains(event.target)
+        ) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+
+      // Handle window resize for mobile menu
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1024) {
+          document.getElementById("mobileMenu").classList.add("hidden");
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Mobile menu toggle
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+
+        mobileMenu.classList.toggle("hidden");
+
+        // Toggle icon between hamburger and close
+        if (mobileMenu.classList.contains("hidden")) {
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+        } else {
+          menuIcon.classList.remove("fa-bars");
+          menuIcon.classList.add("fa-times");
+        }
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (e) {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuButton = document.querySelector(
+          '[onclick="toggleMobileMenu()"]'
+        );
+
+        if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+            const menuIcon = document.getElementById("menuIcon");
+            menuIcon.classList.remove("fa-times");
+            menuIcon.classList.add("fa-bars");
+          }
+        }
+      });
+
+      // Close mobile menu when window is resized to desktop
+      window.addEventListener("resize", function () {
+        if (window.innerWidth >= 1024) {
+          const mobileMenu = document.getElementById("mobileMenu");
+          const menuIcon = document.getElementById("menuIcon");
+          mobileMenu.classList.add("hidden");
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+        }
+      });
+
+      // Close mobile menu when clicking on navigation links
+      document.querySelectorAll("#mobileMenu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobileMenu");
+          const menuIcon = document.getElementById("menuIcon");
+          mobileMenu.classList.add("hidden");
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+        });
+      });
+    </script>
+  </body>
+</html>

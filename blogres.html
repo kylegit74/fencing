@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - JP Landmark Fencing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .text-primary {
+      color: #295E29;
+    }
+
+    .bg-primary {
+      background-color: #295E29;
+    }
+
+    .border-primary {
+      border-color: #295E29;
+    }
+
+    .bg-dark {
+      background-color: #1a1a1a;
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(49, 49, 49, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%),
+        url('https://images.pexels.com/photos/1370750/pexels-photo-1370750.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    }
+
+    .newsletter-bg {
+      background: linear-gradient(135deg, rgba(41, 94, 41, 0.9) 0%, rgba(26, 26, 26, 0.9) 100%),
+        url('https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop') center/cover;
+    }
+
+    .hover-primary:hover {
+      background-color: #295E29;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(41, 94, 41, 0.3);
+    }
+
+    .section-padding {
+      padding: 100px 0;
+    }
+
+    .container-custom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .btn-primary {
+      background-color: #295E29;
+      color: white;
+      padding: 16px 40px;
+      border: none;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary:hover {
+      background-color: #1e4520;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(41, 94, 41, 0.4);
+    }
+
+    .btn-outline {
+      border: 3px solid #295E29;
+      color: #295E29;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 14px 35px;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-outline:hover {
+      background-color: #295E29;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(41, 94, 41, 0.3);
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      border: 2px solid rgba(41, 94, 41, 0.1);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+      border-color: #295E29;
+    }
+
+    .blog-card img {
+      transition: transform 0.5s ease;
+    }
+
+    .blog-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .category-btn {
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      border: 2px solid #295E29;
+    }
+
+    .category-btn.active {
+      background-color: #295E29;
+      color: white;
+      box-shadow: 0 8px 25px rgba(41, 94, 41, 0.3);
+    }
+
+    .category-btn:not(.active) {
+      background-color: white;
+      color: #295E29;
+    }
+
+    .category-btn:not(.active):hover {
+      background-color: #295E29;
+      color: white;
+    }
+
+    .search-input {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border: none;
+      border-radius: 15px;
+      padding: 16px 20px 16px 50px;
+      font-size: 18px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .search-input:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #295E29;
+      background: white;
+    }
+
+    .floating-decoration {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(45deg, rgba(41, 94, 41, 0.1), transparent);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #295E29, #4a8a4a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black overflow-x-hidden">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full h-[130px] bg-white z-50"
+    style="clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);">
+    <div class="max-w-[75vw] mx-auto h-full flex justify-between items-center relative z-10">
+      <!-- Left Navigation -->
+      <nav class="hidden md:flex space-x-6 text-black uppercase font-bold">
+        <a href="index.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Home</a>
+        <a href="about.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">About Us</a>
+        <a href="services.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Our Services</a>
+        <a href="gallery.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Projects</a>
+      </nav>
+
+      <!-- Center Logo -->
+      <div class="relative flex justify-center items-center mx-auto">
+        <div class="h-[120px] w-[130px] rounded-full overflow-hidden border-4 border-white shadow-xl bg-white transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl flex items-center justify-center">
+          <img src="assets/images/Airedale 01.jpg" alt="Landmark Fencing" class="w-[120%]" />
+        </div>
+      </div>
+
+      <!-- Right Navigation -->
+      <nav class="hidden md:flex space-x-6 text-black uppercase font-bold">
+        <a href="contact.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110">Contacts</a>
+        <a href="blog.html" class="header-link hover:text-[#295E29] transition-all duration-300 hover:scale-110 text-[#295E29]">Blog</a>
+      </nav>
+
+      <!-- Button -->
+      <a href="contact.html" class="hidden md:block bg-[#295E29] ml-[20px] text-white px-4 py-2 rounded hover:bg-[#1e4a1e] hover:text-white transition-all duration-300 font-bold transform hover:scale-105">
+        GET A FREE QUOTE
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden bg-white border-t border-gray-200 py-4 hidden">
+      <nav class="flex flex-col space-y-4 px-6">
+        <a href="index.html" class="text-black font-bold hover:text-[#295E29]">Home</a>
+        <a href="about.html" class="text-black font-bold hover:text-[#295E29]">About Us</a>
+        <a href="services.html" class="text-black font-bold hover:text-[#295E29]">Our Services</a>
+        <a href="gallery.html" class="text-black font-bold hover:text-[#295E29]">Projects</a>
+        <a href="contact.html" class="text-black font-bold hover:text-[#295E29]">Contacts</a>
+        <a href="blog.html" class="text-[#295E29] font-bold">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blog Hero Section -->
+   <section class="relative bg-cover bg-center bg-no-repeat mt-[100px]" style="background-image: url('assets/images/bannerimage.jpg');">
+    <div class="absolute inset-0 bg-white/85"></div>
+    <div class="relative max-w-[79vw] mx-auto py-20 flex flex-col items-center justify-center text-center">
+      <div class="text-[#295E29] animate-fade-in-up">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-black raleway">
+          Read About Our Blog
+        </h1>
+       
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+        
+          <a href="contact.html" class="border-2 border-[#295E29] text-[#295E29] px-8 py-3 text-lg font-bold hover:bg-[#295E29] hover:text-white transition raleway transform hover:scale-105">
+            GET FREE QUOTE
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Category Filter & Blog Posts -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+     
+      <!-- Blog Grid -->
+      <div id="blogGrid" class="grid md:grid-cols-3 gap-8 mb-16">
+        <!-- Featured Post -->
+        <article class="blog-card md:col-span-2 md:row-span-2" data-category="home-improvement">
+          <div class="relative overflow-hidden">
+            <img src="assets/images/servFence_7.jpg" 
+                 alt="Complete Guide to Choosing the Perfect Fence" class="w-full h-80 object-cover">
+            <div class="absolute top-4 left-4">
+              <span class="bg-[#295E29] text-white px-4 py-2 rounded-full text-sm font-bold">Home Improvement</span>
+            </div>
+          </div>
+          <div class="p-8">
+           
+            <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight hover:text-[#295E29] transition-colors duration-300">
+              Complete Guide to Choosing the Perfect Fence for Your Home
+            </h3>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              Discover everything you need to know about selecting the right fencing material, style, and design that complements your property while providing security and privacy.
+            </p>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              Discover everything you need to know about selecting the right fencing material, style, and design that complements your property while providing security and privacy.
+            </p>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              Discover everything you need to know about selecting the right fencing material, style, and design that complements your property while providing security and privacy.
+            </p>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              Discover everything you need to know about selecting the right fencing material, style, and design that complements your property while providing security and privacy.
+            </p>
+            <button class="flex items-center space-x-2 text-[#295E29] font-bold hover:text-[#1e4520] transition-colors duration-300">
+              <span>Read More</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Regular Posts -->
+        <article class="blog-card" data-category="installation-tips">
+          <div class="relative overflow-hidden">
+            <img src="https://images.pexels.com/photos/1484516/pexels-photo-1484516.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                 alt="5 Benefits of Professional Fence Installation" class="w-full h-48 object-cover">
+            <div class="absolute top-4 left-4">
+              <span class="bg-[#295E29] text-white px-4 py-2 rounded-full text-sm font-bold">Installation Tips</span>
+            </div>
+          </div>
+          <div class="p-6">
+           
+            <h3 class="text-xl font-black text-gray-900 mb-4 leading-tight hover:text-[#295E29] transition-colors duration-300">
+              5 Benefits of Professional Fence Installation vs DIY
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Learn why hiring professionals for your fence installation saves you time, money, and ensures long-lasting results.
+            </p>
+            <button class="flex items-center space-x-2 text-[#295E29] font-bold hover:text-[#1e4520] transition-colors duration-300">
+              <span>Read More</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="maintenance">
+          <div class="relative overflow-hidden">
+            <img src="https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                 alt="Maintaining Your Fence" class="w-full h-48 object-cover">
+            <div class="absolute top-4 left-4">
+              <span class="bg-[#295E29] text-white px-4 py-2 rounded-full text-sm font-bold">Maintenance</span>
+            </div>
+          </div>
+          <div class="p-6">
+            
+            <h3 class="text-xl font-black text-gray-900 mb-4 leading-tight hover:text-[#295E29] transition-colors duration-300">
+              Maintaining Your Fence: Seasonal Care Tips
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Keep your fence looking great year-round with these essential maintenance tips for every season.
+            </p>
+            <button class="flex items-center space-x-2 text-[#295E29] font-bold hover:text-[#1e4520] transition-colors duration-300">
+              <span>Read More</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="material-guide">
+          <div class="relative overflow-hidden">
+            <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                 alt="Vinyl vs Wood Fencing" class="w-full h-48 object-cover">
+            <div class="absolute top-4 left-4">
+              <span class="bg-[#295E29] text-white px-4 py-2 rounded-full text-sm font-bold">Material Guide</span>
+            </div>
+          </div>
+          <div class="p-6">
+            
+            <h3 class="text-xl font-black text-gray-900 mb-4 leading-tight hover:text-[#295E29] transition-colors duration-300">
+              Vinyl vs Wood Fencing: Which is Right for You?
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Compare the pros and cons of vinyl and wood fencing to make an informed decision for your property.
+            </p>
+            <button class="flex items-center space-x-2 text-[#295E29] font-bold hover:text-[#1e4520] transition-colors duration-300">
+              <span>Read More</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="commercial">
+          <div class="relative overflow-hidden">
+            <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                 alt="Commercial Fencing Solutions" class="w-full h-48 object-cover">
+            <div class="absolute top-4 left-4">
+              <span class="bg-[#295E29] text-white px-4 py-2 rounded-full text-sm font-bold">Commercial</span>
+            </div>
+          </div>
+          <div class="p-6">
+           
+            <h3 class="text-xl font-black text-gray-900 mb-4 leading-tight hover:text-[#295E29] transition-colors duration-300">
+              Commercial Fencing Solutions for Businesses
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Explore the best commercial fencing options that provide security, aesthetics, and value for your business.
+            </p>
+            <button class="flex items-center space-x-2 text-[#295E29] font-bold hover:text-[#1e4520] transition-colors duration-300">
+              <span>Read More</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="installation-tips">
+          <div class="relative overflow-hidden">
+            <img src="assets/images/servFence_1.jpg" 
+                 alt="Prepare Property for Fence Installation" class="w-full h-48 object-cover">
+            <div class="absolute top-4 left-4">
+              <span class="bg-[#295E29] text-white px-4 py-2 rounded-full text-sm font-bold">Installation Tips</span>
+            </div>
+          </div>
+          <div class="p-6">
+            
+            <h3 class="text-xl font-black text-gray-900 mb-4 leading-tight hover:text-[#295E29] transition-colors duration-300">
+              How to Prepare Your Property for Fence Installation
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Essential steps to prepare your property before fence installation to ensure a smooth and efficient process.
+            </p>
+            <button class="flex items-center space-x-2 text-[#295E29] font-bold hover:text-[#1e4520] transition-colors duration-300">
+              <span>Read More</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- No Results Message -->
+      <div id="noResults" class="text-center py-16 hidden">
+        <i class="fas fa-search text-6xl text-gray-300 mb-6"></i>
+        <h3 class="text-2xl font-bold text-gray-600 mb-4">No Articles Found</h3>
+        <p class="text-gray-500 text-xl">Try adjusting your search terms or browse different categories.</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-[#e3e3e3] text-black relative py-10 overflow-hidden">
+    <!-- <div class="absolute inset-0 bg-black bg-opacity-30"></div> -->
+    <div class="floating-decoration top-10 right-10"></div>
+    <div class="floating-decoration bottom-20 left-20" style="animation-delay: -3s;"></div>
+    
+    <div class="container-custom relative">
+      <div class="text-center">
+        <h2 class="text-5xl md:text-4xl font-black mb-8">
+          Ready to Transform Your Property?
+        </h2>
+        <p class="text-xl mb-12 max-w-3xl mx-auto opacity-95 font-medium">
+          Join hundreds of satisfied customers who trust us for their fencing needs. Get your free consultation today!
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          <a href="contact.html" class="glass-effect bg-white text-black  px-10 py-5 rounded-xl font-bold text-xl hover:bg-white hover:text-primary transition-all duration-300 shadow-2xl">
+            <i class="fas fa-calculator mr-3"></i>
+            Get Free Quote
+          </a>
+          <a href="tel:+447897897867" class="flex bg-[#2F302F] items-center space-x-4 border-3 border-white text-white px-10 py-5 rounded-xl font-bold text-xl  transition-all duration-300 shadow-2xl">
+            <i class="fas fa-phone"></i>
+            <span>07897897867</span>
+          </a>
+        </div>
+
+      
+       
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer class="bg-[#2F302F] text-white pt-20 pb-10  relative">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="container-custom">
+      <div class="grid md:grid-cols-4 gap-12 mb-16 relative z-10">
+        <!-- Company Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-4 mb-8">
+            <!-- Logo inside a rounded background -->
+            <div
+              class="w-[140px] h-[120px] bg-whtie  rounded-full flex items-center justify-center shadow-xl overflow-hidden">
+              <img src="assets/images/Airedale png.png" alt="Landmark Fencing Logo"
+                class="w-[100%] h-[100%] object-contain rounded-full" />
+            </div>
+
+            <!-- Title and Subtitle -->
+            <div>
+              <h3 class="text-3xl font-black">JP Landmark Fencing</h3>
+              <p class="text-gray-400 font-semibold">Professional Fencing Services</p>
+            </div>
+          </div>
+
+          <p class="text-gray-300 leading-relaxed mb-8 max-w-md font-medium text-lg">
+            Transform your property with premium fencing solutions from <strong>JP Landmark Fencing</strong>. Our expert
+            team delivers unmatched quality, durability, and style that lasts for decades. Contact us today for a free
+            consultation.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#"
+              class="bg-white text-black  w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#"
+              class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#"
+              class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#"
+              class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-2xl font-bold mb-8 text-white ">Quick Links</h4>
+          <ul class="space-y-4">
+            <li><a href="home.html"
+                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Home</a>
+            </li>
+            <li><a href="about.html"
+                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">About
+                Us</a></li>
+            <li><a href="services.html"
+                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Our
+                Services</a></li>
+            <li><a href="gallery.html"
+                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Gallery</a>
+            </li>
+            <li><a href="contact.html"
+                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Contact</a>
+            </li>
+            <li><a href="privacy-policy.html"
+                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Privacy
+                Policy </a></li>
+            <li><a href="cookie-policy.html"
+                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Cookie
+                Policy</a></li>
+            <li><a href="terms-conditions.html"
+                class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-lg hover:translate-x-2 block">Terms
+                & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-2xl font-bold mb-8 text-white ">Get in Touch</h4>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <i class="fas fa-map-marker-alt text-primary mt-2 text-xl"></i>
+              <div>
+                <a href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/media/googleMap.1fabcae9.html?defaultLocation=2&showZoom=true&showStreetView=true&showMapType=true&language=en&id=dataItem-kfnzlgh9&googleMapsScriptPath=%2Fservices%2Feditor-elements-library%2Fdist%2Fthunderbolt%2Fmedia%2Fgoogle-map.min.08346697.js&origin=https%3A%2F%2Finfo2892662.wixsite.com&hasFocus=true"
+                  class="text-gray-300 font-medium text-lg">123 Main Street<br>Your City, ST 12345</a>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-phone text-primary text-xl"></i>
+              <a href="tel:+447897897867" class="text-gray-300 font-medium text-lg">07897897867</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-envelope text-primary text-xl"></i>
+              <a href="mailto:nfo@Landmarkfencingcompany.com"
+                class="text-gray-300 font-medium text-lg">info@landmarkfencing.com</a>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h5 class="font-bold mb-4 text-lg">Business Hours</h5>
+            <p class="text-gray-300 font-medium">Monday - Friday: 8:00 AM - 6:00 PM</p>
+            <p class="text-gray-300 font-medium">Saturday: 9:00 AM - 5:00 PM</p>
+            <p class="text-gray-300 font-medium">Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t-2 border-gray-700 pt-10 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+          <p class="text-gray-400 font-medium text-lg">© 2025 Landmark Fencing. All Rights Reserved.</p>
+          <p class="text-gray-400 font-medium text-lg">Designed & Developed By <a href="https://kyleinfotech.co.in/"
+              class="text-white">Kyle Infotech</a></p>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('hidden');
+    }
+
+    // Category filtering
+    function filterByCategory(category, button) {
+      // Update active button
+      document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // Filter posts
+      const posts = document.querySelectorAll('.blog-card');
+      const noResults = document.getElementById('noResults');
+      let visibleCount = 0;
+
+      posts.forEach(post => {
+        if (category === 'all' || post.dataset.category === category) {
+          post.style.display = 'block';
+          visibleCount++;
+        } else {
+          post.style.display = 'none';
+        }
+      });
+
+      // Show/hide no results message
+      if (visibleCount === 0) {
+        noResults.classList.remove('hidden');
+      } else {
+        noResults.classList.add('hidden');
+      }
+    }
+
+    // Search functionality
+    function filterPosts() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      const posts = document.querySelectorAll('.blog-card');
+      const noResults = document.getElementById('noResults');
+      let visibleCount = 0;
+
+      posts.forEach(post => {
+        const title = post.querySelector('h3').textContent.toLowerCase();
+        const content = post.querySelector('p').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || content.includes(searchTerm)) {
+          post.style.display = 'block';
+          visibleCount++;
+        } else {
+          post.style.display = 'none';
+        }
+      });
+
+      // Show/hide no results message
+      if (visibleCount === 0 && searchTerm !== '') {
+        noResults.classList.remove('hidden');
+      } else {
+        noResults.classList.add('hidden');
+      }
+
+      // Reset category filter when searching
+      if (searchTerm !== '') {
+        document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelector('.category-btn').classList.add('active');
+      }
+    }
+
+    // Newsletter subscription
+    function subscribeNewsletter(event) {
+      event.preventDefault();
+      
+      // Create success message
+      const successMessage = document.createElement('div');
+      successMessage.innerHTML = `
+        <div class="fixed top-4 right-4 bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-xl shadow-2xl z-50 max-w-sm">
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-check-circle text-2xl"></i>
+            <div>
+              <h4 class="font-bold text-lg">Thank you for subscribing!</h4>
+              <p class="text-sm opacity-90">You'll receive our latest updates and tips.</p>
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(successMessage);
+
+      // Remove message after 5 seconds
+      setTimeout(() => {
+        successMessage.remove();
+      }, 5000);
+
+      // Reset form
+      event.target.reset();
+    }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Parallax effect for floating decorations
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const decorations = document.querySelectorAll('.floating-decoration');
+
+      decorations.forEach((decoration, index) => {
+        const speed = 0.5 + (index * 0.2);
+        decoration.style.transform = `translateY(${scrolled * speed}px)`;
+      });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all blog cards
+    document.querySelectorAll('.blog-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    });
+  </script>
+
+</body>
+</html>
