@@ -84,6 +84,7 @@
     </script>
   </head>
   <body class="font-sans text-gray-800 bg-white">
+    <!-- Header -->
     <header
       id="navbar"
       class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300 h-20 lg:h-24 xl:h-32 header-clip"
@@ -1630,6 +1631,62 @@
               elem.classList.remove("hidden");
             });
           btn.style.display = "none";
+        });
+      });
+
+      // Mobile menu toggle
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+
+        mobileMenu.classList.toggle("hidden");
+
+        // Toggle icon between hamburger and close
+        if (mobileMenu.classList.contains("hidden")) {
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+        } else {
+          menuIcon.classList.remove("fa-bars");
+          menuIcon.classList.add("fa-times");
+        }
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (e) {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuButton = document.querySelector(
+          '[onclick="toggleMobileMenu()"]'
+        );
+
+        if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+            const menuIcon = document.getElementById("menuIcon");
+            menuIcon.classList.remove("fa-times");
+            menuIcon.classList.add("fa-bars");
+          }
+        }
+      });
+
+      // Close mobile menu when window is resized to desktop
+      window.addEventListener("resize", function () {
+        if (window.innerWidth >= 1024) {
+          const mobileMenu = document.getElementById("mobileMenu");
+          const menuIcon = document.getElementById("menuIcon");
+          mobileMenu.classList.add("hidden");
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+        }
+      });
+
+      // Close mobile menu when clicking on navigation links
+      document.querySelectorAll("#mobileMenu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobileMenu");
+          const menuIcon = document.getElementById("menuIcon");
+          mobileMenu.classList.add("hidden");
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
         });
       });
     </script>
