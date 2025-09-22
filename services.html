@@ -1515,6 +1515,36 @@
     </footer>
 
     <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Handle all "Show more" toggles
+        const toggleSets = [
+          { button: ".clckShw_more", target: ".clckElem" },
+          { button: ".clckShw_more_2", target: ".clckElem_2" },
+          { button: ".clckShw_more_3", target: ".clckElem_3" },
+        ];
+
+        toggleSets.forEach(({ button, target }) => {
+          document.querySelectorAll(button).forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+              e.preventDefault();
+              const container = btn.closest(".timeline-item"); // local scope
+              const hiddenElems = container.querySelectorAll(target);
+
+              hiddenElems.forEach((el) => el.classList.toggle("hidden"));
+
+              // toggle button text + arrow
+              if (btn.textContent.includes("Show more")) {
+                btn.classList.add("hidden");
+              } else {
+                btn.innerHTML = `Show more <span class="text-xl">↓</span>`;
+              }
+            });
+          });
+        });
+      });
+    </script>
+
+    <script>
       // Mobile Menu Functions
       const mobileMenuButton = document.getElementById("mobileMenuButton");
       const mobileMenu = document.getElementById("mobileMenu");
@@ -1597,41 +1627,6 @@
       // Observe all timeline items
       document.querySelectorAll(".timeline-item").forEach((item) => {
         observer.observe(item);
-      });
-
-      // Show more functionality
-      document.querySelectorAll(".clckShw_more").forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.querySelectorAll(".clckElem").forEach(function (elem) {
-            elem.classList.remove("hidden");
-          });
-          this.style.display = "none";
-        });
-      });
-
-      document.querySelectorAll(".clckShw_more_2").forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
-          e.preventDefault();
-          document
-            .querySelectorAll(".clckElem_2.hidden")
-            .forEach(function (elem) {
-              elem.classList.remove("hidden");
-            });
-          btn.style.display = "none";
-        });
-      });
-
-      document.querySelectorAll(".clckShw_more_3").forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
-          e.preventDefault();
-          document
-            .querySelectorAll(".clckElem_3.hidden")
-            .forEach(function (elem) {
-              elem.classList.remove("hidden");
-            });
-          btn.style.display = "none";
-        });
       });
 
       // Mobile menu toggle
